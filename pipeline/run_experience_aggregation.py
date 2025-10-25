@@ -29,12 +29,32 @@ def aggregate_experience(base_dir: str, survey_type: str = None):
     print(f"📊 EXPERIENCE AGGREGATION")
     print(f"{'='*70}")
 
+    # Connect to PostgreSQL and read data directly
+    pg_conn = psycopg2.connect(
+        host=os.getenv("POSTGRES_HOST", "simitra_postgres"),
+        port=int(os.getenv("POSTGRES_PORT", "5432")),
+        user=os.getenv("POSTGRES_USER", "postgres"),
+        password=os.getenv("POSTGRES_PASSWORD", "postgres"),
+        database=os.getenv("POSTGRES_DB", "mitra_kaido")
+    )
+    
+    print(f"\n📥 Reading data from PostgreSQL...")
+    df_nilai = pd.read_sql("SELECT * FROM nilai1s_cleaned", pg_conn)
+    df_trans = pd.read_sql("SELECT * FROM transactions_cleaned", pg_conn)
+    df_survey = pd.read_sql("SELECT * FROM surveys_cleaned WHERE is_scored = 1", pg_conn)
+    df_master = pd.read_sql("SELECT * FROM master_surveys_enriched", pg_conn)
+    
+    print(f"   - Nilai: {len(df_nilai)} records")
+    print(f"   - Transactions: {len(df_trans)} records")
+    print(f"   - Surveys (scored only): {len(df_survey)} records")
+    print(f"   - Master surveys: {len(df_master)} records")
+    
+    # Read PSO results from CSV (still needed as this is the ML model output)
     df_pso = pd.read_csv(os.path.join(report_dir, "pso_optimized_mitra.csv"))
     
-    df_nilai = pd.read_csv(os.path.join(processed_dir, "cleaned_nilai1s.csv"))
-    df_trans = pd.read_csv(os.path.join(processed_dir, "cleaned_transactions.csv"))
-    df_survey = pd.read_csv(os.path.join(processed_dir, "cleaned_surveys.csv"))
-    df_master = pd.read_csv(os.path.join(processed_dir, "cleaned_master_surveys.csv"))
+    # Close PostgreSQL connection after reading
+    pg_conn.close()
+    print(f"   PostgreSQL connection closed\n")
 
     df_survey = df_survey.merge(
         df_master[["id", "type"]],

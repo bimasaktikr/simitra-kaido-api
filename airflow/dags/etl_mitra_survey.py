@@ -62,7 +62,7 @@ with DAG(
     preprocess = PythonOperator(
         task_id="preprocess_data",
         python_callable=run_preprocess,
-        op_kwargs={"base_dir": BASE_DIR},
+        op_kwargs={"base_dir": BASE_DIR, "mode": "append"},
     )
 
     feature_engineering = PythonOperator(

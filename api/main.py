@@ -1,5 +1,12 @@
 from fastapi import FastAPI
 from routers import mitra_router, recommendation_router, sync_router
+import logging
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(levelname)s:     %(message)s'
+)
 
 app = FastAPI(
     title="Mitra Recommendation API",

@@ -15,24 +15,25 @@ services:
     command:
       - "postgres"
       - "-c"
-      - "checkpoint_timeout=15min" 
+      - "checkpoint_timeout=15min"
       - "-c"
-      - "log_checkpoints=off" 
+      - "log_checkpoints=off"
       - "-c"
-      - "log_statement=none" 
+      - "log_statement=none"
       - "-c"
-      - "logging_collector=off" 
+      - "logging_collector=off"
       - "-c"
-      - "shared_buffers=256MB" 
+      - "shared_buffers=256MB"
       - "-c"
-      - "max_connections=100" 
+      - "max_connections=100"
       - "-c"
-      - "work_mem=8MB" 
+      - "work_mem=8MB"
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./sql/init-databases.sql:/docker-entrypoint-initdb.d/01-init-databases.sql:ro
+      - ./sql/init-ml-tables.sql:/docker-entrypoint-initdb.d/init-ml-tables.sql:ro
     networks:
       - simitra_network
     healthcheck:
@@ -63,14 +64,14 @@ services:
       AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "True"
       AIRFLOW__WEBSERVER__SECRET_KEY: simitra-kaido-secret-key-2025
 
-      AIRFLOW__WEBSERVER__WORKERS: 2 
-      AIRFLOW__WEBSERVER__WORKER_REFRESH_INTERVAL: 1800 
+      AIRFLOW__WEBSERVER__WORKERS: 2
+      AIRFLOW__WEBSERVER__WORKER_REFRESH_INTERVAL: 1800
       AIRFLOW__WEBSERVER__WEB_SERVER_MASTER_TIMEOUT: 300
       AIRFLOW__WEBSERVER__WEB_SERVER_WORKER_TIMEOUT: 300
 
-      AIRFLOW__LOGGING__LOGGING_LEVEL: WARNING 
+      AIRFLOW__LOGGING__LOGGING_LEVEL: WARNING
       AIRFLOW__SCHEDULER__ORPHANED_TASKS_CHECK_INTERVAL: 600.0
-      AIRFLOW__SCHEDULER__SCHEDULER_HEARTBEAT_SEC: 10 
+      AIRFLOW__SCHEDULER__SCHEDULER_HEARTBEAT_SEC: 10
 
       PROJECT_BASE_DIR: /opt/airflow/project
       BASE_DIR: /opt/airflow/project

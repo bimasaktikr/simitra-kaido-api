@@ -16,6 +16,12 @@ WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'airflow_metadata')\ge
 SELECT 'CREATE DATABASE mitra_kaido'
 WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = 'mitra_kaido')\gexec
 
+-- ========================================
+-- Initialize ML Training Tables
+-- ========================================
+\echo 'Setting up ML training tables...';
+\i /docker-entrypoint-initdb.d/init-ml-tables.sql
+
 -- Grant all privileges (already granted to postgres user by default, but explicit is better)
 \c airflow_metadata
 GRANT ALL PRIVILEGES ON SCHEMA public TO postgres;

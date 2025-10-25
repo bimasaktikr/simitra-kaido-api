@@ -295,7 +295,8 @@ def run_preprocess(base_dir: str, mode: str = "overwrite"):
         cur.execute("""
             INSERT INTO nilai1s_cleaned (
                 transaction_id, aspek1, aspek2, aspek3, rerata, created_at, updated_at
-            ) VALUES (%s,%s,%s,%s,%s,%s,%s);
+            ) VALUES (%s,%s,%s,%s,%s,%s,%s)
+            ON CONFLICT (transaction_id) DO NOTHING;
         """, tuple(noneify(v) for v in r.values))
 
     conn.commit()
