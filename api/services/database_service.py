@@ -8,7 +8,6 @@ from typing import Optional, Dict, List, Any
 
 load_dotenv()
 
-# PostgreSQL Configuration
 POSTGRES_CONFIG = {
     "dbname": os.getenv("DB_NAME"),
     "user": os.getenv("DB_USER"),
@@ -17,7 +16,6 @@ POSTGRES_CONFIG = {
     "port": os.getenv("DB_PORT", "5432")
 }
 
-# MySQL Configuration (Laravel)
 MYSQL_CONFIG = {
     "host": os.getenv("LARAVEL_DB_HOST", "host.docker.internal"),
     "port": int(os.getenv("LARAVEL_DB_PORT", 3306)),
@@ -26,7 +24,6 @@ MYSQL_CONFIG = {
     "password": os.getenv("LARAVEL_DB_PASS", "")
 }
 
-# Backward compatibility - legacy DB_CONFIG
 DB_CONFIG = POSTGRES_CONFIG
 
 class DatabaseService:
@@ -85,12 +82,10 @@ class DatabaseService:
         cursor = conn.cursor()
         
         try:
-            # Get column names from first record
             columns = list(data[0].keys())
             placeholders = ', '.join(['%s'] * len(columns))
             columns_str = ', '.join(columns)
             
-            # Build ON CONFLICT clause
             conflict_str = ', '.join(conflict_columns)
             update_columns = [col for col in columns if col not in conflict_columns]
             update_str = ', '.join([f"{col} = EXCLUDED.{col}" for col in update_columns])
@@ -102,7 +97,6 @@ class DatabaseService:
                 DO UPDATE SET {update_str}
             """
             
-            # Execute batch insert
             rows_affected = 0
             for record in data:
                 values = tuple(record[col] for col in columns)
@@ -116,7 +110,6 @@ class DatabaseService:
             cursor.close()
             conn.close()
 
-# Legacy function for backward compatibility
 def fetch_table(table_name: str, order_by: str = None):
     """Ambil data dari PostgreSQL dan pastikan aman dari NaN/inf"""
     conn = psycopg2.connect(**DB_CONFIG)

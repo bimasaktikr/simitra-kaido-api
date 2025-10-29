@@ -1,9 +1,8 @@
 from fastapi import FastAPI
-from routers import mitra_router, recommendation_router, sync_router
+from routers import mitra_router, recommendation_router, sync_router, webhook_router, master_survey_router
 import logging
 from datetime import datetime
 
-# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(levelname)s:     %(message)s'
@@ -36,4 +35,6 @@ def health_check():
 app.include_router(mitra_router.router)
 app.include_router(recommendation_router.router)
 app.include_router(sync_router.router)
+app.include_router(webhook_router.router)
+app.include_router(master_survey_router.router)
 

@@ -44,6 +44,41 @@ def aggregate_experience_recommendations():
     print("📊 Starting experience aggregation...")
     return aggregate_experience(BASE_DIR)
 
+def notify_laravel_completion(**context):
+    """
+    Notify Laravel after DAG completion to refresh MySQL cache
+    """
+    import requests
+    import os
+    
+    print("🔔 Notifying Laravel to refresh cache...")
+    
+    try:
+        laravel_url = os.getenv("LARAVEL_API_URL", "http://host.docker.internal:8000")
+        webhook_url = f"{laravel_url}/api/webhooks/ml-training-complete"
+        
+        dag_run_id = context.get('dag_run').run_id if context.get('dag_run') else 'unknown'
+        
+        payload = {
+            'dag_run_id': dag_run_id,
+            'status': 'success',
+            'timestamp': datetime.now().isoformat(),
+            'message': 'ML training completed successfully'
+        }
+        
+        response = requests.post(webhook_url, json=payload, timeout=10)
+        
+        if response.status_code == 200:
+            print(f"✅ Laravel notified successfully")
+            print(f"   Response: {response.json()}")
+        else:
+            print(f"⚠️ Laravel notification failed: HTTP {response.status_code}")
+            print(f"   Response: {response.text}")
+    
+    except Exception as e:
+        print(f"❌ Failed to notify Laravel: {str(e)}")
+        pass
+
 with DAG(
     dag_id="master_mitra_survey",
     start_date=datetime(2025, 10, 14),
@@ -52,12 +87,6 @@ with DAG(
     tags=["ETL", "ML-Training", "Linguistic", "CBF", "PSO", "Dual-Model", "Experience"],
     description="ML Training Pipeline - Generates 2 models + Experience-based recommendations",
 ) as dag:
-
-    ingest = PythonOperator(
-        task_id="ingest_data",
-        python_callable=run_ingest,
-        op_kwargs={"base_dir": BASE_DIR},
-    )
 
     preprocess = PythonOperator(
         task_id="preprocess_data",
@@ -97,4 +126,10 @@ with DAG(
         python_callable=aggregate_experience_recommendations,
     )
 
-    ingest >> preprocess >> feature_engineering >> fuzzy_cbf >> [optimize_weight_rt, optimize_weight_pr] >> merge_pso_task >> aggregate_experience_task
+    notify_laravel_task = PythonOperator(
+        task_id="notify_laravel",
+        python_callable=notify_laravel_completion,
+        provide_context=True,
+    )
+
+    preprocess >> feature_engineering >> fuzzy_cbf >> [optimize_weight_rt, optimize_weight_pr] >> merge_pso_task >> aggregate_experience_task >> notify_laravel_task

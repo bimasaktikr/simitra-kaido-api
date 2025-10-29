@@ -29,7 +29,6 @@ def aggregate_experience(base_dir: str, survey_type: str = None):
     print(f"📊 EXPERIENCE AGGREGATION")
     print(f"{'='*70}")
 
-    # Connect to PostgreSQL and read data directly
     pg_conn = psycopg2.connect(
         host=os.getenv("POSTGRES_HOST", "simitra_postgres"),
         port=int(os.getenv("POSTGRES_PORT", "5432")),
@@ -44,15 +43,26 @@ def aggregate_experience(base_dir: str, survey_type: str = None):
     df_survey = pd.read_sql("SELECT * FROM surveys_cleaned WHERE is_scored = 1", pg_conn)
     df_master = pd.read_sql("SELECT * FROM master_surveys_enriched", pg_conn)
     
+    df_mitra = None
+    for table_name in ["mitras_enriched", "mitras_cleaned", "mitras"]:
+        try:
+            df_mitra = pd.read_sql(f"SELECT id, name FROM {table_name}", pg_conn)
+            print(f"   - Mitras (from {table_name}): {len(df_mitra)} records")
+            break
+        except Exception as e:
+            continue
+    
+    if df_mitra is None:
+        print(f"   ⚠️  WARNING: No mitra table found! Mitra names will be NULL for those not in PSO data")
+        df_mitra = pd.DataFrame(columns=["id", "name"])  
+    
     print(f"   - Nilai: {len(df_nilai)} records")
     print(f"   - Transactions: {len(df_trans)} records")
     print(f"   - Surveys (scored only): {len(df_survey)} records")
     print(f"   - Master surveys: {len(df_master)} records")
     
-    # Read PSO results from CSV (still needed as this is the ML model output)
     df_pso = pd.read_csv(os.path.join(report_dir, "pso_optimized_mitra.csv"))
     
-    # Close PostgreSQL connection after reading
     pg_conn.close()
     print(f"   PostgreSQL connection closed\n")
 
@@ -72,7 +82,7 @@ def aggregate_experience(base_dir: str, survey_type: str = None):
         how="left"
     )
 
-    df_join = df_join[["mitra_id", "survey_type", "transaction_id", "rerata"]].dropna()
+    df_join = df_join[["mitra_id", "survey_type", "survey_id", "transaction_id", "rerata"]].dropna()
     df_join["rerata"] = df_join["rerata"].astype(float)
 
     print(f"\n📈 Aggregating historical performance...")
@@ -80,52 +90,74 @@ def aggregate_experience(base_dir: str, survey_type: str = None):
         df_join.groupby(["mitra_id", "survey_type"], as_index=False)
         .agg(
             survey_score=("rerata", "mean"),      
-            jumlah_survey=("transaction_id", "count")  
+            jumlah_survey=("survey_id", "nunique")  
         )
     )
+    
+    if df_mitra is not None and len(df_mitra) > 0:
+        df_agg = df_agg.merge(
+            df_mitra[["id", "name"]],
+            left_on="mitra_id",
+            right_on="id",
+            how="left"
+        ).rename(columns={"name": "mitra_name"}).drop(columns=["id"])
+        
+        nan_count = df_agg["mitra_name"].isna().sum()
+        if nan_count > 0:
+            print(f"   ⚠️  {nan_count} mitra without names in mitra table")
+    else:
+        df_agg["mitra_name"] = None
 
     print(f"   Total mitra with experience: {len(df_agg)}")
     print(f"   Survey types in aggregation: {sorted(df_agg['survey_type'].unique())}")
     print(f"   Rumah Tangga count: {len(df_agg[df_agg['survey_type'].str.contains('Rumah', case=False, na=False)])}")
     print(f"   Perusahaan count: {len(df_agg[df_agg['survey_type'].str.contains('Perusahaan', case=False, na=False)])}")
 
+    df_pso["model_type_clean"] = df_pso["model_type"].str.strip().str.lower().str.replace(" ", "_")
+    df_agg["survey_type_clean"] = df_agg["survey_type"].str.strip().str.lower().str.replace(" ", "_")
+    
     df_final = df_agg.merge(
-        df_pso[["mitra_ID", "mitra_name", "model_type", "optimized_score"]],
-        left_on=["mitra_id"],
-        right_on=["mitra_ID"],
-        how="inner"  
+        df_pso[["mitra_ID", "mitra_name", "model_type", "model_type_clean", "optimized_score"]],
+        left_on=["mitra_id", "survey_type_clean"],
+        right_on=["mitra_ID", "model_type_clean"],
+        how="left",  
+        suffixes=("", "_pso")
     )
     
-    print(f"   After merge with PSO: {len(df_final)} mitra")
-    print(f"   Model types in PSO: {sorted(df_pso['model_type'].unique())}")
-    print(f"   Survey types in experience: {sorted(df_final['survey_type'].unique())}")
+    if "mitra_name_pso" in df_final.columns:
+        df_final["mitra_name"] = df_final["mitra_name"].fillna(df_final["mitra_name_pso"])
+        df_final.loc[df_final["mitra_name"] == "NaN", "mitra_name"] = df_final.loc[df_final["mitra_name"] == "NaN", "mitra_name_pso"]
+        df_final = df_final.drop(columns=["mitra_name_pso"])
     
-    print(f"\n   BEFORE cleaning:")
-    print(f"   - Rumah Tangga in experience: {len(df_final[df_final['survey_type'].str.contains('Rumah', case=False, na=False)])}")
-    print(f"   - Perusahaan in experience: {len(df_final[df_final['survey_type'].str.contains('Perusahaan', case=False, na=False)])}")
-    print(f"   - rumah_tangga in model: {len(df_final[df_final['model_type'] == 'rumah_tangga'])}")
-    print(f"   - perusahaan in model: {len(df_final[df_final['model_type'] == 'perusahaan'])}")
+    df_final.loc[df_final["mitra_name"] == "NaN", "mitra_name"] = None
+    
+    missing_names = df_final[df_final["mitra_name"].isna()]
+    if len(missing_names) > 0:
+        print(f"\n   ⚠️  WARNING: {len(missing_names)} mitra still without names after merge!")
+        print(f"   Missing name mitra_ids: {missing_names['mitra_id'].unique().tolist()[:10]}...")
+    
+    print(f"\n   After merge with PSO (matching by mitra_id AND survey_type): {len(df_final)} rows")
+    print(f"   - Unique mitra: {df_final['mitra_id'].nunique()}")
+    print(f"   - Rumah Tangga: {len(df_final[df_final['survey_type'].str.contains('Rumah', case=False, na=False)])}")
+    print(f"   - Perusahaan: {len(df_final[df_final['survey_type'].str.contains('Perusahaan', case=False, na=False)])}")
+    print(f"   - With PSO scores: {len(df_final[df_final['optimized_score'].notna()])}")
+    print(f"   - Without PSO (experience only): {len(df_final[df_final['optimized_score'].isna()])}")
+    
+    df_final = df_final.drop(columns=["mitra_ID", "model_type", "model_type_clean", "survey_type_clean"])
 
-    df_final["survey_type_clean"] = df_final["survey_type"].str.strip().str.lower().str.replace(" ", "_")
-    df_final["model_type_clean"] = df_final["model_type"].str.strip().str.lower()
-    
-    print(f"\n   Survey types cleaned: {sorted(df_final['survey_type_clean'].unique())}")
-    print(f"   Model types cleaned: {sorted(df_final['model_type_clean'].unique())}")
-    
-    print(f"\n   Sample rows BEFORE filtering:")
-    print(df_final[['mitra_id', 'survey_type', 'model_type', 'survey_type_clean', 'model_type_clean']].head(10).to_string())
-    
-    df_final = df_final[
-        (df_final["survey_type_clean"] == df_final["model_type_clean"])
-    ]
-    
-    print(f"\n   After type matching: {len(df_final)} mitra")
-    print(f"   - Rumah Tangga: {len(df_final[df_final['model_type'] == 'rumah_tangga'])}")
-    print(f"   - Perusahaan: {len(df_final[df_final['model_type'] == 'perusahaan'])}")
-    
-    df_final = df_final.drop(columns=["survey_type_clean", "model_type_clean"])
+    for survey_type_val in df_final["survey_type"].unique():
+        mask = df_final["survey_type"] == survey_type_val
+        median_score = df_final.loc[mask & df_final["optimized_score"].notna(), "optimized_score"].median()
+        
+        if pd.isna(median_score):
+            median_score = 0.5  
+        
+        missing_count = df_final.loc[mask & df_final["optimized_score"].isna()].shape[0]
+        if missing_count > 0:
+            print(f"   ℹ️  Filling {missing_count} missing PSO scores for {survey_type_val} with median: {median_score:.4f}")
+            df_final.loc[mask & df_final["optimized_score"].isna(), "optimized_score"] = median_score
 
-    df_final = df_final.fillna({"optimized_score": 0})
+    df_final = df_final.fillna({"optimized_score": 0.5})
 
     max_exp = df_final["jumlah_survey"].max() if len(df_final) > 0 else 1
     df_final["exp_norm"] = df_final["jumlah_survey"] / max(max_exp, 1)
@@ -247,6 +279,21 @@ def save_to_postgres(df_rt, df_pr):
     insert_df(df_rt, "recommendation_rumah_tangga")
     insert_df(df_pr, "recommendation_perusahaan")
 
+    conn.commit()
+    
+    print(f"\n🔄 Fixing mitra names from mitra_cleaned table...")
+    for table in ["recommendation_rumah_tangga", "recommendation_perusahaan"]:
+        cur.execute(f"""
+            UPDATE {table} r
+            SET mitra_name = m.name
+            FROM mitra_cleaned m
+            WHERE r.mitra_id = m.id
+            AND (r.mitra_name IS NULL OR r.mitra_name = 'NaN')
+        """)
+        fixed_count = cur.rowcount
+        if fixed_count > 0:
+            print(f"   ✅ Fixed {fixed_count} mitra names in {table}")
+    
     conn.commit()
     cur.close()
     conn.close()

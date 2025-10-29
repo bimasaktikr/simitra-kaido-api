@@ -46,7 +46,6 @@ def get_pso_optimized_mitra(
         )
         cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
         
-        # Build dynamic query
         query = """
             SELECT 
                 mitra_ID,
@@ -67,14 +66,12 @@ def get_pso_optimized_mitra(
         
         params = [min_score]
         
-        # Add model_type filter if specified
         if model_type:
             query += " AND model_type = %s"
             params.append(model_type.lower())
         
         query += " ORDER BY optimized_score DESC"
         
-        # Add limit if specified
         if limit:
             query += " LIMIT %s"
             params.append(limit)
@@ -85,16 +82,14 @@ def get_pso_optimized_mitra(
         cursor.close()
         conn.close()
         
-        # Convert Decimal to float for JSON serialization
         data = []
         for row in results:
             row_dict = dict(row)
             for key in row_dict:
-                if hasattr(row_dict[key], 'real'):  # Check if it's a Decimal
+                if hasattr(row_dict[key], 'real'):  
                     row_dict[key] = float(row_dict[key])
             data.append(row_dict)
         
-        # Get model statistics
         stats = {
             "total_count": len(data)
         }
@@ -102,7 +97,6 @@ def get_pso_optimized_mitra(
         if model_type:
             stats["model_type"] = model_type
         else:
-            # Count by model type
             rt_count = sum(1 for d in data if d['model_type'] == 'rumah_tangga')
             pr_count = sum(1 for d in data if d['model_type'] == 'perusahaan')
             stats["rumah_tangga_count"] = rt_count
@@ -186,24 +180,26 @@ def get_pso_weights_info():
 
 @router.get("/rumah_tangga")
 def rekom_rumah_tangga(
-    limit: Optional[int] = Query(None, description="Limit hasil (default: semua)"),
     min_score: Optional[float] = Query(0.0, description="Minimum final_rank_score")
 ):
     """
-    Get recommendations for Rumah Tangga with experience aggregation
+    Get ALL recommendations for Rumah Tangga with experience aggregation
     
-    Returns mitra sorted by final_rank_score (ML rating + historical performance + experience)
+    Returns ALL mitra sorted by final_rank_score (ML rating + historical performance + experience)
+    NO LIMIT - fetches all available recommendations for complete caching
     
     Args:
-        limit: Jumlah maksimal mitra yang dikembalikan (optional, default: semua)
         min_score: Minimum final_rank_score untuk filter (default: 0.0)
         
     Returns:
         JSON dengan data rekomendasi mitra Rumah Tangga
         - mitra_id: ID mitra
         - mitra_name: Nama mitra
+        - survey_type: Survey type
         - survey_score: Avg performance dari historical survey
         - jumlah_survey: Total experience count
+        - exp_norm: Normalized experience score
+        - weighted_score: Weighted combination score
         - optimized_score: ML rating (dari PSO optimization)
         - final_rank_score: Combined score (50% ML + 50% experience)
     """
@@ -235,9 +231,6 @@ def rekom_rumah_tangga(
         """
         
         params = [min_score]
-        if limit:
-            query += " LIMIT %s"
-            params.append(limit)
         
         cursor.execute(query, params)
         results = cursor.fetchall()
@@ -269,24 +262,26 @@ def rekom_rumah_tangga(
 
 @router.get("/perusahaan")
 def rekom_perusahaan(
-    limit: Optional[int] = Query(None, description="Limit hasil (default: semua)"),
     min_score: Optional[float] = Query(0.0, description="Minimum final_rank_score")
 ):
     """
-    Get recommendations for Perusahaan with experience aggregation
+    Get ALL recommendations for Perusahaan with experience aggregation
     
-    Returns mitra sorted by final_rank_score (ML rating + historical performance + experience)
+    Returns ALL mitra sorted by final_rank_score (ML rating + historical performance + experience)
+    NO LIMIT - fetches all available recommendations for complete caching
     
     Args:
-        limit: Jumlah maksimal mitra yang dikembalikan (optional, default: semua)
         min_score: Minimum final_rank_score untuk filter (default: 0.0)
         
     Returns:
         JSON dengan data rekomendasi mitra Perusahaan
         - mitra_id: ID mitra
         - mitra_name: Nama mitra
+        - survey_type: Survey type
         - survey_score: Avg performance dari historical survey
         - jumlah_survey: Total experience count
+        - exp_norm: Normalized experience score
+        - weighted_score: Weighted combination score
         - optimized_score: ML rating (dari PSO optimization)
         - final_rank_score: Combined score (60% performance + 40% experience)
     """
@@ -318,9 +313,6 @@ def rekom_perusahaan(
         """
         
         params = [min_score]
-        if limit:
-            query += " LIMIT %s"
-            params.append(limit)
         
         cursor.execute(query, params)
         results = cursor.fetchall()

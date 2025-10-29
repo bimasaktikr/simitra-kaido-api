@@ -30,7 +30,6 @@ async def sync_survey_data(sync_request: SurveySync):
         
         db_service = DatabaseService()
         
-        # Fetch survey with related data from MySQL
         survey_query = """
             SELECT 
                 s.id, s.master_survey_id, s.triwulan, s.year, 
@@ -66,7 +65,6 @@ async def sync_survey_data(sync_request: SurveySync):
         
         transactions = db_service.fetch_from_mysql(transactions_query, (sync_request.survey_id,))
         
-        # Fetch nilai1s (ratings) for these transactions
         transaction_ids = [t['id'] for t in transactions]
         nilai1s = []
         
@@ -82,10 +80,8 @@ async def sync_survey_data(sync_request: SurveySync):
             
             nilai1s = db_service.fetch_from_mysql(nilai1s_query, tuple(transaction_ids))
         
-        # Prepare data for PostgreSQL upsert
         records_synced = 0
         
-        # Upsert survey to PostgreSQL
         survey_data = {
             'id': survey['id'],
             'master_survey_id': survey['master_survey_id'],
@@ -103,9 +99,8 @@ async def sync_survey_data(sync_request: SurveySync):
             'updated_at': survey.get('updated_at')
         }
         
-        # Execute upsert for survey
         pg_conn = db_service.get_postgres_connection()
-        pg_conn.autocommit = False  # Explicit transaction mode
+        pg_conn.autocommit = False  
         pg_cursor = pg_conn.cursor()
         
         try:
@@ -113,8 +108,6 @@ async def sync_survey_data(sync_request: SurveySync):
             logger.info(f"   - Transactions to sync: {len(transactions)}")
             logger.info(f"   - Nilai to sync: {len(nilai1s)}")
             
-            # Upsert survey to PostgreSQL - simple version without ON CONFLICT for debugging
-            # First try to update
             pg_cursor.execute("""
                 UPDATE surveys_cleaned
                 SET status = %s, rate = %s, is_scored = %s, is_synced = %s, updated_at = %s
@@ -126,7 +119,6 @@ async def sync_survey_data(sync_request: SurveySync):
             
             logger.info(f"   - Survey UPDATE affected {pg_cursor.rowcount} rows")
             
-            # If no rows updated, insert
             if pg_cursor.rowcount == 0:
                 logger.info(f"   - Inserting survey {survey_data['id']} (new record)")
                 pg_cursor.execute("""
@@ -144,9 +136,7 @@ async def sync_survey_data(sync_request: SurveySync):
                 logger.info(f"   - Survey INSERT completed")
             records_synced += 1
             
-            # Upsert transactions
             for trans in transactions:
-                # Try update first
                 pg_cursor.execute("""
                     UPDATE transactions_cleaned
                     SET target = %s, rate = %s, updated_at = %s
@@ -156,7 +146,6 @@ async def sync_survey_data(sync_request: SurveySync):
                     trans.get('updated_at'), trans['id']
                 ))
                 
-                # If no rows updated, insert
                 if pg_cursor.rowcount == 0:
                     pg_cursor.execute("""
                         INSERT INTO transactions_cleaned (
@@ -169,9 +158,7 @@ async def sync_survey_data(sync_request: SurveySync):
                     ))
                 records_synced += 1
             
-            # Upsert nilai1s
             for nilai in nilai1s:
-                # Try update first
                 pg_cursor.execute("""
                     UPDATE nilai1s_cleaned
                     SET aspek1 = %s, aspek2 = %s, aspek3 = %s, rerata = %s, updated_at = %s
@@ -181,7 +168,6 @@ async def sync_survey_data(sync_request: SurveySync):
                     nilai.get('rerata'), nilai.get('updated_at'), nilai['transaction_id']
                 ))
                 
-                # If no rows updated, insert
                 if pg_cursor.rowcount == 0:
                     pg_cursor.execute("""
                         INSERT INTO nilai1s_cleaned (
@@ -213,7 +199,6 @@ async def sync_survey_data(sync_request: SurveySync):
             pg_conn.close()
             logger.info(f"✅ Cursor and connection closed successfully")
         
-        # Verify data with NEW connection after commit
         try:
             verify_conn = db_service.get_postgres_connection()
             verify_cursor = verify_conn.cursor()
