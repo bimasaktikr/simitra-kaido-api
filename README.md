@@ -8,30 +8,28 @@ Sistem dirancang dengan arsitektur terpisah antara profil mitra (ML pipeline) da
     simitra-kaido-api/
     ├── airflow/
     │   ├── dags/
-    │   │   ├── etl_mitra_survey.py
-    │   │   └── etl_recommendation_event.py
+    │   │   └── etl_mitra_survey.py
     │   │
     │   ├── operators/
     │   │   ├── featiure_engineering_operator.py
     │   │   ├── ingest_operator.py
     │   │   ├── preprocess_operator.py
     │   │   ├── ranking_mitra_operator.py
-    │   │   ├── recommendation_event_operator.py
     │   │   └── weight_optimizer_operator.py
     │   │
-    │   └── requirements.txt
-    │
-    ├── data/
-    │   └── raw/
-    │       ├── raw_mitra.csv
-    │       ├── cleaned_mitra.csv
-    │       └── cleaned_mitra.json
+    │   ├── Dockerfile
+    │   ├── init-airflow.sh
+    │   ├── requirements.txt
+    │   └── webserver_config.py
     │
     ├── api/
     │   ├── routers/
     │   │   ├── __init__.py
+    │   │   ├── master_survey_router.py
     │   │   ├── mitra_router.py
-    │   │   └── recommendation_router.py
+    │   │   ├── recommendation_router.py
+    │   │   ├── sync_router.py
+    │   │   └── webhook_router.py
     │   │
     │   ├── services/
     │   │   ├── __init__.py
@@ -42,32 +40,53 @@ Sistem dirancang dengan arsitektur terpisah antara profil mitra (ML pipeline) da
     │   └── requirements.txt
     │
     ├── data/
-    │   └── raw/
-    │       ├── raw_mitra.csv
-    │       ├── cleaned_mitra.csv
-    │       └── cleaned_mitra.json
+    │   ├── processed/
+    │   │   ├── cleaned_master_surveys.csv
+    │   │   ├── cleaned_mitras.csv
+    │   │   ├── cleaned_nilai1s.csv
+    │   │   ├── cleaned_surveys.csv
+    │   │   ├── cleaned_transactions.csv
+    │   │   └── features_mitra_survey.csv
+    │   ├── raw/
+    │   │   ├── raw_master_surveys.csv
+    │   │   ├── raw_mitras.csv
+    │   │   ├── raw_nilai1s.csv
+    │   │   ├── raw_surveys.csv
+    │   │   └── raw_transactions.csv
+    │   └── reports/
+    │       ├── cbf_ranked_mitra.csv
+    │       ├── pso_optimized_mitra.csv
+    │       ├── pso_optimized_perusahaan.csv
+    │       ├── pso_optimized_rumah_tangga.csv
+    │       ├── recommendation_perusahaan.csv
+    │       └── recommendations_rumah_tangga.csv
     │
-    ├── Pipeline/
+    ├── pipeline/
     │   ├── __init__.py
     │   ├── run_feature_engineering.py
     │   ├── run_ingest.py
     │   ├── run_preprocess.py
     │   ├── run_ranking_mitra.py
-    │   ├── run_recommendation_event.py
+    │   ├── run_experience_aggregation.py
     │   └── run_weight_optimizer.py
     │
-    ├── docker-compose.yml
-    ├── .gitignore
+    ├── sql/
+    │   ├── init-databases.sql
+    │   └── init-ml-tables.sql
+    │
     ├── .env.example
-    ├── requirements.txt
-    └── README.md
+    ├── .gitattributes
+    ├── .gitignore
+    ├── docker-compose.yml
+    ├── README.md
+    └── requirements.txt
 
 ## 🚀 Quick Start
 
 1. **Clone repository ini**
 
    ```bash
-   git clone https://github.com/namamu/simitra-kaido-api.git
+   git clone https://github.com/QwAct/simitra-kaido-api.git
    cd simitra-kaido-api
    ```
 
