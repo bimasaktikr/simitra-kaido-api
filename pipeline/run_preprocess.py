@@ -92,6 +92,48 @@ def run_preprocess(base_dir: str, mode: str = "overwrite"):
         conn.close()
     
     print(f"\n{'='*70}")
+    print(f"🧹 CLEANING MITRA NAMES")
+    print(f"{'='*70}")
+    
+    def clean_mitra_name(name):
+        """
+        Clean mitra name by removing problematic symbols:
+        - Backslash (\)
+        - Forward slash (/)
+        - Single quotes (')
+        - Multiple spaces
+        """
+        if pd.isna(name):
+            return name
+        name = str(name)
+        name = name.replace('\\', '')
+        name = name.replace('/', '')
+        name = name.replace("'", '')
+        name = re.sub(r'\s+', ' ', name).strip()
+        
+        return name
+    
+    if 'name' in df_m.columns:
+        print(f"\n📊 Sample BEFORE cleaning:")
+        sample_before = df_m[df_m['name'].str.contains(r"[\\/'']", na=False, regex=True)].head(3)
+        if len(sample_before) > 0:
+            for idx, row in sample_before.iterrows():
+                print(f"   ❌ ID {row.get('id', 'N/A')}: {row['name']}")
+        else:
+            print(f"   ✅ No problematic symbols found")
+        
+        df_m['name'] = df_m['name'].apply(clean_mitra_name)
+        
+        print(f"\n📊 Sample AFTER cleaning:")
+        if len(sample_before) > 0:
+            for idx, row in sample_before.iterrows():
+                mitra_id = row.get('id', 'N/A')
+                cleaned_name = df_m[df_m.get('id', pd.Series()) == row.get('id')]['name'].iloc[0] if 'id' in df_m.columns else 'N/A'
+                print(f"   ✅ ID {mitra_id}: {cleaned_name}")
+        
+        print(f"\n✅ Cleaned {len(df_m)} mitra names")
+    
+    print(f"\n{'='*70}")
     print(f"💾 SAVING CLEANED DATA TO CSV (FOR DOWNSTREAM TASKS)")
     print(f"{'='*70}")
     

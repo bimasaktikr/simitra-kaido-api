@@ -116,12 +116,12 @@ mitra_ID,mitra_name,mitra_gender,mitra_age,survey_type,fuzzy_score,cbf_avg_simil
 213,Adelisa Rizki Zaharani,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
 217,MUHAMMAD CHOLILI,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
 202,KEVYN GALUH JUARDINO,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
-215,Nurfikri Amru Al-fayi\'nursy,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
+215,Nurfikri Amru Al-fayinursy,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
 203,Nelly Avrilia Nur Putri,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
 225,Mulyono Arief,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
 218,Melinda Kristin,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
 228,Moch.Heri Utomo,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
-212,Naufal Khalid Ghali  muhammad,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
+212,Naufal Khalid Ghali muhammad,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
 210,Iqbal Firmansyah,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
 193,Ferary ayu novitasari,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
 220,Christin Mairina Priandini,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
@@ -246,7 +246,7 @@ mitra_ID,mitra_name,mitra_gender,mitra_age,survey_type,fuzzy_score,cbf_avg_simil
 179,Andi Bagus Alfrianto,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
 155,Rina indiana,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
 157,Anni Khoirun Nisa,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
-158,Aataina Thoi\'in,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
+158,Aataina Thoiin,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
 355,Chandra Rusbianto,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
 163,Radias Tarwoco Putro,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
 164,SANDRA DEWI SARASWATI,Perempuan,55,Rumah Tangga,0.92,0.9672998372556095,0.9341899511766829
@@ -290,7 +290,7 @@ mitra_ID,mitra_name,mitra_gender,mitra_age,survey_type,fuzzy_score,cbf_avg_simil
 263,Farhan Mirza Zakky,Perempuan,24,Rumah Tangga,0.84,0.9680748259861112,0.8784224477958333
 262,Dista Dwi Cahyani,Perempuan,24,Rumah Tangga,0.84,0.9680748259861112,0.8784224477958333
 389,Akemat Rio Setiawan,Perempuan,22,Rumah Tangga,0.84,0.9680701361085263,0.8784210408325579
-349,AS\'AD ANDI YAHYA,Perempuan,25,Rumah Tangga,0.84,0.9680650970595398,0.8784195291178619
+349,ASAD ANDI YAHYA,Perempuan,25,Rumah Tangga,0.84,0.9680650970595398,0.8784195291178619
 51,Feri Achmad Ardiansyah,Perempuan,25,Rumah Tangga,0.84,0.9680650970595398,0.8784195291178619
 257,Yasmina Majidah Imanamahirah,Perempuan,25,Rumah Tangga,0.84,0.9680650970595398,0.8784195291178619
 391,Yonatan Hendra Wijaya,Perempuan,21,Rumah Tangga,0.84,0.9680507736146923,0.8784152320844076
@@ -317,7 +317,7 @@ mitra_ID,mitra_name,mitra_gender,mitra_age,survey_type,fuzzy_score,cbf_avg_simil
 303,Meryta Devi Anggraini,Perempuan,28,Rumah Tangga,0.84,0.9680069200121383,0.8784020760036415
 194,Eka Prasetya Nugraha,Perempuan,29,Rumah Tangga,0.84,0.9679813582538027,0.8783944074761407
 185,Eka Indah Nur Fatimah Mashud,Perempuan,29,Rumah Tangga,0.84,0.9679813582538027,0.8783944074761407
-285,M. Asny Fajri Ulama\'i,Perempuan,29,Rumah Tangga,0.84,0.9679813582538027,0.8783944074761407
+285,M. Asny Fajri Ulamai,Perempuan,29,Rumah Tangga,0.84,0.9679813582538027,0.8783944074761407
 329,Septiana iriyanti,Perempuan,30,Rumah Tangga,0.84,0.9679539342238136,0.878386180267144
 54,Retno Herawati,Perempuan,30,Rumah Tangga,0.84,0.9679539342238136,0.878386180267144
 175,JULIZA TRIPUSPITA RACHMAWATI,Perempuan,30,Rumah Tangga,0.84,0.9679539342238136,0.878386180267144
@@ -356,7 +356,7 @@ mitra_ID,mitra_name,mitra_gender,mitra_age,survey_type,fuzzy_score,cbf_avg_simil
 42,Fenny Gunawan,Perempuan,55,Perusahaan,0.7,0.966539634078924,0.7799618902236771
 43,ERNAWATI,Perempuan,55,Perusahaan,0.7,0.966539634078924,0.7799618902236771
 44,Maulid Diyah Kholis Saputri,Perempuan,55,Perusahaan,0.7,0.966539634078924,0.7799618902236771
-45,Nurfuady Rafi\' Alfauznursy,Perempuan,55,Perusahaan,0.7,0.966539634078924,0.7799618902236771
+45,Nurfuady Rafi Alfauznursy,Perempuan,55,Perusahaan,0.7,0.966539634078924,0.7799618902236771
 46,TALITHA ALIFAH,Perempuan,55,Perusahaan,0.7,0.966539634078924,0.7799618902236771
 52,Ariesta Putri Sayekti,Perempuan,55,Perusahaan,0.7,0.966539634078924,0.7799618902236771
 79,Selina Fathriska Ramadani,Perempuan,55,Perusahaan,0.7,0.966539634078924,0.7799618902236771

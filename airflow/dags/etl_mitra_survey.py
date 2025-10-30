@@ -27,7 +27,7 @@ def cleanup_old_dag_runs(**context):
     
     dag_id = context['dag'].dag_id
     max_total_runs = 5
-    keep_completed_runs = max_total_runs - 1  # Keep 4, because current run will make it 5
+    keep_completed_runs = max_total_runs - 1
     
     print(f"🧹 Cleaning up old DAG runs for '{dag_id}'...")
     print(f"   Target: Keep max {max_total_runs} runs (including current)")
@@ -35,7 +35,6 @@ def cleanup_old_dag_runs(**context):
     
     try:
         with create_session() as session:
-            # Get all successful runs, ordered by execution_date descending
             successful_runs = session.query(DagRun).filter(
                 DagRun.dag_id == dag_id,
                 DagRun.state == DagRunState.SUCCESS
@@ -48,7 +47,6 @@ def cleanup_old_dag_runs(**context):
                 print(f"   ✅ Within limit, no cleanup needed")
                 return
             
-            # Keep the first N, delete the rest
             runs_to_delete = successful_runs[keep_completed_runs:]
             deleted_count = 0
             
@@ -64,7 +62,6 @@ def cleanup_old_dag_runs(**context):
     
     except Exception as e:
         print(f"   ⚠️ Cleanup failed: {str(e)}")
-        # Don't fail the DAG if cleanup fails
         pass
 
 def optimize_weight_rumah_tangga():
@@ -199,5 +196,4 @@ with DAG(
         provide_context=True,
     )
 
-    # Pipeline flow: cleanup first, then run training pipeline
     cleanup_task >> preprocess >> feature_engineering >> fuzzy_cbf >> [optimize_weight_rt, optimize_weight_pr] >> merge_pso_task >> aggregate_experience_task >> refresh_cache_task

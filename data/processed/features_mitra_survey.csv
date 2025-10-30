@@ -119,7 +119,7 @@ mitra_ID,mitra_name,mitra_gender,mitra_age,survey_ID,survey_type
 36,HENI KUSUMAWATI,Perempuan,55,20,Rumah Tangga
 35,Eka Astuti,Perempuan,55,20,Rumah Tangga
 37,Dicky Ramadhan,Perempuan,55,20,Rumah Tangga
-45,Nurfuady Rafi\' Alfauznursy,Perempuan,55,21,Perusahaan
+45,Nurfuady Rafi Alfauznursy,Perempuan,55,21,Perusahaan
 36,HENI KUSUMAWATI,Perempuan,55,22,Perusahaan
 36,HENI KUSUMAWATI,Perempuan,55,23,Perusahaan
 12,TITIEK TRISOESILOWATI,Perempuan,55,24,Perusahaan
@@ -311,7 +311,7 @@ mitra_ID,mitra_name,mitra_gender,mitra_age,survey_ID,survey_type
 12,TITIEK TRISOESILOWATI,Perempuan,55,45,Perusahaan
 43,ERNAWATI,Perempuan,55,45,Perusahaan
 35,Eka Astuti,Perempuan,55,45,Perusahaan
-45,Nurfuady Rafi\' Alfauznursy,Perempuan,55,45,Perusahaan
+45,Nurfuady Rafi Alfauznursy,Perempuan,55,45,Perusahaan
 79,Selina Fathriska Ramadani,Perempuan,55,45,Perusahaan
 80,Alifionita Nur Hikmaningtyas,Perempuan,55,45,Perusahaan
 81,LULIS RAHAYUNINGSIH,Perempuan,55,45,Perusahaan
@@ -332,7 +332,7 @@ mitra_ID,mitra_name,mitra_gender,mitra_age,survey_ID,survey_type
 35,Eka Astuti,Perempuan,55,47,Rumah Tangga
 37,Dicky Ramadhan,Perempuan,55,47,Rumah Tangga
 36,HENI KUSUMAWATI,Perempuan,55,47,Rumah Tangga
-45,Nurfuady Rafi\' Alfauznursy,Perempuan,55,48,Perusahaan
+45,Nurfuady Rafi Alfauznursy,Perempuan,55,48,Perusahaan
 44,Maulid Diyah Kholis Saputri,Perempuan,55,49,Perusahaan
 84,Rike indarwati,Perempuan,38,49,Perusahaan
 11,KUSMILAH,Perempuan,52,50,Perusahaan
@@ -459,7 +459,7 @@ mitra_ID,mitra_name,mitra_gender,mitra_age,survey_ID,survey_type
 155,Rina indiana,Perempuan,55,56,Rumah Tangga
 156,ENGGA RESTU DIAN SAGITA,Perempuan,39,56,Rumah Tangga
 157,Anni Khoirun Nisa,Perempuan,55,56,Rumah Tangga
-158,Aataina Thoi\'in,Perempuan,55,56,Rumah Tangga
+158,Aataina Thoiin,Perempuan,55,56,Rumah Tangga
 159,NENI YUTRIKASARI,Perempuan,38,56,Rumah Tangga
 160,Sherly anggraeni cahya putri,Perempuan,0,56,Rumah Tangga
 161,Cynthia June Indah Widiyasari,Perempuan,31,56,Rumah Tangga
@@ -519,10 +519,10 @@ mitra_ID,mitra_name,mitra_gender,mitra_age,survey_ID,survey_type
 209,ADYATMA NUGRAHSANTO WICAKSONO,Perempuan,55,56,Rumah Tangga
 210,Iqbal Firmansyah,Perempuan,55,56,Rumah Tangga
 211,Muhammad Khoirul Basyar,Perempuan,27,56,Rumah Tangga
-212,Naufal Khalid Ghali  muhammad,Perempuan,55,56,Rumah Tangga
+212,Naufal Khalid Ghali muhammad,Perempuan,55,56,Rumah Tangga
 213,Adelisa Rizki Zaharani,Perempuan,55,56,Rumah Tangga
 214,Novi Silvia,Perempuan,55,56,Rumah Tangga
-215,Nurfikri Amru Al-fayi\'nursy,Perempuan,55,56,Rumah Tangga
+215,Nurfikri Amru Al-fayinursy,Perempuan,55,56,Rumah Tangga
 216,Moch Aldi Putra Permata,Perempuan,0,56,Rumah Tangga
 217,MUHAMMAD CHOLILI,Perempuan,55,56,Rumah Tangga
 218,Melinda Kristin,Perempuan,55,56,Rumah Tangga
@@ -592,7 +592,7 @@ mitra_ID,mitra_name,mitra_gender,mitra_age,survey_ID,survey_type
 282,Ovita Sellgi Liesdamaiyanti,Perempuan,55,56,Rumah Tangga
 283,Nani Puji Rahayu,Perempuan,51,56,Rumah Tangga
 284,BENNY RIYANTO,Perempuan,55,56,Rumah Tangga
-285,M. Asny Fajri Ulama\'i,Perempuan,29,56,Rumah Tangga
+285,M. Asny Fajri Ulamai,Perempuan,29,56,Rumah Tangga
 286,Catur Sisworini,Perempuan,55,56,Rumah Tangga
 287,Akhmad Budi,Perempuan,39,56,Rumah Tangga
 288,Woro Ratih Andayani,Perempuan,40,56,Rumah Tangga
@@ -656,7 +656,7 @@ mitra_ID,mitra_name,mitra_gender,mitra_age,survey_ID,survey_type
 346,Lestari,Perempuan,52,56,Rumah Tangga
 347,Vina Irawati,Perempuan,55,56,Rumah Tangga
 348,Widyaningsih,Perempuan,55,56,Rumah Tangga
-349,AS\'AD ANDI YAHYA,Perempuan,25,56,Rumah Tangga
+349,ASAD ANDI YAHYA,Perempuan,25,56,Rumah Tangga
 350,Sapphiretita Oktarissa Farakh Heydina,Perempuan,28,56,Rumah Tangga
 351,Robiatul Adawiyah,Perempuan,55,56,Rumah Tangga
 352,Silva ahmad adini,Perempuan,37,56,Rumah Tangga
@@ -725,6 +725,7 @@ mitra_ID,mitra_name,mitra_gender,mitra_age,survey_ID,survey_type
 7,Zulfian Arif,Perempuan,57,64,Perusahaan
 119,Aisni Nurul Rochmah,Perempuan,55,65,Rumah Tangga
 59,SRI WILUJENG,Perempuan,47,68,Rumah Tangga
+11,KUSMILAH,Perempuan,52,69,Rumah Tangga
 12,TITIEK TRISOESILOWATI,Perempuan,55,62,Perusahaan
 2,Emman Suparji,Perempuan,44,62,Perusahaan
 66,Anggraeni Istanti,Perempuan,48,61,Rumah Tangga

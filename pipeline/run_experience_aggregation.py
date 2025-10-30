@@ -195,10 +195,17 @@ def aggregate_experience(base_dir: str, survey_type: str = None):
     df_rt = df_rt.drop(columns=["mitra_ID", "model_type"], errors="ignore")
     df_pr = df_pr.drop(columns=["mitra_ID", "model_type"], errors="ignore")
 
+    # Add timestamp for created_at (untuk consistency dengan MySQL)
+    from datetime import datetime
+    current_timestamp = datetime.now()
+    
+    df_rt["created_at"] = current_timestamp
+    df_pr["created_at"] = current_timestamp
+
     desired_cols = [
         "mitra_id", "mitra_name", "survey_type",
         "survey_score", "jumlah_survey", "exp_norm",
-        "weighted_score", "optimized_score", "final_rank_score"
+        "weighted_score", "optimized_score", "final_rank_score", "created_at"
     ]
 
     df_rt = df_rt.reindex(columns=[c for c in desired_cols if c in df_rt.columns])
