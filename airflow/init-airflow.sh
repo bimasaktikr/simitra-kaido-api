@@ -1,29 +1,37 @@
-#!/bin/bash
+﻿#!/bin/bash
 set -e
 
-echo "🚀 Initializing Airflow..."
+echo " Initializing Airflow..."
 
 # Initialize or migrate database
-echo "📊 Running database initialization/migration..."
+echo " Running database initialization/migration..."
 airflow db init || airflow db migrate
 
-# Create admin user (fallback, but won't be needed for public access)
-echo "👤 Creating default admin user (username: admin, password: admin)..."
+# Create default admin user for easy access
+echo " Creating default admin user..."
+echo "   Username: admin"
+echo "   Password: admin"
+echo "   Email: admin@simitra.com"
 airflow users create \
     --username admin \
     --password admin \
     --firstname Admin \
     --lastname User \
     --role Admin \
-    --email admin@example.com 2>/dev/null || echo "Admin user already exists"
+    --email admin@simitra.com 2>/dev/null || echo "ℹ  Admin user already exists"
 
-echo "✅ Airflow initialization complete!"
-echo "🌐 Webserver will be accessible at http://localhost:8080 (No login required!)"
+echo ""
+echo " Airflow initialization complete!"
+echo ""
+echo " Webserver: http://localhost:8080"
+echo " Username: admin"
+echo " Password: admin"
+echo ""
 echo ""
 
 # Start services
-echo "🎯 Starting Airflow Webserver..."
+echo " Starting Airflow Webserver..."
 airflow webserver &
 
-echo "📅 Starting Airflow Scheduler..."
+echo " Starting Airflow Scheduler..."
 airflow scheduler

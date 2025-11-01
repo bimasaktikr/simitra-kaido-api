@@ -24,6 +24,9 @@ def aggregate_experience(base_dir: str, survey_type: str = None):
 
     processed_dir = os.path.join(base_dir, "data", "processed")
     report_dir = os.path.join(base_dir, "data", "reports")
+    
+    # Create reports directory if it doesn't exist
+    os.makedirs(report_dir, exist_ok=True)
 
     print(f"\n{'='*70}")
     print(f"📊 EXPERIENCE AGGREGATION")
@@ -33,7 +36,7 @@ def aggregate_experience(base_dir: str, survey_type: str = None):
         host=os.getenv("POSTGRES_HOST", "simitra_postgres"),
         port=int(os.getenv("POSTGRES_PORT", "5432")),
         user=os.getenv("POSTGRES_USER", "postgres"),
-        password=os.getenv("POSTGRES_PASSWORD", "postgres"),
+        password=os.getenv("POSTGRES_PASSWORD", "mitra123"),
         database=os.getenv("POSTGRES_DB", "mitra_kaido")
     )
     

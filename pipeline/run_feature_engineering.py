@@ -8,6 +8,10 @@ def run_feature_engineering(base_dir: str):
     load_dotenv(find_dotenv(), override=True)
 
     processed_dir = os.path.join(base_dir, "data", "processed")
+    
+    # Create processed directory if it doesn't exist
+    os.makedirs(processed_dir, exist_ok=True)
+    
     output_csv = os.path.join(processed_dir, "features_mitra_survey.csv")
 
     mitras = pd.read_csv(os.path.join(processed_dir, "cleaned_mitras.csv"))

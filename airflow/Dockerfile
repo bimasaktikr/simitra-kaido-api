@@ -22,5 +22,21 @@ USER airflow
 COPY airflow/requirements.txt /opt/airflow/requirements.txt
 RUN pip install --no-cache-dir -r /opt/airflow/requirements.txt
 
+# Copy DAGs and pipeline code
+COPY airflow/dags /opt/airflow/dags
+COPY pipeline /opt/airflow/pipeline
+
+# Copy webserver config for no-authentication
+COPY airflow/webserver_config.py /opt/airflow/webserver_config.py
+
+# Create data directories for ML pipeline outputs
+USER root
+RUN mkdir -p /opt/airflow/data/raw /opt/airflow/data/processed /opt/airflow/data/reports && \
+    chown -R airflow:root /opt/airflow/data
+USER airflow
+
+# Set PYTHONPATH so pipeline module can be imported
+ENV PYTHONPATH="${PYTHONPATH}:/opt/airflow"
+
 # Set working directory
 WORKDIR /opt/airflow

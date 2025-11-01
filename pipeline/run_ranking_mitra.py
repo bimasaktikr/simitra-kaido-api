@@ -46,6 +46,10 @@ def fuzzy_similarity(row, survey_type):
 def run_fuzzy_cbf(base_dir: str):
     processed_dir = os.path.join(base_dir, "data", "processed")
     report_dir = os.path.join(base_dir, "data", "reports")
+    
+    # Create reports directory if it doesn't exist
+    os.makedirs(report_dir, exist_ok=True)
+    
     feature_path = os.path.join(processed_dir, "features_mitra_survey.csv")
     nilai_path = os.path.join(processed_dir, "cleaned_nilai1s.csv")
 

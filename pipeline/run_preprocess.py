@@ -66,10 +66,10 @@ def run_preprocess(base_dir: str, mode: str = "overwrite"):
         
         print(f"\n📥 Reading mitras data...")
         try:
-            df_m = pd.read_sql("SELECT * FROM mitras_enriched", conn)
+            df_m = pd.read_sql("SELECT * FROM mitra_cleaned", conn)
             print(f"   ✅ Found {len(df_m)} mitras from PostgreSQL")
         except Exception as e:
-            print(f"   ⚠️  Table mitras_enriched not found, reading from CSV...")
+            print(f"   ⚠️  Table mitra_cleaned not found, reading from CSV...")
             raw_dir = os.path.join(base_dir, "data", "raw")
             mitra_csv = os.path.join(raw_dir, "raw_mitras.csv")
             

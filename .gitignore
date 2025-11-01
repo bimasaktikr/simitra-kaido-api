@@ -1,6 +1,34 @@
 venv
 .env
+.env.local
 
 **/__pycache__/
 __pycache__/
 *.py[cod]
+
+# Data files (generated outputs)
+data/processed/*.csv
+data/reports/*.csv
+data/raw/*.csv
+
+# Airflow logs and generated files
+airflow/logs/
+airflow/airflow.db
+airflow/airflow.cfg
+airflow/webserver_config.pyc
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker volumes (if accidentally created in project)
+postgres_data/
+airflow_logs/
+airflow_dags/
+airflow_plugins/

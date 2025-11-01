@@ -4,16 +4,46 @@ from datetime import datetime
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 
-BASE_DIR = "/opt/airflow/project"
+# Ensure /opt/airflow is in Python path
+BASE_DIR = "/opt/airflow"
 if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
 
-from pipeline.run_ingest import run_ingest
-from pipeline.run_preprocess import run_preprocess
-from pipeline.run_feature_engineering import run_feature_engineering
-from pipeline.run_ranking_mitra import run_fuzzy_cbf
-from pipeline.run_weight_optimizer import weight_optimizer, merge_pso_results
-from pipeline.run_experience_aggregation import aggregate_experience
+# Lazy import - will be imported when functions are called
+def get_pipeline_functions():
+    """Import pipeline functions dynamically to avoid import errors at DAG parse time"""
+    from pipeline.run_ingest import run_ingest
+    from pipeline.run_preprocess import run_preprocess
+    from pipeline.run_feature_engineering import run_feature_engineering
+    from pipeline.run_ranking_mitra import run_fuzzy_cbf
+    from pipeline.run_weight_optimizer import weight_optimizer, merge_pso_results
+    from pipeline.run_experience_aggregation import aggregate_experience
+    
+    return {
+        'run_ingest': run_ingest,
+        'run_preprocess': run_preprocess,
+        'run_feature_engineering': run_feature_engineering,
+        'run_fuzzy_cbf': run_fuzzy_cbf,
+        'weight_optimizer': weight_optimizer,
+        'merge_pso_results': merge_pso_results,
+        'aggregate_experience': aggregate_experience
+    }
+
+# Wrapper functions for tasks
+def run_preprocess_wrapper(**kwargs):
+    """Wrapper for run_preprocess with lazy import"""
+    funcs = get_pipeline_functions()
+    return funcs['run_preprocess'](**kwargs)
+
+def run_feature_engineering_wrapper(**kwargs):
+    """Wrapper for run_feature_engineering with lazy import"""
+    funcs = get_pipeline_functions()
+    return funcs['run_feature_engineering'](**kwargs)
+
+def run_fuzzy_cbf_wrapper(**kwargs):
+    """Wrapper for run_fuzzy_cbf with lazy import"""
+    funcs = get_pipeline_functions()
+    return funcs['run_fuzzy_cbf'](**kwargs)
 
 def cleanup_old_dag_runs(**context):
     """
@@ -69,21 +99,24 @@ def optimize_weight_rumah_tangga():
     Run PSO optimization for Rumah Tangga survey type only
     """
     print("🏠 Starting PSO optimization for Rumah Tangga...")
-    return weight_optimizer(BASE_DIR, survey_type="rumah_tangga")
+    funcs = get_pipeline_functions()
+    return funcs['weight_optimizer'](BASE_DIR, survey_type="rumah_tangga")
 
 def optimize_weight_perusahaan():
     """
     Run PSO optimization for Perusahaan survey type only
     """
     print("🏢 Starting PSO optimization for Perusahaan...")
-    return weight_optimizer(BASE_DIR, survey_type="perusahaan")
+    funcs = get_pipeline_functions()
+    return funcs['weight_optimizer'](BASE_DIR, survey_type="perusahaan")
 
 def merge_pso_outputs():
     """
     Merge individual PSO result files into combined file and upload to PostgreSQL
     """
     print("🔗 Merging PSO results...")
-    return merge_pso_results(BASE_DIR)
+    funcs = get_pipeline_functions()
+    return funcs['merge_pso_results'](BASE_DIR)
 
 def aggregate_experience_recommendations():
     """
@@ -91,7 +124,8 @@ def aggregate_experience_recommendations():
     Generate final recommendations with combined scoring
     """
     print("📊 Starting experience aggregation...")
-    return aggregate_experience(BASE_DIR)
+    funcs = get_pipeline_functions()
+    return funcs['aggregate_experience'](BASE_DIR)
 
 def refresh_mysql_cache(**context):
     """
@@ -154,19 +188,19 @@ with DAG(
 
     preprocess = PythonOperator(
         task_id="preprocess_data",
-        python_callable=run_preprocess,
+        python_callable=run_preprocess_wrapper,
         op_kwargs={"base_dir": BASE_DIR, "mode": "append"},
     )
 
     feature_engineering = PythonOperator(
         task_id="feature_engineering",
-        python_callable=run_feature_engineering,
+        python_callable=run_feature_engineering_wrapper,
         op_kwargs={"base_dir": BASE_DIR},
     )
 
     fuzzy_cbf = PythonOperator(
         task_id="fuzzy_cbf_model",
-        python_callable=run_fuzzy_cbf,
+        python_callable=run_fuzzy_cbf_wrapper,
         op_kwargs={"base_dir": BASE_DIR},
     )
 

@@ -180,6 +180,10 @@ def weight_optimizer(base_dir: str, survey_type: str = None):
     load_dotenv(find_dotenv(), override=True)
 
     report_dir = os.path.join(base_dir, "data", "reports")
+    
+    # Create reports directory if it doesn't exist
+    os.makedirs(report_dir, exist_ok=True)
+    
     ranked_path = os.path.join(report_dir, "cbf_ranked_mitra.csv")
 
     if not os.path.exists(ranked_path):

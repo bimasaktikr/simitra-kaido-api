@@ -1,0 +1,160 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:17
+    container_name: simitra_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME:-mitra_kaido}
+      POSTGRES_USER: ${DB_USER:-postgres}
+      POSTGRES_PASSWORD: ${DB_PASS:-mitra123}
+      POSTGRES_HOST_AUTH_METHOD: scram-sha-256
+      PGDATA: /var/lib/postgresql/data/pgdata
+    command:
+      - "postgres"
+      - "-c"
+      - "checkpoint_timeout=15min"
+      - "-c"
+      - "log_checkpoints=off"
+      - "-c"
+      - "shared_buffers=256MB"
+      - "-c"
+      - "max_connections=100"
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - simitra_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  airflow:
+    image: qwact/simitra-airflow:latest
+    container_name: simitra_airflow
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__EXECUTOR: LocalExecutor
+      AIRFLOW__CORE__LOAD_EXAMPLES: "False"
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${DB_USER:-postgres}:${DB_PASS:-mitra123}@postgres:5432/airflow_metadata
+
+      AIRFLOW__CORE__PARALLELISM: 32
+      AIRFLOW__CORE__DAG_CONCURRENCY: 16
+      AIRFLOW__CORE__MAX_ACTIVE_RUNS_PER_DAG: 16
+      AIRFLOW__SCHEDULER__MAX_TIS_PER_QUERY: 512
+      AIRFLOW__CORE__MAX_ACTIVE_TASKS_PER_DAG: 16
+
+      AIRFLOW__WEBSERVER__SECRET_KEY: ${AIRFLOW_SECRET_KEY:-simitra-kaido-secret-key}
+      AIRFLOW__WEBSERVER__EXPOSE_CONFIG: "True"
+      AIRFLOW__API__AUTH_BACKENDS: airflow.api.auth.backend.basic_auth
+      AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "False"
+      AIRFLOW__WEBSERVER__RELOAD_ON_PLUGIN_CHANGE: "True"
+
+      AIRFLOW__WEBSERVER__AUTH_BACKEND: airflow.api.auth.backend.basic_auth
+      AIRFLOW__WEBSERVER__RBAC: "True"
+
+      DB_NAME: ${DB_NAME:-mitra_kaido}
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASS: ${DB_PASS:-mitra123}
+      DB_HOST: postgres
+      DB_PORT: 5432
+
+      LARAVEL_DB_HOST: ${LARAVEL_DB_HOST:-host.docker.internal}
+      LARAVEL_DB_PORT: ${LARAVEL_DB_PORT:-3306}
+      LARAVEL_DB_NAME: ${LARAVEL_DB_NAME:-kaido_kit}
+      LARAVEL_DB_USER: ${LARAVEL_DB_USER:-root}
+      LARAVEL_DB_PASS: ${LARAVEL_DB_PASS:-}
+      LARAVEL_API_URL: ${LARAVEL_API_URL:-http://host.docker.internal:8000}
+
+      _PIP_ADDITIONAL_REQUIREMENTS: >
+        pandas==2.1.4
+        psycopg2-binary==2.9.9
+        python-dotenv==1.0.1
+        scikit-learn
+        numpy
+        requests==2.31.0
+        mysql-connector-python
+
+      PYTHONPATH: /opt/airflow
+
+    ports:
+      - "${AIRFLOW_PORT:-8080}:8080"
+    volumes:
+      - airflow_dags:/opt/airflow/dags
+      - airflow_logs:/opt/airflow/logs
+      - airflow_data:/opt/airflow/data
+    user: "50000:0"
+    entrypoint: []
+    command: /opt/airflow/init-airflow.sh
+    networks:
+      - simitra_network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
+  api:
+    image: qwact/simitra-api:latest
+    container_name: simitra_api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_NAME: ${DB_NAME:-mitra_kaido}
+      DB_USER: ${DB_USER:-postgres}
+      DB_PASS: ${DB_PASS:-mitra123}
+      DB_HOST: postgres
+      DB_PORT: 5432
+
+      AIRFLOW_URL: http://airflow:8080
+
+      LARAVEL_API_URL: ${LARAVEL_API_URL:-http://host.docker.internal:8000}
+      LARAVEL_DB_HOST: ${LARAVEL_DB_HOST:-host.docker.internal}
+      LARAVEL_DB_PORT: ${LARAVEL_DB_PORT:-3306}
+      LARAVEL_DB_NAME: ${LARAVEL_DB_NAME:-kaido_kit}
+      LARAVEL_DB_USER: ${LARAVEL_DB_USER:-root}
+      LARAVEL_DB_PASS: ${LARAVEL_DB_PASS:-}
+
+    ports:
+      - "${API_PORT:-8001}:8000"
+    volumes:
+      - api_data:/app
+    networks:
+      - simitra_network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/docs || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  postgres_data:
+    driver: local
+  airflow_dags:
+    driver: local
+  airflow_logs:
+    driver: local
+  airflow_data:
+    driver: local
+  api_data:
+    driver: local
+
+networks:
+  simitra_network:
+    driver: bridge

@@ -1,9 +1,8 @@
-# 🧠 Machine Learning Backend Service (Mitra Ranking & Survey Aggregator)
+# 🚀 SIMITRA KAIDO - ML Backend API
 
-Backend ML ini bertugas untuk mengelola, memproses, dan menghitung hasil pemeringkatan mitra serta performa survei secara otomatis.
-Sistem dirancang dengan arsitektur terpisah antara profil mitra (ML pipeline) dan hasil survei (aggregator pipeline) agar proses lebih modular, efisien, dan mudah di-maintain.
+Machine Learning Backend Service untuk Mitra Ranking & Survey Aggregation dengan Apache Airflow dan FastAPI. This ML backend is responsible for automatically managing, processing, and calculating partner ranking results and survey performance. The system is designed with a separate architecture for partner profiles (ML pipeline) and survey results (aggregator pipeline) to make the process more modular, efficient, and easy to maintain.
 
-## 🧱 Struktur Folder
+## 🧱 **Folder Structure**
 
     simitra-kaido-api/
     ├── airflow/
@@ -81,12 +80,18 @@ Sistem dirancang dengan arsitektur terpisah antara profil mitra (ML pipeline) da
     ├── README.md
     └── requirements.txt
 
-## 🚀 Quick Start
+## **Prerequisites:**
 
-1. **Clone repository ini**
+- Docker Desktop running
+- Portainer installed (http://localhost:9443)
+- Git (untuk clone repository)
+
+## 🚀 **Quick Start**
+
+1. **Clone Repository**
 
    ```bash
-   git clone https://github.com/QwAct/simitra-kaido-api.git
+   git clone https://github.com/QwAct225/simitra-kaido-api.git
    cd simitra-kaido-api
    ```
 
@@ -125,38 +130,247 @@ Sistem dirancang dengan arsitektur terpisah antara profil mitra (ML pipeline) da
    - Airflow UI: http://localhost:8080
    - API Docs: http://localhost:8001/docs
 
-## 🔧 Troubleshooting
+---
 
-### 🐧 Cross-Platform Compatibility
+## **🎯 Deploy to Portainer**
 
-**Sistem yang Didukung:**
+1. **Login to Portainer:** http://localhost:9443
+2. **Go to:** Stacks → Add stack
+3. **Stack name:** `simitra-kaido-api`
+4. **Build method:** Web editor
+5. **Copy & Paste** entire content dari file `docker-compose.portainer.yml`
+6. **Environment variables** (optional - gunakan default jika tidak diisi):
+   ```env
+   DB_NAME=mitra_kaido
+   DB_USER=postgres
+   DB_PASS=mitra123
+   POSTGRES_PORT=5432
+   AIRFLOW_PORT=8080
+   API_PORT=8001
+   ```
+7. **Click:** "Deploy the stack"
+8. **Wait:** 3-5 minutes untuk initialization
 
-- ✅ Windows 10/11
-- ✅ macOS (Intel & Apple Silicon)
-- ✅ Linux (Ubuntu, Debian, Fedora, dll)
+### **Verify Deployment**
 
-**Solusi Line Endings:**  
-Proyek ini menggunakan **custom Dockerfile dengan `dos2unix`** untuk otomatis mengkonversi line endings dari CRLF (Windows) ke LF (Linux/Unix) saat build image. File `.gitattributes` juga memastikan Git menangani line endings dengan benar.
+**Check Containers Status:**
 
-**Jika Mengalami Error:**
+- Portainer → Containers → All should be "healthy" (green)
+
+**Verify DAG Status (No Import Errors):**
 
 ```bash
-# Stop container
-docker-compose down
+docker exec simitra_airflow airflow dags list
+# Expected: master_mitra_survey | /opt/airflow/dags/etl_mitra_survey.py | airflow | False
 
-# Rebuild dengan clean cache
-docker-compose build --no-cache airflow
+docker exec simitra_airflow airflow dags list-import-errors
+# Expected: No data found (✅ means no errors)
+```
 
-# Start ulang
-docker-compose up -d
+**Access Services:**
 
-# Monitor logs
-docker logs simitra_airflow -f --tail 50
+```
+✅ Airflow UI:  http://localhost:8080
+✅ API Docs:    http://localhost:8001/docs
+✅ PostgreSQL:  localhost:5432
+```
+
+**Test API:**
+
+```bash
+curl http://localhost:8001/docs
+curl http://localhost:8001/health
+```
+
+**Test Airflow:**
+
+- Open http://localhost:8080 (no login required)
+- DAG `etl_mitra_survey` should appear
+- Click DAG → Trigger DAG to run pipeline
+
+---
+
+## 📦 **Docker Images**
+
+Pre-built images available on Docker Hub:
+
+```
+🐳 qwact/simitra-airflow:latest   (Apache Airflow + DAGs + Pipeline)
+🐳 qwact/simitra-api:latest        (FastAPI + Routers + Services)
+🐳 postgres:17                      (PostgreSQL Database)
 ```
 
 ---
 
-### 🐘 PostgreSQL Port Conflict (Windows)
+## 🔄 **Update Code (For Developers)**
+
+When you make changes to DAGs or API code:
+
+```bash
+# 1. Edit your code
+# 2. Rebuild images
+docker build -f airflow/Dockerfile -t qwact/simitra-airflow:latest .
+docker build -f api/Dockerfile -t qwact/simitra-api:latest .
+
+# 3. Push to Docker Hub
+docker push qwact/simitra-airflow:latest
+docker push qwact/simitra-api:latest
+
+# 4. In Portainer: Pull and redeploy stack
+```
+
+---
+
+## 🔧 **Troubleshooting**
+
+### **Common Issues:**
+
+#### **1. Container Unhealthy**
+
+```bash
+# Check logs
+docker logs simitra_airflow --tail 50
+docker logs simitra_api --tail 50
+
+# Restart container
+docker restart simitra_airflow
+docker restart simitra_api
+```
+
+#### **2. DAG Import Errors**
+
+- **Error:** `ModuleNotFoundError: No module named 'pipeline'`
+- **Solution:** Pastikan menggunakan image `qwact/simitra-airflow:latest` yang sudah include PYTHONPATH fix
+
+#### **3. Port Already in Use**
+
+```bash
+# Check what's using the port
+netstat -ano | findstr :8080  # Windows
+lsof -i :8080                  # macOS/Linux
+
+# Change port in .env
+AIRFLOW_PORT=8081
+API_PORT=8002
+```
+
+#### **4. Database Connection Failed**
+
+- **Check:** Password di `.env` harus sama dengan yang di volume PostgreSQL
+- **Solution:** Jika password berubah, hapus volume dan recreate:
+  ```bash
+  docker volume rm simitra-kaido-api_postgres_data
+  docker-compose up -d
+  ```
+
+---
+
+## 📊 **API Endpoints**
+
+### **FastAPI Documentation:**
+
+- Swagger UI: http://localhost:8001/docs
+- ReDoc: http://localhost:8001/redoc
+
+### **Available Endpoints:**
+
+**Health Check:**
+
+```bash
+GET /health
+```
+
+**Mitra Recommendations:**
+
+```bash
+GET /recommendations/mitra?limit=10
+```
+
+**Survey Master Data:**
+
+```bash
+GET /master-survey
+```
+
+**Webhook (Trigger Airflow DAG):**
+
+```bash
+POST /webhook/trigger-dag
+```
+
+---
+
+## 🛠️ **Local Development**
+
+### **Option 1: Docker Compose (Recommended)**
+
+```bash
+# Start all services
+docker-compose up -d
+
+# View logs
+docker-compose logs -f airflow
+
+# Stop services
+docker-compose down
+```
+
+### **Option 2: Local Python (Advanced)**
+
+```bash
+# Setup virtual environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+pip install -r airflow/requirements.txt
+pip install -r api/requirements.txt
+
+# Run API locally
+cd api
+uvicorn main:app --reload --port 8001
+```
+
+---
+
+## 📝 **Environment Variables**
+
+Create `.env` file (copy from `.env.example`):
+
+```env
+# PostgreSQL
+DB_NAME=mitra_kaido
+DB_USER=postgres
+DB_PASS=mitra123
+POSTGRES_PORT=5432
+
+# Laravel MySQL (External)
+LARAVEL_DB_HOST=host.docker.internal
+LARAVEL_DB_PORT=3306
+LARAVEL_DB_NAME=kaido_kit
+LARAVEL_DB_USER=root
+LARAVEL_DB_PASS=
+LARAVEL_API_URL=http://host.docker.internal:8000
+
+# Airflow
+AIRFLOW_PORT=8080
+AIRFLOW_SECRET_KEY=your-secret-key
+
+# API
+API_PORT=8001
+```
+
+---
+
+## � **Security Notes**
+
+- **Default Airflow:** No authentication (disable for development only)
+- **Production:** Enable authentication in `docker-compose.portainer.yml`
+- **Database:** Change default passwords in `.env`
+- **API:** Add authentication middleware for production
+
+---
 
 Jika Anda tidak dapat mengakses PostgreSQL karena port tertahan oleh service lokal atau tidak bisa menjalankan `docker compose down -v`, coba langkah berikut di Windows (jalankan terminal sebagai Administrator):
 
