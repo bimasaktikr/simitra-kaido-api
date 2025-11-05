@@ -10,10 +10,12 @@ services:
       POSTGRES_USER: ${DB_USER:-postgres}
       POSTGRES_PASSWORD: ${DB_PASS:-postgres}
       POSTGRES_HOST_AUTH_METHOD: md5
+      POSTGRES_INITDB_ARGS: "--auth-host=md5 --auth-local=md5"
       PGDATA: /var/lib/postgresql/data/pgdata
-      POSTGRES_INITDB_ARGS: "-c checkpoint_timeout=15min -c log_checkpoints=off -c log_statement=none"
     command:
       - "postgres"
+      - "-c"
+      - "password_encryption=md5"
       - "-c"
       - "checkpoint_timeout=15min"
       - "-c"
