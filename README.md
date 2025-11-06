@@ -223,9 +223,33 @@ docker push qwact/simitra-api:latest
 
 ## 🔧 **Troubleshooting**
 
+Untuk panduan lengkap troubleshooting, silakan lihat **[TROUBLESHOOTING.md](./TROUBLESHOOTING.md)**
+
 ### **Common Issues:**
 
-#### **1. Container Unhealthy**
+#### **1. Database "airflow_metadata" does not exist**
+
+**Quick Fix:**
+
+```bash
+# Option 1: Clean installation (removes all data)
+docker-compose -f docker-compose.portainer.yml down
+docker volume rm simitra-kaido-api_postgres_data
+docker-compose -f docker-compose.portainer.yml up -d
+
+# Option 2: Manual database creation (keeps data)
+docker exec -it simitra_postgres psql -U postgres -c "CREATE DATABASE airflow_metadata;"
+docker exec -it simitra_postgres psql -U postgres -c "CREATE DATABASE mitra_kaido;"
+```
+
+**Solution:** Versi terbaru sudah include automatic database creation. Update dengan:
+
+```bash
+docker-compose -f docker-compose.portainer.yml pull
+docker-compose -f docker-compose.portainer.yml up -d
+```
+
+#### **2. Container Unhealthy**
 
 ```bash
 # Check logs
@@ -237,12 +261,12 @@ docker restart simitra_airflow
 docker restart simitra_api
 ```
 
-#### **2. DAG Import Errors**
+#### **3. DAG Import Errors**
 
 - **Error:** `ModuleNotFoundError: No module named 'pipeline'`
 - **Solution:** Pastikan menggunakan image `qwact/simitra-airflow:latest` yang sudah include PYTHONPATH fix
 
-#### **3. Port Already in Use**
+#### **4. Port Already in Use**
 
 ```bash
 # Check what's using the port
@@ -254,14 +278,12 @@ AIRFLOW_PORT=8081
 API_PORT=8002
 ```
 
-#### **4. Database Connection Failed**
+#### **5. Database Connection Failed / MD5 Authentication Error**
 
 - **Check:** Password di `.env` harus sama dengan yang di volume PostgreSQL
-- **Solution:** Jika password berubah, hapus volume dan recreate:
-  ```bash
-  docker volume rm simitra-kaido-api_postgres_data
-  docker-compose up -d
-  ```
+- **Solution:** Lihat [TROUBLESHOOTING.md - PostgreSQL Authentication](./TROUBLESHOOTING.md#-postgresql-authentication-errors)
+
+**More Issues?** Check **[TROUBLESHOOTING.md](./TROUBLESHOOTING.md)** for comprehensive solutions.
 
 ---
 

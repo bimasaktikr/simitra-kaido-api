@@ -5,19 +5,6 @@ import psycopg2
 from dotenv import load_dotenv, find_dotenv
 
 def apply_age_gender_priority(df, survey_type):
-    """
-    Apply age and gender priority based on survey type
-    
-    Rumah Tangga:
-    - Gender: Female > Male (Female = 1.2x, Male = 1.0x)
-    - Age Priority: 41-50 > 31-40 > 51+ > 21-30
-      (x3 > x2 > x4 > x1)
-      
-    Perusahaan:
-    - Gender: Female > Male (Female = 1.2x, Male = 1.0x)
-    - Age Priority: 51+ > 41-50 > 31-40 > 21-30
-      (x4 > x3 > x2 > x1)
-    """
     df = df.copy()
     df['gender_weight'] = df['mitra_gender'].apply(
         lambda x: 1.2 if str(x).lower() in ['female', 'perempuan', 'p'] else 1.0
@@ -62,12 +49,6 @@ def apply_age_gender_priority(df, survey_type):
     return df
 
 def fitness_function(weights, df):
-    """
-    Fitness function for PSO optimization
-    Optimizes 2 weights: fuzzy + cbf
-    
-    BALANCED APPROACH: Multi-objective with natural balance incentive
-    """
     w_fuzzy, w_cbf = weights
     
     if w_fuzzy <= 0 or w_cbf <= 0:
@@ -102,15 +83,6 @@ def fitness_function(weights, df):
     return fitness
 
 def run_pso(df, survey_type, n_particles=40, n_iterations=100, inertia=0.6, c1=1.8, c2=1.8):
-    """
-    Run PSO optimization for specific survey type
-    Optimizes 2 weights: fuzzy + cbf
-    
-    Updated strategy:
-    - 40 particles for better exploration
-    - Lower inertia (0.6) for faster convergence
-    - Soft constraints via penalty instead of hard bounds
-    """
     print(f"\n{'='*60}")
     print(f"🎯 Running PSO Optimization for: {survey_type.upper()}")
     print(f"{'='*60}")
@@ -169,21 +141,10 @@ def run_pso(df, survey_type, n_particles=40, n_iterations=100, inertia=0.6, c1=1
     return normalized_weights
 
 def weight_optimizer(base_dir: str, survey_type: str = None):
-    """
-    Main weight optimizer function
-    Processes specific survey type or BOTH if survey_type is None
-    
-    Args:
-        base_dir: Base directory path
-        survey_type: 'rumah_tangga', 'perusahaan', or None (both)
-    """
     load_dotenv(find_dotenv(), override=True)
 
     report_dir = os.path.join(base_dir, "data", "reports")
-    
-    # Create reports directory if it doesn't exist
     os.makedirs(report_dir, exist_ok=True)
-    
     ranked_path = os.path.join(report_dir, "cbf_ranked_mitra.csv")
 
     if not os.path.exists(ranked_path):
@@ -193,11 +154,33 @@ def weight_optimizer(base_dir: str, survey_type: str = None):
     df_all = df_all.dropna(subset=["fuzzy_score", "cbf_avg_similarity"])
     
     print(f"\n📊 Total data: {len(df_all)} mitra")
-    print(f"   Rumah Tangga: {len(df_all[df_all['survey_type'] == 'Rumah Tangga'])} mitra")
-    print(f"   Perusahaan: {len(df_all[df_all['survey_type'] == 'Perusahaan'])} mitra")
+    
+    nan_count = df_all['survey_type'].isna().sum()
+    if nan_count > 0:
+        print(f"\n⚠️  Found {nan_count} mitras with NaN survey_type")
+        print(f"   Converting NaN → 'Perusahaan' (default category)")
+        df_all['survey_type'] = df_all['survey_type'].fillna('Perusahaan')
+        print(f"   ✅ All mitras now have valid survey_type")
+    
+    unique_types = df_all['survey_type'].unique()
+    print(f"\n   Survey types found: {list(unique_types)}")
+    
+    for stype in unique_types:
+        count = len(df_all[df_all['survey_type'] == stype])
+        print(f"   {stype}: {count} mitra")
     
     df_rt = df_all[df_all['survey_type'] == 'Rumah Tangga'].copy()
     df_pr = df_all[df_all['survey_type'] == 'Perusahaan'].copy()
+    
+    total_processed = len(df_rt) + len(df_pr)
+    if total_processed < len(df_all):
+        excluded = len(df_all) - total_processed
+        print(f"\n⚠️  WARNING: {excluded} mitra excluded due to invalid survey_type")
+        invalid_types = df_all[~df_all['survey_type'].isin(['Rumah Tangga', 'Perusahaan'])]
+        if len(invalid_types) > 0:
+            print(f"   Invalid types found: {invalid_types['survey_type'].unique()}")
+    else:
+        print(f"\n✅ All {len(df_all)} mitras will be processed (no exclusions)")
     
     results = []
     weights_rt = None
@@ -365,16 +348,6 @@ def weight_optimizer(base_dir: str, survey_type: str = None):
 
 
 def merge_pso_results(base_dir: str):
-    """
-    Merge individual PSO result files (rumah_tangga and perusahaan) into a combined file.
-    This task should run after both optimization tasks complete.
-    
-    Args:
-        base_dir: Base directory path
-    
-    Returns:
-        dict: Summary of merged results
-    """
     report_dir = os.path.join(base_dir, "data", "reports")
     rt_file = os.path.join(report_dir, "pso_optimized_rumah_tangga.csv")
     pr_file = os.path.join(report_dir, "pso_optimized_perusahaan.csv")

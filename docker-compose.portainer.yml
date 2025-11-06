@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   postgres:
-    image: postgres:17
+    image: postgres:17.6
     container_name: simitra_postgres
     restart: unless-stopped
     environment:
@@ -31,11 +31,11 @@ services:
     networks:
       - simitra_network
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres}"]
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-mitra_kaido}"]
       interval: 10s
       timeout: 5s
-      retries: 5
-      start_period: 30s
+      retries: 10
+      start_period: 60s
 
   airflow:
     image: qwact/simitra-airflow:latest
@@ -63,6 +63,8 @@ services:
 
       AIRFLOW__WEBSERVER__AUTH_BACKEND: airflow.api.auth.backend.basic_auth
       AIRFLOW__WEBSERVER__RBAC: "True"
+      AIRFLOW__WEBSERVER__WEB_SERVER_MASTER_TIMEOUT: 300
+      AIRFLOW__WEBSERVER__WEB_SERVER_WORKER_TIMEOUT: 300
 
       DB_NAME: ${DB_NAME:-mitra_kaido}
       DB_USER: ${DB_USER:-postgres}
@@ -91,9 +93,7 @@ services:
     ports:
       - "${AIRFLOW_PORT:-8080}:8080"
     volumes:
-      - airflow_dags:/opt/airflow/dags
-      - airflow_logs:/opt/airflow/logs
-      - airflow_data:/opt/airflow/data
+      - ./data/raw:/opt/airflow/data/raw
     user: "50000:0"
     entrypoint: []
     command: /opt/airflow/init-airflow.sh
@@ -102,11 +102,11 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:8080/health || exit 1"]
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/health 2>/dev/null || pgrep -f 'airflow webserver' > /dev/null"]
       interval: 30s
-      timeout: 10s
+      timeout: 15s
       retries: 5
-      start_period: 60s
+      start_period: 180s
 
   api:
     image: qwact/simitra-api:latest
@@ -140,20 +140,14 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:8000/docs || exit 1"]
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/docs').read()"]
       interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 40s
+      timeout: 15s
+      retries: 5
+      start_period: 60s
 
 volumes:
   postgres_data:
-    driver: local
-  airflow_dags:
-    driver: local
-  airflow_logs:
-    driver: local
-  airflow_data:
     driver: local
   api_data:
     driver: local

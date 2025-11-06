@@ -1,8 +1,3 @@
-"""
-Experience Aggregation Pipeline
-Combines ML ratings (from PSO) with historical survey performance & experience
-Output: Recommendation tables with final_rank_score (rating + experience)
-"""
 import os
 import pandas as pd
 import psycopg2
@@ -10,22 +5,10 @@ from dotenv import load_dotenv, find_dotenv
 
 
 def aggregate_experience(base_dir: str, survey_type: str = None):
-    """
-    Aggregate mitra experience & performance with ML ratings
-    
-    Args:
-        base_dir: Base directory path
-        survey_type: 'rumah_tangga', 'perusahaan', or None (both)
-    
-    Returns:
-        Dict with aggregation results
-    """
     load_dotenv(find_dotenv(), override=True)
 
     processed_dir = os.path.join(base_dir, "data", "processed")
     report_dir = os.path.join(base_dir, "data", "reports")
-    
-    # Create reports directory if it doesn't exist
     os.makedirs(report_dir, exist_ok=True)
 
     print(f"\n{'='*70}")
@@ -40,52 +23,133 @@ def aggregate_experience(base_dir: str, survey_type: str = None):
         database=os.getenv("POSTGRES_DB", "mitra_kaido")
     )
     
-    print(f"\n📥 Reading data from PostgreSQL...")
-    df_nilai = pd.read_sql("SELECT * FROM nilai1s_cleaned", pg_conn)
-    df_trans = pd.read_sql("SELECT * FROM transactions_cleaned", pg_conn)
-    df_survey = pd.read_sql("SELECT * FROM surveys_cleaned WHERE is_scored = 1", pg_conn)
-    df_master = pd.read_sql("SELECT * FROM master_surveys_enriched", pg_conn)
+    print(f"\n📥 Reading data from PostgreSQL with CSV fallback...")
+    
+    try:
+        df_nilai = pd.read_sql("SELECT * FROM nilai1s_cleaned", pg_conn)
+        if len(df_nilai) == 0:
+            raise ValueError("nilai1s_cleaned is empty")
+    except Exception:
+        nilai_csv = os.path.join(processed_dir, "cleaned_nilai1s.csv")
+        if os.path.exists(nilai_csv):
+            df_nilai = pd.read_csv(nilai_csv)
+            print(f"   - Nilai (from CSV): {len(df_nilai)} records")
+        else:
+            df_nilai = pd.DataFrame()
+            print(f"   ⚠️  Nilai data not found!")
+    
+    try:
+        df_trans = pd.read_sql("SELECT * FROM transactions_cleaned", pg_conn)
+        if len(df_trans) == 0:
+            raise ValueError("transactions_cleaned is empty")
+    except Exception:
+        trans_csv = os.path.join(processed_dir, "cleaned_transactions.csv")
+        if os.path.exists(trans_csv):
+            df_trans = pd.read_csv(trans_csv)
+            print(f"   - Transactions (from CSV): {len(df_trans)} records")
+        else:
+            df_trans = pd.DataFrame()
+            print(f"   ⚠️  Transactions data not found!")
+    
+    try:
+        df_survey = pd.read_sql("SELECT * FROM surveys_cleaned WHERE is_scored = 1", pg_conn)
+        if len(df_survey) == 0:
+            raise ValueError("surveys_cleaned is empty")
+    except Exception:
+        survey_csv = os.path.join(processed_dir, "cleaned_surveys.csv")
+        if os.path.exists(survey_csv):
+            df_survey = pd.read_csv(survey_csv)
+            df_survey = df_survey[df_survey['is_scored'] == 1]
+            print(f"   - Surveys (from CSV, scored only): {len(df_survey)} records")
+        else:
+            df_survey = pd.DataFrame()
+            print(f"   ⚠️  Surveys data not found!")
+    
+    print(f"   📋 Reading master_surveys from CSV (enriched with type)...")
+    master_csv = os.path.join(processed_dir, "cleaned_master_surveys.csv")
+    if not os.path.exists(master_csv):
+        raise FileNotFoundError(f"Cannot find enriched master_surveys CSV: {master_csv}")
+    
+    df_master = pd.read_csv(master_csv)
+    print(f"   - Master surveys (from CSV): {len(df_master)} records")
+    
+    if 'type' not in df_master.columns:
+        raise ValueError(f"ERROR: 'type' column missing in master_surveys CSV! Preprocess task may have failed.")
     
     df_mitra = None
     for table_name in ["mitras_enriched", "mitras_cleaned", "mitras"]:
         try:
             df_mitra = pd.read_sql(f"SELECT id, name FROM {table_name}", pg_conn)
-            print(f"   - Mitras (from {table_name}): {len(df_mitra)} records")
-            break
+            if len(df_mitra) > 0:
+                print(f"   - Mitras (from PostgreSQL {table_name}): {len(df_mitra)} records")
+                break
         except Exception as e:
             continue
     
-    if df_mitra is None:
-        print(f"   ⚠️  WARNING: No mitra table found! Mitra names will be NULL for those not in PSO data")
-        df_mitra = pd.DataFrame(columns=["id", "name"])  
+    if df_mitra is None or len(df_mitra) == 0:
+        mitra_csv = os.path.join(processed_dir, "cleaned_mitras.csv")
+        if os.path.exists(mitra_csv):
+            df_mitra = pd.read_csv(mitra_csv)
+            df_mitra = df_mitra[["id", "name"]]
+            print(f"   - Mitras (from CSV): {len(df_mitra)} records")
+        else:
+            print(f"   ⚠️  WARNING: No mitra data found! Mitra names will be NULL for those not in PSO data")
+            df_mitra = pd.DataFrame(columns=["id", "name"])
     
+    print(f"\n📊 Data Summary:")
     print(f"   - Nilai: {len(df_nilai)} records")
     print(f"   - Transactions: {len(df_trans)} records")
     print(f"   - Surveys (scored only): {len(df_survey)} records")
-    print(f"   - Master surveys: {len(df_master)} records")
+    print(f"   - Master surveys: {len(df_master)} records (type column: {'✅' if 'type' in df_master.columns else '❌'})")
+    print(f"   - Mitras: {len(df_mitra)} records")
     
     df_pso = pd.read_csv(os.path.join(report_dir, "pso_optimized_mitra.csv"))
     
     pg_conn.close()
     print(f"   PostgreSQL connection closed\n")
 
+    print(f"🔗 Merging surveys with master_surveys to get survey types...")
+    print(f"   - Surveys before merge: {len(df_survey)} rows")
+    print(f"   - Master surveys columns: {df_master.columns.tolist()}")
+    print(f"   - Sample master_surveys types: {df_master['type'].value_counts().to_dict()}")
+    
     df_survey = df_survey.merge(
         df_master[["id", "type"]],
         left_on="master_survey_id",
         right_on="id",
         how="left",
         suffixes=("", "_master")
-    ).rename(columns={"type": "survey_type", "id": "survey_id_final"}).drop(columns=["id_master"])
-
-    df_join = df_trans.merge(df_nilai, left_on="id", right_on="transaction_id", how="left")
-    df_join = df_join.merge(
-        df_survey[["survey_id_final", "survey_type"]],
-        left_on="survey_id",
-        right_on="survey_id_final",
-        how="left"
     )
+    
+    print(f"   - Surveys after merge: {len(df_survey)} rows")
+    print(f"   - Columns after merge: {df_survey.columns.tolist()}")
+    
+    if 'id_master' in df_survey.columns:
+        df_survey = df_survey.drop(columns=["id_master"])
+    elif 'id' in df_survey.columns and 'master_survey_id' in df_survey.columns:
+        pass  
+    
+    df_survey = df_survey.rename(columns={"type": "survey_type"})
+    
+    print(f"   - Survey types after rename: {df_survey['survey_type'].value_counts().to_dict() if 'survey_type' in df_survey.columns else 'NO COLUMN!'}")
+    print(f"   - Null survey_types: {df_survey['survey_type'].isna().sum()}")
+
+    print(f"\n🔗 Joining transactions with nilai and surveys...")
+    df_join = df_trans.merge(df_nilai, left_on="id", right_on="transaction_id", how="left")
+    print(f"   - After trans+nilai: {len(df_join)} rows")
+    
+    df_join = df_join.merge(
+        df_survey[["id", "survey_type"]],  
+        left_on="survey_id",
+        right_on="id",
+        how="left",
+        suffixes=("", "_survey")
+    )
+    print(f"   - After joining with surveys: {len(df_join)} rows")
+    print(f"   - Survey types in join: {df_join['survey_type'].value_counts().to_dict() if 'survey_type' in df_join.columns else 'NO COLUMN!'}")
 
     df_join = df_join[["mitra_id", "survey_type", "survey_id", "transaction_id", "rerata"]].dropna()
+    print(f"   - After filtering columns and dropna: {len(df_join)} rows")
     df_join["rerata"] = df_join["rerata"].astype(float)
 
     print(f"\n📈 Aggregating historical performance...")
@@ -166,10 +230,6 @@ def aggregate_experience(base_dir: str, survey_type: str = None):
     df_final["exp_norm"] = df_final["jumlah_survey"] / max(max_exp, 1)
 
     def weighted_score(row):
-        """
-        Combine survey performance with experience
-        Different weights for different survey types
-        """
         survey_type_lower = str(row["survey_type"]).strip().lower()
         
         if "rumah" in survey_type_lower or survey_type_lower == "rumah tangga":
@@ -198,7 +258,6 @@ def aggregate_experience(base_dir: str, survey_type: str = None):
     df_rt = df_rt.drop(columns=["mitra_ID", "model_type"], errors="ignore")
     df_pr = df_pr.drop(columns=["mitra_ID", "model_type"], errors="ignore")
 
-    # Add timestamp for created_at (untuk consistency dengan MySQL)
     from datetime import datetime
     current_timestamp = datetime.now()
     
@@ -240,8 +299,6 @@ def aggregate_experience(base_dir: str, survey_type: str = None):
 
 
 def save_to_postgres(df_rt, df_pr):
-    """Save aggregated recommendations to PostgreSQL"""
-    
     db_cfg = {
         "dbname": os.getenv("DB_NAME"),
         "user": os.getenv("DB_USER"),
@@ -291,12 +348,12 @@ def save_to_postgres(df_rt, df_pr):
 
     conn.commit()
     
-    print(f"\n🔄 Fixing mitra names from mitra_cleaned table...")
+    print(f"\n🔄 Fixing mitra names from mitras table...")
     for table in ["recommendation_rumah_tangga", "recommendation_perusahaan"]:
         cur.execute(f"""
             UPDATE {table} r
             SET mitra_name = m.name
-            FROM mitra_cleaned m
+            FROM mitras m
             WHERE r.mitra_id = m.id
             AND (r.mitra_name IS NULL OR r.mitra_name = 'NaN')
         """)

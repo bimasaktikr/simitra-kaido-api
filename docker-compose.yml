@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   postgres:
-    image: postgres:17
+    image: postgres:17.6
     container_name: simitra_postgres
     restart: always
     environment:
@@ -40,9 +40,10 @@ services:
       - simitra_network
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -h localhost"]
-      interval: 10s
+      interval: 15s
       timeout: 5s
       retries: 5
+      start_period: 45s
     stop_grace_period: 30s
     stop_signal: SIGTERM
 
@@ -147,6 +148,12 @@ services:
       - ./api:/app
       - ./.env:/app/.env:ro
     command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/docs').read()"]
+      interval: 30s
+      timeout: 15s
+      retries: 5
+      start_period: 60s
     networks:
       - simitra_network
     extra_hosts:

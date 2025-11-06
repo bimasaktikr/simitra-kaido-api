@@ -1,55 +1,55 @@
-id,name,code,created_at,updated_at
-3,Pengolahan Survei Sosial Ekonomi Nasional,SUSENAS,2025-07-07 16:22:24,2025-07-07 16:22:24
-5,Survey Ketenagakerjaan Nasional,SAK,2025-07-07 16:22:24,2025-10-15 04:32:31
-7,Survei Nasional Literasi dan Inklusi Keuangan,SNLIK,2025-07-07 16:22:24,2025-07-07 16:22:24
-8,Survei Sosial Ekonomi Nasional,SSN,2025-07-07 16:22:24,2025-10-15 05:14:51
-12,Pengolahan Survei Ekonomi Rumah Tangga Triwulanan,P-SERUTI,2025-07-07 16:22:24,2025-07-07 16:22:24
-13,Pengolahan Survei Sosial Ekonomi Nasional,SUSENAS,2025-07-07 16:22:24,2025-07-07 16:22:24
-14,Survei Harga Kemahalan Konstruksi,SHKK,2025-07-07 16:22:24,2025-07-07 16:22:24
-16,Survei Ekonomi Rumah Tangga,SERUTI,2025-07-07 16:22:24,2025-07-07 16:22:24
-17,Survei Nasional Literasi dan Inklusi Keuangan,SNLIK,2025-07-07 16:22:24,2025-07-07 16:22:24
-18,Survei Sosial Ekonomi Nasional,SUSENASMARET,2025-07-07 16:22:24,2025-07-07 16:22:24
-19,Survey Industri Besar Sedang,IBS,2025-07-07 16:22:24,2025-07-07 16:22:24
-20,Survey Konstruksi Triwulanan,KONSTRUKSI,2025-07-07 16:22:24,2025-07-07 16:22:24
-21,Kerangka Sampel Area,KSA,2025-07-07 16:22:24,2025-07-07 16:22:24
-22,Laporan Pemotongan Ternak Bulanan,LPTB,2025-07-07 16:22:24,2025-07-07 16:22:24
-23,Survei Perusahaan Air Bersih,SPAB,2025-07-07 16:22:24,2025-07-07 16:22:24
-24,Survey Ubinan,UBINAN,2025-07-07 16:22:24,2025-07-07 16:22:24
-25,Survei Khusus Lembaga Non Profit Rumah Tangga,SKLNPRT,2025-07-07 16:22:24,2025-07-07 16:22:24
-26,Survei Khusus Triwulanan Neraca Produksi,SKTNP,2025-07-07 16:22:24,2025-07-07 16:22:24
-27,Survei Triwulanan Kegiatan Usaha,SKTU,2025-07-07 16:22:24,2025-07-07 16:22:24
-29,Survey Harga Konsumen,SHK,2025-07-07 16:22:24,2025-07-07 16:22:24
-30,Survei Harga Produsen,SHP,2025-07-07 16:22:24,2025-07-07 16:22:24
-31,Survei Harga Perdagangan Besar,SHPB,2025-07-07 16:22:24,2025-07-07 16:22:24
-32,Survey Harga Produsen,SHP,2025-07-07 16:22:24,2025-07-07 16:22:24
-33,Pengolahan Survei Sosial Ekonomi Nasional,P-SSN,2025-07-07 16:22:24,2025-10-15 08:20:25
-34,Survei Objek Daya Tarik Wisata,VDTW,2025-07-10 08:03:05,2025-07-10 08:03:05
-35,Survei Perusahaan/Usaha Penyedia Jasa Akomodasi,VHTL,2025-07-10 08:15:58,2025-07-10 08:15:58
-36,Survei Tingkat Penghunian Kamar Hotel,VHTS,2025-07-10 08:18:11,2025-07-10 08:18:11
-37,Survei Perdagangan Barang Domestik,VPBD,2025-07-10 08:21:37,2025-07-10 08:21:37
-38,Survei Pergudangan dan Jasa Penunjang Angkutan,VPEK,2025-07-10 08:23:14,2025-07-10 08:23:14
-39,Survei Usaha Penyediaan Makanan Minuman,VREST,2025-07-10 08:24:37,2025-07-10 08:24:37
-40,Survei Survei Pola Usaha Non Pertanian,SPUNP,2025-07-10 08:27:32,2025-07-10 08:27:32
-41,Updating Direktori,UD,2025-07-10 08:29:06,2025-07-10 08:29:06
-42,Survei Lembaga Keuangan,SLK,2025-07-10 08:30:16,2025-07-10 08:30:16
-43,Survei Volume Penjualan Eceran Beras,SVPEB,2025-07-10 08:41:13,2025-07-10 08:41:13
-44,Potensi Desa,PODES,2025-07-10 08:43:34,2025-07-10 08:43:34
-45,Survei Captive Power,SCP,2025-07-10 08:49:31,2025-07-10 08:49:31
-46,Survei Industri Mikro dan Kecil,IMK,2025-07-10 08:56:49,2025-07-10 08:56:49
-47,Survei Non Migas,SNM,2025-07-10 09:10:55,2025-07-10 09:10:55
-48,Survei Perusahaan Hortikultura,SPH,2025-07-10 09:18:07,2025-07-10 09:18:07
-49,Survei Perusahaan Kehutanan,SPK,2025-07-10 09:19:35,2025-07-10 09:19:35
-50,Survei Perusahaan Peternakan,SPP,2025-07-10 09:20:51,2025-07-10 09:20:51
-51,Survei Khusus Lembaga Non Profit Rumah Tangga Triwulanan,SKLNPRT,2025-07-10 09:26:15,2025-07-10 09:26:15
-52,Survey Bahan Pokok,SBP,2025-10-15 03:38:25,2025-10-15 03:38:25
-53,E-Commerce,EC,2025-10-15 03:54:05,2025-10-15 03:54:05
-54,Survey Pola Distribusi,SPD,2025-10-15 04:08:46,2025-10-15 04:08:46
-55,Survei Volume Penjualan Eceran Komoditas Spesifik,SVK,2025-10-15 04:26:17,2025-10-15 04:26:17
-56,Survei Penduduk Antar Sensus,SUPAS,2025-10-15 05:10:17,2025-10-15 05:10:17
-57,Survei Industri Mikro dan Kecil Tahunan,IMK-T,2025-10-15 05:20:40,2025-10-15 05:20:40
-58,Survei Konversi Gabah ke Beras,SKGB,2025-10-15 07:37:21,2025-10-15 07:37:21
-59,Makanan Bergizi Gratis Baseline,MBG-Baseline,2025-10-15 07:42:46,2025-10-15 07:42:46
-60,Makanan Bergizi Gratis Khusus,MBG-Khusus,2025-10-15 07:46:00,2025-10-15 07:46:00
-61,Survei Khusus Studi Penyusunan Perubahan Inventori,SKSPPI,2025-10-15 07:50:08,2025-10-15 07:50:08
-62,Updating Wilayah Kerja Statistik,WILKERSTAT,2025-10-15 07:56:53,2025-10-15 07:56:53
-63,Pengolahan Updating Wilayah Kerja Statistik,P-WILKERSTAT,2025-10-15 08:14:31,2025-10-15 08:14:31
+"id","name","code","created_at","updated_at"
+"3","Pengolahan Survei Sosial Ekonomi Nasional","SUSENAS","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"5","Survey Ketenagakerjaan Nasional","SAK","2025-07-07 16:22:24","2025-10-15 04:32:31"
+"7","Survei Nasional Literasi dan Inklusi Keuangan","SNLIK","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"8","Survei Sosial Ekonomi Nasional","SSN","2025-07-07 16:22:24","2025-10-15 05:14:51"
+"12","Pengolahan Survei Ekonomi Rumah Tangga Triwulanan","P-SERUTI","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"13","Pengolahan Survei Sosial Ekonomi Nasional","SUSENAS","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"14","Survei Harga Kemahalan Konstruksi","SHKK","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"16","Survei Ekonomi Rumah Tangga","SERUTI","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"17","Survei Nasional Literasi dan Inklusi Keuangan","SNLIK","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"18","Survei Sosial Ekonomi Nasional","SUSENASMARET","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"19","Survey Industri Besar Sedang","IBS","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"20","Survey Konstruksi Triwulanan","KONSTRUKSI","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"21","Kerangka Sampel Area","KSA","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"22","Laporan Pemotongan Ternak Bulanan","LPTB","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"23","Survei Perusahaan Air Bersih","SPAB","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"24","Survey Ubinan","UBINAN","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"25","Survei Khusus Lembaga Non Profit Rumah Tangga","SKLNPRT","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"26","Survei Khusus Triwulanan Neraca Produksi","SKTNP","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"27","Survei Triwulanan Kegiatan Usaha","SKTU","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"29","Survey Harga Konsumen","SHK","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"30","Survei Harga Produsen","SHP","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"31","Survei Harga Perdagangan Besar","SHPB","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"32","Survey Harga Produsen","SHP","2025-07-07 16:22:24","2025-07-07 16:22:24"
+"33","Pengolahan Survei Sosial Ekonomi Nasional","P-SSN","2025-07-07 16:22:24","2025-10-15 08:20:25"
+"34","Survei Objek Daya Tarik Wisata","VDTW","2025-07-10 08:03:05","2025-07-10 08:03:05"
+"35","Survei Perusahaan/Usaha Penyedia Jasa Akomodasi","VHTL","2025-07-10 08:15:58","2025-07-10 08:15:58"
+"36","Survei Tingkat Penghunian Kamar Hotel","VHTS","2025-07-10 08:18:11","2025-07-10 08:18:11"
+"37","Survei Perdagangan Barang Domestik","VPBD","2025-07-10 08:21:37","2025-07-10 08:21:37"
+"38","Survei Pergudangan dan Jasa Penunjang Angkutan","VPEK","2025-07-10 08:23:14","2025-07-10 08:23:14"
+"39","Survei Usaha Penyediaan Makanan Minuman","VREST","2025-07-10 08:24:37","2025-07-10 08:24:37"
+"40","Survei Survei Pola Usaha Non Pertanian","SPUNP","2025-07-10 08:27:32","2025-07-10 08:27:32"
+"41","Updating Direktori","UD","2025-07-10 08:29:06","2025-07-10 08:29:06"
+"42","Survei Lembaga Keuangan","SLK","2025-07-10 08:30:16","2025-07-10 08:30:16"
+"43","Survei Volume Penjualan Eceran Beras","SVPEB","2025-07-10 08:41:13","2025-07-10 08:41:13"
+"44","Potensi Desa","PODES","2025-07-10 08:43:34","2025-07-10 08:43:34"
+"45","Survei Captive Power","SCP","2025-07-10 08:49:31","2025-07-10 08:49:31"
+"46","Survei Industri Mikro dan Kecil","IMK","2025-07-10 08:56:49","2025-07-10 08:56:49"
+"47","Survei Non Migas","SNM","2025-07-10 09:10:55","2025-07-10 09:10:55"
+"48","Survei Perusahaan Hortikultura","SPH","2025-07-10 09:18:07","2025-07-10 09:18:07"
+"49","Survei Perusahaan Kehutanan","SPK","2025-07-10 09:19:35","2025-07-10 09:19:35"
+"50","Survei Perusahaan Peternakan","SPP","2025-07-10 09:20:51","2025-07-10 09:20:51"
+"51","Survei Khusus Lembaga Non Profit Rumah Tangga Triwulanan","SKLNPRT","2025-07-10 09:26:15","2025-07-10 09:26:15"
+"52","Survey Bahan Pokok","SBP","2025-10-15 03:38:25","2025-10-15 03:38:25"
+"53","E-Commerce","EC","2025-10-15 03:54:05","2025-10-15 03:54:05"
+"54","Survey Pola Distribusi","SPD","2025-10-15 04:08:46","2025-10-15 04:08:46"
+"55","Survei Volume Penjualan Eceran Komoditas Spesifik","SVK","2025-10-15 04:26:17","2025-10-15 04:26:17"
+"56","Survei Penduduk Antar Sensus","SUPAS","2025-10-15 05:10:17","2025-10-15 05:10:17"
+"57","Survei Industri Mikro dan Kecil Tahunan","IMK-T","2025-10-15 05:20:40","2025-10-15 05:20:40"
+"58","Survei Konversi Gabah ke Beras","SKGB","2025-10-15 07:37:21","2025-10-15 07:37:21"
+"59","Makanan Bergizi Gratis Baseline","MBG-Baseline","2025-10-15 07:42:46","2025-10-15 07:42:46"
+"60","Makanan Bergizi Gratis Khusus","MBG-Khusus","2025-10-15 07:46:00","2025-10-15 07:46:00"
+"61","Survei Khusus Studi Penyusunan Perubahan Inventori","SKSPPI","2025-10-15 07:50:08","2025-10-15 07:50:08"
+"62","Updating Wilayah Kerja Statistik","WILKERSTAT","2025-10-15 07:56:53","2025-10-15 07:56:53"
+"63","Pengolahan Updating Wilayah Kerja Statistik","P-WILKERSTAT","2025-10-15 08:14:31","2025-10-15 08:14:31"

@@ -4,14 +4,11 @@ from datetime import datetime
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 
-# Ensure /opt/airflow is in Python path
 BASE_DIR = "/opt/airflow"
 if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
 
-# Lazy import - will be imported when functions are called
 def get_pipeline_functions():
-    """Import pipeline functions dynamically to avoid import errors at DAG parse time"""
     from pipeline.run_ingest import run_ingest
     from pipeline.run_preprocess import run_preprocess
     from pipeline.run_feature_engineering import run_feature_engineering
@@ -29,28 +26,65 @@ def get_pipeline_functions():
         'aggregate_experience': aggregate_experience
     }
 
-# Wrapper functions for tasks
-def run_preprocess_wrapper(**kwargs):
-    """Wrapper for run_preprocess with lazy import"""
+def run_ingest_wrapper(**kwargs):
     funcs = get_pipeline_functions()
-    return funcs['run_preprocess'](**kwargs)
+    
+    import os
+    import psycopg2
+    from dotenv import load_dotenv, find_dotenv
+    
+    load_dotenv(find_dotenv(), override=True)
+    
+    raw_dir = os.path.join(BASE_DIR, "data", "raw")
+    sql_files = [f for f in os.listdir(raw_dir) if f.endswith(".sql")] if os.path.exists(raw_dir) else []
+    
+    if not sql_files:
+        print("ℹ️  No SQL backup file found in data/raw - SKIPPING ingest task")
+        print("   This is normal if you're using live Laravel PostgreSQL connection")
+        print("   Preprocess task will read directly from PostgreSQL tables")
+        return {"status": "skipped", "reason": "no_sql_file"}
+    
+    DB_CONFIG = {
+        "dbname": os.getenv("DB_NAME", "mitra_kaido"),
+        "user": os.getenv("DB_USER", "postgres"),
+        "password": os.getenv("DB_PASS", "postgres"),
+        "host": os.getenv("DB_HOST", "postgres"),
+        "port": os.getenv("DB_PORT", "5432"),
+    }
+    
+    try:
+        conn = psycopg2.connect(**DB_CONFIG)
+        cursor = conn.cursor()
+        cursor.execute("SELECT COUNT(*) FROM mitras")
+        count = cursor.fetchone()[0]
+        cursor.close()
+        conn.close()
+        
+        if count > 0:
+            print(f"ℹ️  Database already contains {count} mitras - SKIPPING ingest task")
+            print("   Ingest only runs on empty database to avoid duplicate data")
+            return {"status": "skipped", "reason": "database_not_empty", "mitra_count": count}
+    except Exception as e:
+        print(f"⚠️  Could not check database status: {e}")
+        print("   Proceeding with ingest...")
+    
+    print(f"📦 Found SQL backup file: {sql_files[0]}")
+    print("   Running data ingestion from SQL dump...")
+    return funcs['run_ingest'](base_dir=BASE_DIR)
+
+def run_preprocess_wrapper(**kwargs):
+    funcs = get_pipeline_functions()
+    return funcs['run_preprocess'](base_dir=BASE_DIR, mode="overwrite")
 
 def run_feature_engineering_wrapper(**kwargs):
-    """Wrapper for run_feature_engineering with lazy import"""
     funcs = get_pipeline_functions()
-    return funcs['run_feature_engineering'](**kwargs)
+    return funcs['run_feature_engineering'](base_dir=BASE_DIR)
 
 def run_fuzzy_cbf_wrapper(**kwargs):
-    """Wrapper for run_fuzzy_cbf with lazy import"""
     funcs = get_pipeline_functions()
-    return funcs['run_fuzzy_cbf'](**kwargs)
+    return funcs['run_fuzzy_cbf'](base_dir=BASE_DIR)
 
 def cleanup_old_dag_runs(**context):
-    """
-    Auto-cleanup old DAG runs to prevent log accumulation.
-    Keeps only the last 4 completed successful runs (+ current run = 5 total).
-    Runs at the start of each DAG execution.
-    """
     from airflow.models import DagRun
     from airflow.utils.session import create_session
     from airflow.utils.state import DagRunState
@@ -95,49 +129,26 @@ def cleanup_old_dag_runs(**context):
         pass
 
 def optimize_weight_rumah_tangga():
-    """
-    Run PSO optimization for Rumah Tangga survey type only
-    """
     print("🏠 Starting PSO optimization for Rumah Tangga...")
     funcs = get_pipeline_functions()
     return funcs['weight_optimizer'](BASE_DIR, survey_type="rumah_tangga")
 
 def optimize_weight_perusahaan():
-    """
-    Run PSO optimization for Perusahaan survey type only
-    """
     print("🏢 Starting PSO optimization for Perusahaan...")
     funcs = get_pipeline_functions()
     return funcs['weight_optimizer'](BASE_DIR, survey_type="perusahaan")
 
 def merge_pso_outputs():
-    """
-    Merge individual PSO result files into combined file and upload to PostgreSQL
-    """
     print("🔗 Merging PSO results...")
     funcs = get_pipeline_functions()
     return funcs['merge_pso_results'](BASE_DIR)
 
 def aggregate_experience_recommendations():
-    """
-    Aggregate ML ratings with historical performance & experience
-    Generate final recommendations with combined scoring
-    """
     print("📊 Starting experience aggregation...")
     funcs = get_pipeline_functions()
     return funcs['aggregate_experience'](BASE_DIR)
 
 def refresh_mysql_cache(**context):
-    """
-    Trigger Laravel to refresh MySQL cache after training completion.
-    
-    This task sends webhook to Laravel API which will:
-    1. Fetch fresh recommendations from ML API (PostgreSQL)
-    2. Clear old cache in MySQL
-    3. Store new recommendations in MySQL cache tables:
-       - ml_cache_rumah_tangga
-       - ml_cache_perusahaan
-    """
     import requests
     import os
     
@@ -177,7 +188,7 @@ with DAG(
     schedule_interval=None,
     catchup=False,
     tags=["ETL", "ML-Training", "Linguistic", "CBF", "PSO", "Dual-Model", "Experience"],
-    description="ML Training Pipeline - Generates 2 models + Experience-based recommendations",
+    description="ML Training Pipeline - Full ETL from SQL dump to ML recommendations. Note: 'ingest_data' task only needed for initial setup from SQL backup file.",
 ) as dag:
 
     cleanup_task = PythonOperator(
@@ -186,22 +197,24 @@ with DAG(
         provide_context=True,
     )
 
+    ingest = PythonOperator(
+        task_id="ingest_data",
+        python_callable=run_ingest_wrapper,
+    )
+
     preprocess = PythonOperator(
         task_id="preprocess_data",
         python_callable=run_preprocess_wrapper,
-        op_kwargs={"base_dir": BASE_DIR, "mode": "append"},
     )
 
     feature_engineering = PythonOperator(
         task_id="feature_engineering",
         python_callable=run_feature_engineering_wrapper,
-        op_kwargs={"base_dir": BASE_DIR},
     )
 
     fuzzy_cbf = PythonOperator(
         task_id="fuzzy_cbf_model",
         python_callable=run_fuzzy_cbf_wrapper,
-        op_kwargs={"base_dir": BASE_DIR},
     )
 
     optimize_weight_rt = PythonOperator(
@@ -230,4 +243,4 @@ with DAG(
         provide_context=True,
     )
 
-    cleanup_task >> preprocess >> feature_engineering >> fuzzy_cbf >> [optimize_weight_rt, optimize_weight_pr] >> merge_pso_task >> aggregate_experience_task >> refresh_cache_task
+    cleanup_task >> ingest >> preprocess >> feature_engineering >> fuzzy_cbf >> [optimize_weight_rt, optimize_weight_pr] >> merge_pso_task >> aggregate_experience_task >> refresh_cache_task

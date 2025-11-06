@@ -1,393 +1,393 @@
-id,sobat_id,name,user_id,email,pendidikan,jenis_kelamin,tanggal_lahir,photo,created_at,updated_at
-1,357322090040,SUTARTI YUNI ASTUTIK,32,astuti.sya@gmail.com,5,Perempuan,1970-01-01,NULL,2025-07-10 08:07:44,2025-07-10 08:07:44
-2,357322030002,Emman Suparji,29,e81emm4n5@gmail.com,5,Perempuan,1981-06-21,NULL,2025-07-10 08:14:57,2025-07-10 08:14:57
-3,357322010048,SONNA ASDINATA,30,Sonna.asdinata19@gmail.com,5,Perempuan,1982-04-19,NULL,2025-07-10 08:14:57,2025-07-10 08:14:57
-4,357322090027,Didiet Ananto Widodo,31,didietwidodo33@gmail.com,3,Perempuan,1964-03-21,NULL,2025-07-10 08:14:58,2025-07-10 08:14:58
-5,357322090007,Shindy Ayu Widyaswara,33,shindyayu.widyaswara@gmail.com,5,Perempuan,1993-10-26,NULL,2025-07-10 08:16:42,2025-07-10 08:16:42
-6,357322090013,Hilda Seskowati,34,hildayasmin2211@gmail.com,3,Perempuan,1991-06-18,NULL,2025-07-10 08:16:44,2025-07-10 08:16:44
-7,357322090177,Zulfian Arif,35,zulfian.arif@gmail.com,5,Perempuan,1968-02-29,NULL,2025-07-10 08:16:44,2025-07-10 08:16:44
-8,357323070003,Arif Hambali,36,hambali.arif@gmail.com,5,Perempuan,1983-10-28,NULL,2025-07-10 08:16:45,2025-07-10 08:16:45
-9,357323110322,Tri Wahyu Utomo,37,my_hygeva@yahoo.com,3,Perempuan,1970-01-01,NULL,2025-07-10 08:16:45,2025-07-10 08:16:45
-10,839724452,Dessy Anggrainy,38,dessy.anggrainy87@gmail.com,3,Perempuan,1987-01-31,NULL,2025-07-10 08:22:06,2025-07-10 08:22:06
-11,839814778,KUSMILAH,39,Bundakus42300@gmail.com,3,Perempuan,1973-07-24,NULL,2025-07-10 08:22:07,2025-07-10 08:22:07
-12,839804489,TITIEK TRISOESILOWATI,40,ndhoxsusie@gmail.com,5,Perempuan,1970-01-01,NULL,2025-07-10 08:22:07,2025-07-10 08:22:07
-13,357322090103,IKE MARDIANA SADIYAH,41,ikerafi1@gmail.com,5,Perempuan,1972-09-14,NULL,2025-07-10 08:25:03,2025-07-10 08:25:03
-14,357323110133,Muhammad Jehan Rabbani,42,mjgila8@gmail.com,3,Perempuan,2005-04-26,NULL,2025-07-10 08:29:37,2025-07-10 08:29:37
-15,357322030004,Riyono,43,kopler87@gmail.com,5,Perempuan,1979-04-22,NULL,2025-07-10 08:29:38,2025-07-10 08:29:38
-16,357322030023,Ardhea Citra Dhamayanty,44,ardheacitraa2807@gmail.com,5,Perempuan,1997-07-28,NULL,2025-07-10 08:37:01,2025-07-10 08:37:01
-17,357322030026,Mila Nurjana,45,aisyah.nurjanah116@gmail.com,3,Perempuan,1985-04-16,NULL,2025-07-10 08:37:02,2025-07-10 08:37:02
-18,357322030032,Ila Nur Chasanah,46,ilanurchasanah5@gmail.com,3,Perempuan,1970-01-01,NULL,2025-07-10 08:37:02,2025-07-10 08:37:02
-19,357322050019,Khoirunisa Sukma Hadi,47,sukma.khoirunisa21@gmail.com,5,Perempuan,1970-01-01,NULL,2025-07-10 08:37:02,2025-07-10 08:37:02
-20,357322100017,Yessy Tri Hardiyanti,48,hardiyantiyessy@gmail.com,5,Perempuan,1970-01-01,NULL,2025-07-10 08:37:03,2025-07-10 08:37:03
-21,357322090185,Indah Wahyuningsih,49,sbw.mlg@gmail.com,6,Perempuan,1970-01-01,NULL,2025-07-10 08:37:03,2025-07-10 08:37:03
-22,357323110001,Sharon Mahar Tanjung,50,sharonmahartn@gmail.com,5,Perempuan,1970-01-01,NULL,2025-07-10 08:37:04,2025-07-10 08:37:04
-23,357322090014,Arry Puspitasari,51,trust.indigo@gmail.com,3,Perempuan,1970-01-01,NULL,2025-07-10 08:38:26,2025-07-10 08:38:26
-24,357322020041,Rujiyani,52,rujiyaniyani@gmail.com,3,Perempuan,1972-07-19,NULL,2025-07-10 08:44:15,2025-07-10 08:44:15
-25,357323030009,Theresiana Septioningrum,53,theresiana07@gmail.com,5,Perempuan,1970-01-01,NULL,2025-07-10 08:44:17,2025-07-10 08:44:17
-26,357322030009,Puji Rahayu,54,doublesix664@gmail.com,5,Perempuan,1977-11-18,NULL,2025-07-10 08:46:37,2025-07-10 08:46:37
-27,357322090108,Era Dhani Restari,55,Eradhani588@gmail.com,3,Perempuan,1976-06-22,NULL,2025-07-10 08:46:38,2025-07-10 08:46:38
-28,357322030029,ROOS PANDAN WANGI(WIWIN
-29,357322030044,Farida Achadyah,57,faridachadyah1309@gmail.com,5,Perempuan,1970-09-13,NULL,2025-07-10 08:46:39,2025-07-10 08:46:39
-30,357322030059,Aris Sugiarti,58,mbkaris80@gmail.com,3,Perempuan,1970-01-01,NULL,2025-07-10 08:46:39,2025-07-10 08:46:39
-31,357322090163,YUNIAR PANDANSARI,59,yuniarpandansari67@gmail.com,5,Perempuan,1967-06-15,NULL,2025-07-10 08:46:39,2025-07-10 08:46:39
-32,357322100100,Rodiyah,60,rodiyah44307@gmail.com,4,Perempuan,1970-01-01,NULL,2025-07-10 08:46:40,2025-07-10 08:46:40
-33,357322090417,Dewi Ayu Indriani,61,dewia4101@gmail.com,5,Perempuan,1982-02-22,NULL,2025-07-10 08:46:40,2025-07-10 08:46:40
-34,357323110167,HERTIN SULISTYO RINI,62,hertinrini59@gmail.com,3,Perempuan,1979-09-16,NULL,2025-07-10 08:46:41,2025-07-10 08:46:41
-35,357322100385,Eka Astuti,63,ekaastuti1980@gmail.com,5,Perempuan,1970-01-01,NULL,2025-07-10 08:50:12,2025-07-10 08:50:12
-36,357322090428,HENI KUSUMAWATI,64,Henikusuma29@gmail.com,3,Perempuan,1970-01-01,NULL,2025-07-10 08:50:12,2025-07-10 08:50:12
-37,357323030003,Dicky Ramadhan,65,Dickyrammm97@gmail.com,3,Perempuan,1970-01-01,NULL,2025-07-10 08:50:13,2025-07-10 08:50:13
-38,357322030003,Juwariyah,66,e85riasuparji@gmail.com,4,Perempuan,1970-01-01,NULL,2025-07-10 08:57:25,2025-07-10 08:57:25
-39,357322020022,Muhammad Handy Rizki Prasetyo,67,tunjungsekarppl@gmail.com,3,Perempuan,1970-01-01,NULL,2025-07-10 08:57:25,2025-07-10 08:57:25
-40,357322010053,TEJO WIRAWAN,68,tejowirawan1@gmail.com,5,Perempuan,1970-01-01,NULL,2025-07-10 08:57:26,2025-07-10 08:57:26
-41,357322020080,Agus Dwi Prasetyo,69,agusdwiprasetyo07@gmail.com,5,Perempuan,1970-01-01,NULL,2025-07-10 08:57:26,2025-07-10 08:57:26
-42,357322030031,Fenny Gunawan,70,fennymarsudi@gmail.com,3,Perempuan,1970-01-01,NULL,2025-07-10 08:57:27,2025-07-10 08:57:27
-43,357322100321,ERNAWATI,71,ernaina6@gmail.com,3,Perempuan,1970-01-01,NULL,2025-07-10 08:57:27,2025-07-10 08:57:27
-44,357323030002,Maulid Diyah Kholis Saputri,72,diyahmaulid234@gmail.com,3,Perempuan,1970-01-01,NULL,2025-07-10 08:57:28,2025-07-10 08:57:28
-45,840744433,Nurfuady Rafi\' Alfauznursy,73,nurfuady1@gmail.com,5,Perempuan,1970-01-01,NULL,2025-07-10 09:09:07,2025-07-10 09:09:07
-46,357323110096,TALITHA ALIFAH,74,talithaalifah99@gmail.com,5,Perempuan,1970-01-01,NULL,2025-07-10 09:30:42,2025-07-10 09:30:42
-47,357322030027,ALFIATUL KHAMIMAH,75,alfi.sewing@gmail.com,3,Perempuan,1988-10-21,NULL,2025-07-10 09:30:43,2025-07-10 09:30:43
-48,357322030035,Arinda Putri Dewi,76,dewiarindaputri3@gmail.com,5,Perempuan,1993-03-22,NULL,2025-07-10 09:30:43,2025-07-10 09:30:43
-49,839734549,Aulia Rachman,77,armand.m.513@gmail.com,3,Perempuan,1970-01-01,NULL,2025-07-10 09:33:34,2025-07-10 09:33:34
-50,839764446,Catur Sandy Cahyono,78,catursandy70@gmail.com,5,Perempuan,1970-01-01,NULL,2025-07-10 09:33:34,2025-07-10 09:33:34
-51,839724505,Feri Achmad Ardiansyah,79,feriachmad683@gmail.com,4,Perempuan,2000-08-23,NULL,2025-07-10 09:33:35,2025-07-10 09:33:35
-52,357322040023,Ariesta Putri Sayekti,81,Ariestaps9@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 03:58:47,2025-10-15 03:58:47
-53,357322090317,Devita Aprilia Purwitasari,87,devitaaprilia65@gmail.com,Tamat D4/S1,Perempuan,1998-04-05,NULL,2025-10-15 04:43:26,2025-10-15 04:43:26
-54,357322090100,Retno Herawati,90,retno.herawatti@gmail.com,Tamat D4/S1,Perempuan,1995-04-24,NULL,2025-10-15 04:43:27,2025-10-15 04:43:27
-55,357322100330,Wiwik Ambarwati,95,Wiwiekcentil@gmail.com,Tamat D4/S1,Perempuan,1990-06-02,NULL,2025-10-15 04:43:29,2025-10-15 04:43:29
-56,357322090296,YULIATI,96,yulenkayuliati@gmail.com,Tamat D4/S1,Perempuan,1970-06-30,NULL,2025-10-15 04:43:30,2025-10-15 04:43:30
-57,357322090050,MIFTAKHUL HIDAYAH,91,emiphid@gmail.com,Tamat D4/S1,Perempuan,1976-07-14,NULL,2025-10-15 04:45:50,2025-10-15 04:45:50
-58,357322010009,Dian Falah Fitriyana,82,dianff19@gmail.com,Tamat D4/S1,Perempuan,1992-03-19,NULL,2025-10-15 04:53:08,2025-10-15 04:53:08
-59,357322010026,SRI WILUJENG,83,ajengsriwilujeng.78@gmail.com,Tamat SMS/Sederajat,Perempuan,1978-08-31,NULL,2025-10-15 04:53:09,2025-10-15 04:53:09
-60,357322010033,Sekar Widiasmara,84,sekar.w.asmara@gmail.com,Tamat D4/S1,Perempuan,1988-03-14,NULL,2025-10-15 04:53:09,2025-10-15 04:53:09
-61,357322030033,Orlin Tiara Oktavia Purnama,85,tiaraorlin@gmail.com,Tamat SMS/Sederajat,Perempuan,1999-10-14,NULL,2025-10-15 04:53:10,2025-10-15 04:53:10
-62,357322100358,Sulastri Ningsih,86,nsulastri685@gmail.com,Tamat SMS/Sederajat,Perempuan,1981-05-30,NULL,2025-10-15 04:53:12,2025-10-15 04:53:12
-63,357322090029,Suhariyanti,88,nurulyantwibisana@gmail.com,Tamat SMS/Sederajat,Perempuan,1986-10-14,NULL,2025-10-15 04:53:13,2025-10-15 04:53:13
-64,357322090051,Anis Zauzzaenah,89,zauza.anis86@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 04:53:14,2025-10-15 04:53:14
-65,357322090408,Ninik Wahyuni,92,ninikwahyuni53@gmail.com,Tamat SMS/Sederajat,Perempuan,1978-03-17,NULL,2025-10-15 04:53:16,2025-10-15 04:53:16
-66,357322090549,Anggraeni Istanti,93,anggraenistantist@gmail.com,Tamat D1/D2/D3,Perempuan,1977-10-18,NULL,2025-10-15 04:53:17,2025-10-15 04:53:17
-67,357322090274,FITRI HIDAYATI,94,fitrihidayati2108@gmail.com,Tamat D1/D2/D3,Perempuan,1979-08-21,NULL,2025-10-15 04:53:17,2025-10-15 04:53:17
-68,357322100264,MARISA RAHMAWATI,97,marisarahma06@gmail.com,Tamat D1/D2/D3,Perempuan,1970-01-01,NULL,2025-10-15 04:53:19,2025-10-15 04:53:19
-69,357322090161,YENI MILAWATI,100,Milawatiyeni1@gmail.com,Tamat SMS/Sederajat,Perempuan,1976-06-16,NULL,2025-10-15 05:04:57,2025-10-15 05:04:57
-70,357322090370,NINA YULIANA PRIYATININGSIH,101,ninasepohrakharaykha@gmail.com,Tamat SMS/Sederajat,Perempuan,1984-07-05,NULL,2025-10-15 05:04:57,2025-10-15 05:04:57
-71,357322090219,Eddy Subagio,102,eddysubagio32@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 05:04:59,2025-10-15 05:04:59
-72,357322040008,Lilis Sunarmi,98,lilis30sni@gmail.com,Tamat SMS/Sederajat,Perempuan,1981-03-30,NULL,2025-10-15 05:07:02,2025-10-15 05:07:02
-73,357322090036,Diana Christanty Handayani,99,dianachristantyhandayani@gmail.com,Tamat D4/S1,Perempuan,1972-03-13,NULL,2025-10-15 05:07:05,2025-10-15 05:07:05
-74,357322090544,Windy Arum Ningtyas,107,windyberseri@gmail.com,Tamat D1/D2/D3,Perempuan,1970-01-01,NULL,2025-10-15 05:11:00,2025-10-15 05:11:00
-75,357322090128,SRI HARTINI,103,titinsri301@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 05:12:16,2025-10-15 05:12:16
-76,357322090123,SRI HARTATIK,104,sritatik0312@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 05:12:16,2025-10-15 05:12:16
-77,357322090393,Sri mutini,105,srimutini2016@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 05:12:18,2025-10-15 05:12:18
-78,357322090575,Enis Dwi Sri Wahyuni,106,enisbudi87@gmail.com,Tamat SMS/Sederajat,Perempuan,1988-10-17,NULL,2025-10-15 05:12:18,2025-10-15 05:12:18
-79,357323110164,Selina Fathriska Ramadani,112,selinafath71@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 05:21:53,2025-10-15 05:21:53
-80,357322010072,Alifionita Nur Hikmaningtyas,108,alifionita99@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 05:23:08,2025-10-15 05:23:08
-81,357322090077,LULIS RAHAYUNINGSIH,109,lulisrahayu70@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 05:23:10,2025-10-15 05:23:10
-82,357322090095,Atik Mujiati,110,atiek8885@gmail.com,Tamat SMS/Sederajat,Perempuan,1974-03-23,NULL,2025-10-15 05:23:11,2025-10-15 05:23:11
-83,357322090471,Dewi Agustiningrum,111,agustiningrumdewi@gmail.com,Tamat SMS/Sederajat,Perempuan,1977-08-15,NULL,2025-10-15 05:23:12,2025-10-15 05:23:12
-84,357322090131,Rike indarwati,113,indarwati.rike96@gmail.com,Tamat D4/S1,Perempuan,1987-03-31,NULL,2025-10-15 07:38:43,2025-10-15 07:38:43
-85,357322090273,Eni Widiarti,114,eniwidya1712@gmail.com,Tamat D1/D2/D3,Perempuan,1973-12-17,NULL,2025-10-15 07:52:06,2025-10-15 07:52:06
-86,357323110115,Fitriatin Yulaikah,117,yullshabreena@gmail.com,Tamat SMS/Sederajat,Perempuan,1983-07-18,NULL,2025-10-15 07:59:37,2025-10-15 07:59:37
-87,357323110077,Mila Amalia Damayanti,118,milaamaliad@gmail.com,Tamat D4/S1,Perempuan,2025-07-22,NULL,2025-10-15 07:59:37,2025-10-15 07:59:37
-88,357323110098,Ani koirunisak,120,anikoirunisak5@gmail.com,Tamat SMS/Sederajat,Perempuan,1989-07-05,NULL,2025-10-15 07:59:38,2025-10-15 07:59:38
-89,357325050001,Dimas Zainul Umar Fahri,122,dimaszainulumarfahri@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 07:59:39,2025-10-15 07:59:39
-90,357322010002,Indah Wulandari,124,indah.indahwulandari99@gmail.com,Tamat D1/D2/D3,Perempuan,1995-06-05,NULL,2025-10-15 07:59:40,2025-10-15 07:59:40
-91,357322010064,Oria Arda Bella,125,oriaardabella@gmail.com,Tamat SMS/Sederajat,Perempuan,1982-07-06,NULL,2025-10-15 07:59:40,2025-10-15 07:59:40
-92,357322010003,Zulfikar Rifqi,127,zr2692@gmail.com,Tamat D1/D2/D3,Perempuan,1992-06-26,NULL,2025-10-15 07:59:41,2025-10-15 07:59:41
-93,357322010052,Saiful arif,130,sawunkaconk@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 07:59:42,2025-10-15 07:59:42
-94,357322010051,Lidya Pradina Ayuningtyas,134,lidyaayuningtyas@gmail.com,Tamat D4/S1,Perempuan,1985-07-25,NULL,2025-10-15 07:59:43,2025-10-15 07:59:43
-95,357322030053,Yulli Handayani,135,handafani@gmail.com,Tamat SMS/Sederajat,Perempuan,1981-07-18,NULL,2025-10-15 07:59:43,2025-10-15 07:59:43
-96,357322020023,Indrawati,136,inoxin79@gmail.com,Tamat D1/D2/D3,Perempuan,1970-01-01,NULL,2025-10-15 07:59:44,2025-10-15 07:59:44
-97,357322030051,Arvina,138,Arvinamakmurjaya@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 07:59:44,2025-10-15 07:59:44
-98,357322020017,Rr. Nanien Setyaningsih,139,nanien_setyaningsih@yahoo.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 07:59:45,2025-10-15 07:59:45
-99,357322010021,Titania Franciska Dewi,140,Titaniafranciska11@gmail.com,Tamat D4/S1,Perempuan,1998-07-11,NULL,2025-10-15 07:59:45,2025-10-15 07:59:45
-100,357322010024,Purwatiningsih,141,galuh.tietie@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 07:59:45,2025-10-15 07:59:45
-101,357322010018,Sofyan,S.Ap,143,isofyan0381@gmail.com,Tamat D4/S1,Perempuan,1981-07-03,NULL,2025-10-15 07:59:46,2025-10-15 07:59:46
-102,357322010028,Adi Khisbul Wathon,145,kissbull@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 07:59:47,2025-10-15 07:59:47
-103,357322020036,Novi Inisyahika,146,samjir0n46@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 07:59:47,2025-10-15 07:59:47
-104,357322010034,Sugeng Hari Priyanto,149,ngekhharipriyanto@gmail.com,Tamat D1/D2/D3,Perempuan,1970-01-01,NULL,2025-10-15 07:59:48,2025-10-15 07:59:48
-105,357322020016,Siti Cholifah,154,siticholifah0607@gmail.com,Tamat D4/S1,Perempuan,1967-07-09,NULL,2025-10-15 07:59:50,2025-10-15 07:59:50
-106,357322010063,Rusmiana,164,rusmianatutut@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 07:59:54,2025-10-15 07:59:54
-107,357322030013,Dian Purwanti,165,dianpurwanti49@gmail.com,Tamat SMS/Sederajat,Perempuan,1991-06-13,NULL,2025-10-15 07:59:54,2025-10-15 07:59:54
-108,357322020070,M. Hafizh Al Hanif,SE.,172,hafisnsi@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 07:59:56,2025-10-15 07:59:56
-109,357322020053,Rani Karlina,174,leenaran@yahoo.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 07:59:57,2025-10-15 07:59:57
-110,357322020052,HERDYAN APRIANTO,175,Dianapri460@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 07:59:57,2025-10-15 07:59:57
-111,357322030036,SUNARSIH,180,sunnarsih494@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 07:59:59,2025-10-15 07:59:59
-112,357322020103,Novi mahmudah lailatus stani,187,Staninovi5@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:01,2025-10-15 08:00:01
-113,357322020105,Elly Herlinda,188,ellyherlinda3@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:01,2025-10-15 08:00:01
-114,357322020102,DZIKRI MUDHOFAR,189,dzikrimudhofar04@gmail.com,Tamat SMS/Sederajat,Perempuan,2025-07-04,NULL,2025-10-15 08:00:01,2025-10-15 08:00:01
-115,357322090054,Erlin Prasetyowati,191,08170525730.a@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:02,2025-10-15 08:00:02
-116,357322100062,Sri Indrayani,192,indrayanisri203@gmail.com,Tamat SMS/Sederajat,Perempuan,1985-07-11,NULL,2025-10-15 08:00:03,2025-10-15 08:00:03
-117,357322030015,Ratrin blester linata,196,blesterratrin@gmail.com,Tamat D1/D2/D3,Perempuan,1991-07-31,NULL,2025-10-15 08:00:05,2025-10-15 08:00:05
-118,357322030040,Kartika Dwi Ariyani,198,Kartikada04@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:07,2025-10-15 08:00:07
-119,357322040017,Aisni Nurul Rochmah,202,aisni.rochmah@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:08,2025-10-15 08:00:08
-120,357322090015,Irfan Santosa,203,Irfansantoso3084@gmail.com,Tamat SMS/Sederajat,Perempuan,1985-07-30,NULL,2025-10-15 08:00:09,2025-10-15 08:00:09
-121,337222050009,Rakryan Shelbidilla,204,rakryan52@gmail.com,Tamat D4/S1,Perempuan,2025-07-10,NULL,2025-10-15 08:00:09,2025-10-15 08:00:09
-122,357322090010,MUSLIHIN,206,caliztamazta@gmail.com,Tamat SMS/Sederajat,Perempuan,1974-07-07,NULL,2025-10-15 08:00:10,2025-10-15 08:00:10
-123,357322090018,VANNI PUJI HERMAWATI,207,vannipuji30@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:10,2025-10-15 08:00:10
-124,357322090009,Azizah,208,zhizha2012@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:11,2025-10-15 08:00:11
-125,357322090012,Wahyu Ika Setyaningsih,210,wahyuikas1980@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:12,2025-10-15 08:00:12
-126,357322090083,Titik Indrawati,212,titikindrawati0507@gmail.com,Tamat D4/S1,Perempuan,1980-07-05,NULL,2025-10-15 08:00:13,2025-10-15 08:00:13
-127,357322090210,FATCHIYAH SE,218,fatchiyah1965@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:14,2025-10-15 08:00:14
-128,357322090412,Chiqmatus Sania,220,Sofyanaprianto01@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:16,2025-10-15 08:00:16
-129,357322100199,FEMMY FIRMAN WIGATI,221,wigatifemmy@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:16,2025-10-15 08:00:16
-130,357322090330,RIZCHA VERDA AMARILLO,225,rizchaverda94@gmail.com,Tamat SMS/Sederajat,Perempuan,2025-06-27,NULL,2025-10-15 08:00:18,2025-10-15 08:00:18
-131,357322090254,Atik purwati,233,atikp3@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:21,2025-10-15 08:00:21
-132,357322090280,Tri Wahyuni,234,khareem3333@gmail.com,Tamat D4/S1,Perempuan,1978-06-12,NULL,2025-10-15 08:00:22,2025-10-15 08:00:22
-133,357322100057,Bella Novanda,235,akyuncadhangan@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:22,2025-10-15 08:00:22
-134,357322100257,Moh Agus Romadhoni,236,romadhoni.mlg0780@gmail.com,Tamat SMS/Sederajat,Perempuan,1980-07-27,NULL,2025-10-15 08:00:22,2025-10-15 08:00:22
-135,357322090135,Yusnia Rizky Amalia,237,Yusniara88@gmail.com,Tamat SMS/Sederajat,Perempuan,1988-06-06,NULL,2025-10-15 08:00:23,2025-10-15 08:00:23
-136,357322100344,Hanik mashuda,242,Hanikmashuda@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:25,2025-10-15 08:00:25
-137,357322100029,Hanang Asmuntoro,243,kawulohanang@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:26,2025-10-15 08:00:26
-138,357322090353,Puryadi,244,ppuryadi08@gmail.com,Tamat SMS/Sederajat,Perempuan,1974-07-16,NULL,2025-10-15 08:00:26,2025-10-15 08:00:26
-139,357322090130,AL AMIN BAYU MUSTIKA,245,bayualseven2@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:27,2025-10-15 08:00:27
-140,357322090225,Risky Fajar Afrianto,248,riskyfajarr321@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:28,2025-10-15 08:00:28
-141,357322090198,Rinil Indarti,249,rinilndrt@gmail.com,Tamat D4/S1,Perempuan,1967-07-26,NULL,2025-10-15 08:00:29,2025-10-15 08:00:29
-142,357322090157,Amin Yuli Astuti,251,astuti131@gmail.com,Tamat D4/S1,Perempuan,1981-07-13,NULL,2025-10-15 08:00:29,2025-10-15 08:00:29
-143,357322090286,SUGIANTO,258,giantosugiantosugianto323@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:32,2025-10-15 08:00:32
-144,357322090248,Anik Hidayati,259,azzahraleon13@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:32,2025-10-15 08:00:32
-145,357322090193,Yuyun Rinawati Ningsih,260,yuyun.rinawati75@gmail.com,Tamat SMS/Sederajat,Perempuan,1975-06-14,NULL,2025-10-15 08:00:32,2025-10-15 08:00:32
-146,357322100261,Maulut ulfa dwiyanti,264,Ulpeupe@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:34,2025-10-15 08:00:34
-147,357322100222,Lilun arbiyanti salatina,266,lilunsalatina@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:35,2025-10-15 08:00:35
-148,357322090577,Riris Rukma Nisita,267,riris.rukma@gmail.com,Tamat D4/S1,Perempuan,1989-06-19,NULL,2025-10-15 08:00:35,2025-10-15 08:00:35
-149,357322090358,Anggi maudy priyanti,268,Anggimaudy42@gmail.com,Tamat SMS/Sederajat,Perempuan,1999-06-25,NULL,2025-10-15 08:00:35,2025-10-15 08:00:35
-150,357322090582,Vika Lusita Anggraeni,271,vlanggraeni.vla2@gmail.com,Tamat D4/S1,Perempuan,1992-07-29,NULL,2025-10-15 08:00:36,2025-10-15 08:00:36
-151,357322100204,SUSIOWATI,272,Susiowati909@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:36,2025-10-15 08:00:36
-152,357322100176,Waode Pristanti Nuri Rachmawati,274,waodepristanti@gmail.com,Tamat S2,Perempuan,1970-01-01,NULL,2025-10-15 08:00:37,2025-10-15 08:00:37
-153,357322090525,Herni natalia,276,elisabethherni1984@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:38,2025-10-15 08:00:38
-154,357322090354,MAYA INDRIYANI,279,mayaindri03@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:39,2025-10-15 08:00:39
-155,357322100208,Rina indiana,282,adysule12@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:40,2025-10-15 08:00:40
-156,357322090474,ENGGA RESTU DIAN SAGITA,284,rdsengga@gmail.com,Tamat D4/S1,Perempuan,1986-06-12,NULL,2025-10-15 08:00:41,2025-10-15 08:00:41
-157,357322090566,Anni Khoirun Nisa,287,annikhoirunn@gmail.com,Tamat D1/D2/D3,Perempuan,1970-01-01,NULL,2025-10-15 08:00:42,2025-10-15 08:00:42
-158,357322090530,Aataina Thoi\'in,290,aatainathoiin@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:42,2025-10-15 08:00:42
-159,357322090532,NENI YUTRIKASARI,291,neniyutrikasari@gmail.com,Tamat SMS/Sederajat,Perempuan,1987-07-24,NULL,2025-10-15 08:00:43,2025-10-15 08:00:43
-160,357322090426,Sherly anggraeni cahya putri,292,jziiiaannzkr01@gmail.com,Tamat SMS/Sederajat,Perempuan,2025-06-25,NULL,2025-10-15 08:00:43,2025-10-15 08:00:43
-161,357322090436,Cynthia June Indah Widiyasari,294,cynthiajuneiw@gmail.com,Tamat D4/S1,Perempuan,1994-06-01,NULL,2025-10-15 08:00:44,2025-10-15 08:00:44
-162,357322090466,Vita rakhmawati,299,Tarasaga74@gmail.com,Tamat SMS/Sederajat,Perempuan,1993-06-30,NULL,2025-10-15 08:00:46,2025-10-15 08:00:46
-163,357322090486,Radias Tarwoco Putro,301,radias.tarwoco@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:47,2025-10-15 08:00:47
-164,357322100098,SANDRA DEWI SARASWATI,302,sandraiwed83@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:48,2025-10-15 08:00:48
-165,357322100185,Wilda Wahyuningsih,303,wilda.wahyuni123@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:48,2025-10-15 08:00:48
-166,357322100250,Ika Rahmawati,304,ikarahmakusuma87@gmail.com,Tamat D1/D2/D3,Perempuan,1987-07-28,NULL,2025-10-15 08:00:48,2025-10-15 08:00:48
-167,357322090518,Maudini Mutiara Wandarti,306,maudinimutiarawandarti@gmail.com,Tamat D4/S1,Perempuan,2025-06-04,NULL,2025-10-15 08:00:49,2025-10-15 08:00:49
-168,357323110008,Erdina Elfi Riana,307,erdinaelfiriana@gmail.com,Tamat D4/S1,Perempuan,1994-07-08,NULL,2025-10-15 08:00:49,2025-10-15 08:00:49
-169,357322100500,VENNIA DIAN RESTANI,309,Venniadianrestani@gmwil.com,Tamat SMS/Sederajat,Perempuan,1999-07-23,NULL,2025-10-15 08:00:50,2025-10-15 08:00:50
-170,357322090534,Diah Mesti,310,diahmesti.ri@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:51,2025-10-15 08:00:51
-171,357322100240,Satya Bram Wiratma,311,bho.satya@gmail.com,Tamat D4/S1,Perempuan,1989-06-23,NULL,2025-10-15 08:00:51,2025-10-15 08:00:51
-172,357322100386,Chusnul Chotimah,312,chusnul27041991@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:52,2025-10-15 08:00:52
-173,357322100370,Suryani Pradina Mp,316,dinakiran13@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:54,2025-10-15 08:00:54
-174,357322100070,SUCIANI KUMARIAH,317,Sucianikumariah6@gmail.com,Tamat D4/S1,Perempuan,1983-07-08,NULL,2025-10-15 08:00:54,2025-10-15 08:00:54
-175,357322100096,JULIZA TRIPUSPITA RACHMAWATI,318,julyzha69@gmail.com,Tamat D4/S1,Perempuan,1995-07-11,NULL,2025-10-15 08:00:55,2025-10-15 08:00:55
-176,357322100209,Pratiwi dita ayu putri setya permana,319,pratiwidita1404@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:55,2025-10-15 08:00:55
-177,357322100477,Eli Saputri,323,elisaputri682@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:57,2025-10-15 08:00:57
-178,357324100030,ENI SUCI HARIATI,327,kh4risma74@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:00:59,2025-10-15 08:00:59
-179,357323110021,Andi Bagus Alfrianto,328,alfrianto00@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:00:59,2025-10-15 08:00:59
-180,357323110003,Lina Siti Maryamah,330,stm.lina@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:01:00,2025-10-15 08:01:00
-181,350723110151,Jati Laksono,331,djati.laksono79@gmail.com,Tamat SMS/Sederajat,Perempuan,2025-06-05,NULL,2025-10-15 08:01:00,2025-10-15 08:01:00
-182,351824090001,NADIA NURBAITI,334,nadianurbaiti13@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:01:02,2025-10-15 08:01:02
-183,350223060063,Rr Ajar Wikhu Redhati,336,roroajarwikhu@gmail.com,Tamat D4/S1,Perempuan,1999-06-09,NULL,2025-10-15 08:01:02,2025-10-15 08:01:02
-184,351423080009,NABIILAH RAUDHANISA,337,nabiilahr322@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:01:03,2025-10-15 08:01:03
-185,357323110207,Eka Indah Nur Fatimah Mashud,340,ekin0696@gmail.com,Tamat D4/S1,Perempuan,1996-06-12,NULL,2025-10-15 08:01:04,2025-10-15 08:01:04
-186,357323110064,DYANA IKA SARI,341,dyanaikasari@gmail.com,Tamat D4/S1,Perempuan,1988-06-28,NULL,2025-10-15 08:01:04,2025-10-15 08:01:04
-187,357323110144,Achmad Fatchur Rizqi,344,rizqielfath16095@gmail.com,Tamat D4/S1,Perempuan,1998-06-14,NULL,2025-10-15 08:01:06,2025-10-15 08:01:06
-188,357323110129,ZAKIYATUL FAKHIROH,345,zakiyatull90@gmail.com,Tamat D4/S1,Perempuan,1990-07-21,NULL,2025-10-15 08:01:06,2025-10-15 08:01:06
-189,350723110360,Rosi Risa Haris,346,rosiryan1982@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:01:06,2025-10-15 08:01:06
-190,357323110170,Mas Lutfi Afandi,347,masloethfieafandi@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:01:07,2025-10-15 08:01:07
-191,357323110321,Muhammad Riza Fachruddin,348,Ezataher82@gmail.com,Tamat D4/S1,Perempuan,1994-06-10,NULL,2025-10-15 08:01:07,2025-10-15 08:01:07
-192,350723110027,PUTRI WAHYU SARIARTI,353,putrisariarti24@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:01:09,2025-10-15 08:01:09
-193,357323110262,Ferary ayu novitasari,356,Feraryayunovi@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:01:10,2025-10-15 08:01:10
-194,357323110216,Eka Prasetya Nugraha,357,nugrahaekaprasetya@gmail.com,Tamat D4/S1,Perempuan,1996-06-14,NULL,2025-10-15 08:01:10,2025-10-15 08:01:10
-195,350723110361,Mustika Siwi Amumpuni,359,tikacw52@gmail.com,Tamat D4/S1,Perempuan,1980-07-13,NULL,2025-10-15 08:01:11,2025-10-15 08:01:11
-196,357324100010,Tarisya Izzahirah Permana,361,tarisyatarisya@gmail.com,Tamat D4/S1,Perempuan,2025-07-25,NULL,2025-10-15 08:01:11,2025-10-15 08:01:11
-197,350723110341,Laili Dzakiyyah Efendi,362,lailidzakiyyah@gmail.com,Tamat D4/S1,Perempuan,2025-07-22,NULL,2025-10-15 08:01:12,2025-10-15 08:01:12
-198,357324100025,Benny Yogga Pratama,366,yoga@pulsawae.com,Tamat D1/D2/D3,Perempuan,1985-07-22,NULL,2025-10-15 08:01:13,2025-10-15 08:01:13
-199,357324100020,FIRMANSYAH HARIS HERLAMBANG,370,firmansyah.haris.h@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:01:14,2025-10-15 08:01:14
-200,357324100027,Maudi Eka Putri,372,maudieka4@gmail.com,Tamat D4/S1,Perempuan,2025-06-01,NULL,2025-10-15 08:01:15,2025-10-15 08:01:15
-201,357324100064,Setyarini,375,ririnsetyarini18@gmail.com,Tamat D1/D2/D3,Perempuan,1972-06-26,NULL,2025-10-15 08:01:16,2025-10-15 08:01:16
-202,357324100012,KEVYN GALUH JUARDINO,377,galuhjuardino@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:01:17,2025-10-15 08:01:17
-203,357324100066,Nelly Avrilia Nur Putri,378,nellyavrilia67@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:01:18,2025-10-15 08:01:18
-204,357324100009,KHARISMA LATIFATUNNISA,379,khrisma88@gmail.com,Tamat SMS/Sederajat,Perempuan,2025-06-23,NULL,2025-10-15 08:01:18,2025-10-15 08:01:18
-205,357325050004,DYAH BAYU EKA PRAMESWARI,380,prameswaridyah43@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:01:19,2025-10-15 08:01:19
-206,357324100022,Nurul azmi,382,RasyaOke60@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:01:19,2025-10-15 08:01:19
-207,357324100006,Nova Lailatul Zanah,388,nova20856@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:01:21,2025-10-15 08:01:21
-208,357324100049,Nadine Ranisyademas H.C,389,ranisnadine@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:01:22,2025-10-15 08:01:22
-209,357324100067,ADYATMA NUGRAHSANTO WICAKSONO,394,adyatmahebat@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:01:23,2025-10-15 08:01:23
-210,357324100035,Iqbal Firmansyah,396,iqbalfirmansyah971@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:01:24,2025-10-15 08:01:24
-211,357324100047,Muhammad Khoirul Basyar,398,basyar0106@gmail.com,Tamat SMS/Sederajat,Perempuan,1998-06-01,NULL,2025-10-15 08:01:25,2025-10-15 08:01:25
-212,357324100063,Naufal Khalid Ghali  muhammad,399,khaliedwoii@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:01:25,2025-10-15 08:01:25
-213,357325050005,Adelisa Rizki Zaharani,400,adelisarizki@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:01:25,2025-10-15 08:01:25
-214,357325050006,Novi Silvia,401,nsilvia2330@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:01:26,2025-10-15 08:01:26
-215,357325050007,Nurfikri Amru Al-fayi\'nursy,402,nurfikri090905@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:01:26,2025-10-15 08:01:26
-216,357325050023,Moch Aldi Putra Permata,406,aldiputrapermata16@gmail.com,Tamat SMS/Sederajat,Perempuan,2025-06-16,NULL,2025-10-15 08:01:27,2025-10-15 08:01:27
-217,357325050022,MUHAMMAD CHOLILI,408,cholilibaly@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:01:28,2025-10-15 08:01:28
-218,357323110055,Melinda Kristin,116,melindamelindakristin@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:02:44,2025-10-15 08:02:44
-219,357324100057,Desi harini,119,desiharini2021@gmail.com,Tamat SMS/Sederajat,Perempuan,1980-12-26,NULL,2025-10-15 08:02:45,2025-10-15 08:02:45
-220,357323110104,Christin Mairina Priandini,121,chrstn.mairina@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:02:46,2025-10-15 08:02:46
-221,357322010067,Desi Puspita,129,desiathallah07@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:02:49,2025-10-15 08:02:49
-222,357322010068,Ahmad Fariz Rahmadani,131,farizdani002@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:02:50,2025-10-15 08:02:50
-223,357322090302,Ferry Hardiansyah Hadi Seputra,137,fhardiansyahhadis@gmail.com,Tamat D4/S1,Perempuan,1980-12-15,NULL,2025-10-15 08:02:52,2025-10-15 08:02:52
-224,357322020018,Idham Kholiq,147,idhamcorner@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:02:55,2025-10-15 08:02:55
-225,357322010036,Mulyono Arief,148,mulyonoarief9@gmail.com,Tamat D1/D2/D3,Perempuan,1970-01-01,NULL,2025-10-15 08:02:56,2025-10-15 08:02:56
-226,357322020013,Nurul Siti Fatimah,155,adityanurulnirwan@gmail.com,Tamat S2,Perempuan,1970-01-01,NULL,2025-10-15 08:02:59,2025-10-15 08:02:59
-227,357322020008,Saiful Akbar,156,akbarnacal@gmail.com,Tamat SMS/Sederajat,Perempuan,1973-12-31,NULL,2025-10-15 08:02:59,2025-10-15 08:02:59
-228,357322020005,Moch.Heri Utomo,158,ireh.ceko@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:03:00,2025-10-15 08:03:00
-229,357322010062,Vicky Prasetia Bakti,160,ekiviky@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:03:01,2025-10-15 08:03:01
-230,357322020011,Kadang Pancoro,161,kadangpancoro@gmail.com,Tamat D4/S1,Perempuan,1972-12-20,NULL,2025-10-15 08:03:01,2025-10-15 08:03:01
-231,357322090229,Muhammad Adam Dairis,169,muhadam1220@gmail.com,Tamat SMS/Sederajat,Perempuan,1999-12-20,NULL,2025-10-15 08:03:04,2025-10-15 08:03:04
-232,357322090134,CANDRA SRI UTAMI,171,candrasriutamiu61@gmail.com,Tamat D4/S1,Perempuan,1980-12-25,NULL,2025-10-15 08:03:05,2025-10-15 08:03:05
-233,357322020089,Ignasius Tri Hariyono,184,m.trihariyono@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:03:09,2025-10-15 08:03:09
-234,357322020090,Umbar Wulandari,185,rengganisumbarwulandari@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:03:10,2025-10-15 08:03:10
-235,357322020093,Mira Kurniasari,186,Kurniasarimira74@gmail.com,Tamat D1/D2/D3,Perempuan,1974-05-23,NULL,2025-10-15 08:03:10,2025-10-15 08:03:10
-236,357323030005,NELA DWINGUDIYAHSARI,193,nelakankim@gmail.com,Tamat D1/D2/D3,Perempuan,1970-01-01,NULL,2025-10-15 08:03:12,2025-10-15 08:03:12
-237,357325050002,Raihan Adenoer Ekaputra,213,raihanadenoerekaputra@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:03:21,2025-10-15 08:03:21
-238,357322090090,Sudarmi,216,pinkynio75@gmail.com,Tamat SMS/Sederajat,Perempuan,1975-12-17,NULL,2025-10-15 08:03:21,2025-10-15 08:03:21
-239,357322090063,Nur Farida,217,rezqianorafardhan20@gmail.com,Tamat SMS/Sederajat,Perempuan,1993-12-31,NULL,2025-10-15 08:03:22,2025-10-15 08:03:22
-240,357322090066,RATIH MAYKURNIA,222,ratihmaykurnia1@gmail.com,Tamat D4/S1,Perempuan,1984-05-16,NULL,2025-10-15 08:03:25,2025-10-15 08:03:25
-241,357322100355,Risha alfa safitri,223,Rishaalfasafitri@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:03:25,2025-10-15 08:03:25
-242,357322090143,Wiwik Indriani,224,wiwikindriani13@gmail.com,Tamat SMS/Sederajat,Perempuan,1993-12-29,NULL,2025-10-15 08:03:26,2025-10-15 08:03:26
-243,357322090399,MOH SLAMET,250,nurs4llim@gmail.com,Tamat SMS/Sederajat,Perempuan,1986-12-16,NULL,2025-10-15 08:03:36,2025-10-15 08:03:36
-244,357322090598,ISTIKOMAH WIDYA,252,widya.talita27@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:03:37,2025-10-15 08:03:37
-245,357322090171,Doni Erfanto,254,azka.albaik@gmail.com,Tamat D4/S1,Perempuan,1979-12-27,NULL,2025-10-15 08:03:38,2025-10-15 08:03:38
-246,357322090181,Faisal Amin,257,aminsal426@gmail.com,Tamat D4/S1,Perempuan,1999-05-17,NULL,2025-10-15 08:03:39,2025-10-15 08:03:39
-247,357322090247,Khusnul Kholidah,269,KhusnulKholidah@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:03:43,2025-10-15 08:03:43
-248,357322100407,Samsul Mashuri,270,samsulmashuri84@gmail.com,Tamat SMS/Sederajat,Perempuan,1984-05-14,NULL,2025-10-15 08:03:43,2025-10-15 08:03:43
-249,357325050003,Muhammad Hanif Firnanda,275,amirfauzie1@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:03:45,2025-10-15 08:03:45
-250,357322090295,Ika Suryaningsih,277,nafillahikari56@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:03:45,2025-10-15 08:03:45
-251,357322090299,Dessy Anggraeni,280,dessyanggraeni269@gmail.com,Tamat SMS/Sederajat,Perempuan,1990-12-22,NULL,2025-10-15 08:03:47,2025-10-15 08:03:47
-252,357322090301,MERLINA ADI KURNIAWATI,283,arsyilamalang901@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:03:47,2025-10-15 08:03:47
-253,357322100420,Rani Hafilianawati,295,bundarun.e@gmail.com,Tamat D4/S1,Perempuan,1980-05-24,NULL,2025-10-15 08:03:51,2025-10-15 08:03:51
-254,357322090470,Ismi Alfiah,296,Alfiahismi06@gmail.com,Tamat SMS/Sederajat,Perempuan,1991-05-26,NULL,2025-10-15 08:03:52,2025-10-15 08:03:52
-255,357322100090,FIFIN AGUS PRIYA UTAMA,298,mrayyan3a@gmail.com,Tamat D4/S1,Perempuan,1982-05-21,NULL,2025-10-15 08:03:53,2025-10-15 08:03:53
-256,357322100419,Tria Warsa Enggal,308,triawarsaenggal@gmail.com,Tamat D4/S1,Perempuan,1986-12-31,NULL,2025-10-15 08:03:57,2025-10-15 08:03:57
-257,357322100425,Yasmina Majidah Imanamahirah,321,yasminamajidah@gmail.com,Tamat D4/S1,Perempuan,2000-05-25,NULL,2025-10-15 08:04:01,2025-10-15 08:04:01
-258,357322100512,Qorina Anindhita Prameswari,324,qorinaanindhita708@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:04:02,2025-10-15 08:04:02
-259,357322110015,Daniel,325,Daniel.sulik88@gmail.com,Tamat SMS/Sederajat,Perempuan,1988-05-22,NULL,2025-10-15 08:04:02,2025-10-15 08:04:02
-260,357322110029,Fahrisyal Ainur Roziqin,326,fahrisyalroz59@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:04:03,2025-10-15 08:04:03
-261,357324100040,Dian Ratnasari,329,dhianata@yahoo.com,Tamat S2,Perempuan,1970-01-01,NULL,2025-10-15 08:04:04,2025-10-15 08:04:04
-262,357323110336,Dista Dwi Cahyani,338,distadc@gmail.com,Tamat D1/D2/D3,Perempuan,2001-05-21,NULL,2025-10-15 08:04:08,2025-10-15 08:04:08
-263,357324100042,Farhan Mirza Zakky,339,farhan.zakky354@gmail.com,Tamat D1/D2/D3,Perempuan,2001-12-31,NULL,2025-10-15 08:04:08,2025-10-15 08:04:08
-264,357323110065,Achmad Firmansah,342,raveculture9@gmail.com,Tamat D4/S1,Perempuan,1982-05-28,NULL,2025-10-15 08:04:09,2025-10-15 08:04:09
-265,350723110283,Bahjatul Imaniyyah,350,bahjatul.kerja@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:04:12,2025-10-15 08:04:12
-266,357323110211,Sofwan Meiridho,352,meiridho@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:04:13,2025-10-15 08:04:13
-267,357324100008,Helmalia Intan Azzahra,360,Azzahraintan976@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:04:16,2025-10-15 08:04:16
-268,357324100024,Dewi Hafi Doturochma,363,Kendz34@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:04:17,2025-10-15 08:04:17
-269,351323110387,Aji Muktioko Utomo,365,muktiokoaji@gmail.com,Tamat SMS/Sederajat,Perempuan,1989-12-14,NULL,2025-10-15 08:04:18,2025-10-15 08:04:18
-270,357324100070,NANDA ANDI PURNAMANSYAH,S.Si.,373,purnamalevi05@gmail.com,Tamat D4/S1,Perempuan,2002-05-14,NULL,2025-10-15 08:04:22,2025-10-15 08:04:22
-271,357324100054,Amelia nur rahma,374,amelianurrahma23@gmail.com,Tamat D4/S1,Perempuan,1999-12-23,NULL,2025-10-15 08:04:22,2025-10-15 08:04:22
-272,357324100058,Nunik Indrawati,384,nunikindraw@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:04:25,2025-10-15 08:04:25
-273,357324100056,ARIS HIDAYAT,385,aris.ukwk@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:04:26,2025-10-15 08:04:26
-274,357324100007,Berliano budiono,387,berlianobudiono99@gmail.com,Tamat D4/S1,Perempuan,1999-05-15,NULL,2025-10-15 08:04:26,2025-10-15 08:04:26
-275,357324100014,Ruliyanto Ratno Saputro,393,ruliyantoratno@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:04:28,2025-10-15 08:04:28
-276,357325050019,Mochamad bandi,404,bandi3453@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:04:32,2025-10-15 08:04:32
-277,357323110363,MOCHAMMAD REVALINO VARGAS,123,revalinovargas684@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:06:32,2025-10-15 08:06:32
-278,357322040029,Eka Pujiyanti,126,ekapujiyantitutut@gmail.com,Tamat SMS/Sederajat,Perempuan,1981-10-28,NULL,2025-10-15 08:06:33,2025-10-15 08:06:33
-279,357322010006,Avilia agustin,128,vilaagustin988@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:06:34,2025-10-15 08:06:34
-280,357322030041,M. Rudi,132,bpssimitra@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:06:35,2025-10-15 08:06:35
-281,357322020002,Suliati,133,Mamacun42@gmail.com,Tamat SMS/Sederajat,Perempuan,1976-03-20,NULL,2025-10-15 08:06:36,2025-10-15 08:06:36
-282,357322010015,Ovita Sellgi Liesdamaiyanti,142,ovsellgi@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:06:39,2025-10-15 08:06:39
-283,357322090165,Nani Puji Rahayu,152,Rahayu76nani@gmail.com,Tamat D4/S1,Perempuan,1974-08-25,NULL,2025-10-15 08:06:44,2025-10-15 08:06:44
-284,357322020020,BENNY RIYANTO,153,bennyriyan@gmail.com,Tamat D1/D2/D3,Perempuan,1970-01-01,NULL,2025-10-15 08:06:44,2025-10-15 08:06:44
-285,357322010056,M. Asny Fajri Ulama\'i,157,fajrey12@gmail.com,Tamat D4/S1,Perempuan,1996-03-24,NULL,2025-10-15 08:06:46,2025-10-15 08:06:46
-286,357322020003,Catur Sisworini,159,rinicatur09@gmail.com,Tamat D1/D2/D3,Perempuan,1970-01-01,NULL,2025-10-15 08:06:47,2025-10-15 08:06:47
-287,357322010066,Akhmad Budi,162,akhmadbudidg77@gmail.com,Tamat SMS/Sederajat,Perempuan,1986-02-21,NULL,2025-10-15 08:06:48,2025-10-15 08:06:48
-288,357322020027,Woro Ratih Andayani,163,woro.dedykayana@gmail.com,Tamat SMS/Sederajat,Perempuan,1985-10-16,NULL,2025-10-15 08:06:48,2025-10-15 08:06:48
-289,357322020010,LAILATUL FADJRIJAH,166,lfadjrijah@gmail.com,Tamat D4/S1,Perempuan,1968-10-24,NULL,2025-10-15 08:06:49,2025-10-15 08:06:49
-290,357322020026,Nur chasanah,167,nurpsm3@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:06:49,2025-10-15 08:06:49
-291,357322020043,Anang Maret Tri Basuki,170,alpasigma69@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:06:51,2025-10-15 08:06:51
-292,357322020050,SRI ASIH,173,asri50526@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:06:52,2025-10-15 08:06:52
-293,357322020059,Seno Febriyanto,176,senofebryanto@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:06:53,2025-10-15 08:06:53
-294,357322020047,Moch syarifudin hidayatullah,177,asoy9112@gmail.com,Tamat SMS/Sederajat,Perempuan,1992-10-16,NULL,2025-10-15 08:06:53,2025-10-15 08:06:53
-295,357322020076,Witria Linawati,178,witria.linawati.id@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:06:54,2025-10-15 08:06:54
-296,357322020057,Hargi Pranoto,179,hargipranoto96@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:06:54,2025-10-15 08:06:54
-297,357322020075,Ani mutmainah,181,almozaani@gmail.com,Tamat SMS/Sederajat,Perempuan,1983-02-25,NULL,2025-10-15 08:06:54,2025-10-15 08:06:54
-298,357322020086,Ina Fayati,182,inafayati@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:06:55,2025-10-15 08:06:55
-299,357322020088,CHANDRA WIDY HARTATO,183,wchandra1190@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:06:56,2025-10-15 08:06:56
-300,357322030021,Lensi Rachmawati,194,lensirachma40@gmail.com,Tamat SMS/Sederajat,Perempuan,1981-03-14,NULL,2025-10-15 08:07:00,2025-10-15 08:07:00
-301,357322030022,Yulfaridah Eka Ariani,195,yulfaridah9@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:07:00,2025-10-15 08:07:00
-302,357322030024,Inawan Pamoengkas,197,Gambyohgamby@gmail.com,Tamat SMS/Sederajat,Perempuan,1978-03-20,NULL,2025-10-15 08:07:01,2025-10-15 08:07:01
-303,357322030043,Meryta Devi Anggraini,200,merytadevi46@gmail.com,Tamat D4/S1,Perempuan,1997-03-27,NULL,2025-10-15 08:07:03,2025-10-15 08:07:03
-304,357322090056,Eryk Sareyang Hasan,209,wgrp2009@gmail.com,Tamat D4/S1,Perempuan,1976-08-25,NULL,2025-10-15 08:07:07,2025-10-15 08:07:07
-305,357322090021,Wahdaniar Sri Utami,211,Wahdaniar.utami@gmail.com,Tamat S2,Perempuan,1989-03-17,NULL,2025-10-15 08:07:08,2025-10-15 08:07:08
-306,357322100073,Marliya Ika Irmawati,214,ikasahroni@gmail.com,Tamat D1/D2/D3,Perempuan,1991-03-13,NULL,2025-10-15 08:07:09,2025-10-15 08:07:09
-307,357322090035,NURMA KURNIAWATI,215,nurmakurnia0403@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:07:10,2025-10-15 08:07:10
-308,357322090147,Ida Kurnia wati,219,idakurniawati991@gmail.com,Tamat SMS/Sederajat,Perempuan,1979-08-13,NULL,2025-10-15 08:07:12,2025-10-15 08:07:12
-309,357322100278,EVIE RESTU WILUJENG,226,everestuui@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:07:15,2025-10-15 08:07:15
-310,357324100031,Titik nurhajati,227,Plongkowati9@gmail.com,Tamat D4/S1,Perempuan,1972-10-17,NULL,2025-10-15 08:07:15,2025-10-15 08:07:15
-311,357322090365,ERIA FEBRI SUSANTI,229,eriasusantiyuhu@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:07:16,2025-10-15 08:07:16
-312,357322090535,Mitha Munawaroh,230,panich2005@gmail.com,Tamat SMS/Sederajat,Perempuan,1987-02-23,NULL,2025-10-15 08:07:16,2025-10-15 08:07:16
-313,357322090472,Cindy Christiningsih Neno,231,cindyneno897@gmail.com,Tamat SMS/Sederajat,Perempuan,1997-08-29,NULL,2025-10-15 08:07:17,2025-10-15 08:07:17
-314,357322090164,Reny Diana,232,renydiana05@gmail.com,Tamat D1/D2/D3,Perempuan,1970-01-01,NULL,2025-10-15 08:07:17,2025-10-15 08:07:17
-315,357322100404,SOEHERIS,238,herissoe@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:07:19,2025-10-15 08:07:19
-316,357322090124,Yuny Damayanti,241,lagilagiveronica@gmail.com,Tamat D4/S1,Perempuan,1988-03-14,NULL,2025-10-15 08:07:21,2025-10-15 08:07:21
-317,357322090303,SRI HARI WURYANTI,246,amywury08@gmail.com,Tamat SMS/Sederajat,Perempuan,1968-08-19,NULL,2025-10-15 08:07:23,2025-10-15 08:07:23
-318,357322090312,Yonarisa Febryanti,253,yonarisa84@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:07:27,2025-10-15 08:07:27
-319,357324100002,Ilham Octavia Pratama,255,ilhamokta1916@gmail.com,Tamat SMS/Sederajat,Perempuan,2002-10-15,NULL,2025-10-15 08:07:28,2025-10-15 08:07:28
-320,357322090180,Suherna,256,suherna143@gmail.com,Tamat D4/S1,Perempuan,1968-02-29,NULL,2025-10-15 08:07:28,2025-10-15 08:07:28
-321,357322090262,Rini Arthanti Agustini,261,arthanti02@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:07:29,2025-10-15 08:07:29
-322,357322100399,Ivana kartikasari,262,vanaz90687@gmail.com,Tamat D1/D2/D3,Perempuan,1984-03-31,NULL,2025-10-15 08:07:30,2025-10-15 08:07:30
-323,357322090228,LIA KURNIA SARI,263,liakurnia8815@gmail.com,Tamat D1/D2/D3,Perempuan,1988-08-15,NULL,2025-10-15 08:07:30,2025-10-15 08:07:30
-324,357322090217,Ridha Nur Rohma,265,ridhanurrohma@gmail.com,Tamat SMS/Sederajat,Perempuan,1998-10-17,NULL,2025-10-15 08:07:31,2025-10-15 08:07:31
-325,357322100001,Kartika juwita,273,carteacajoe@gmail.com,Tamat SMS/Sederajat,Perempuan,1983-08-16,NULL,2025-10-15 08:07:33,2025-10-15 08:07:33
-326,357322090369,Karuniawati,278,Karuniaw71@gmail.com,Tamat SMS/Sederajat,Perempuan,1980-03-16,NULL,2025-10-15 08:07:35,2025-10-15 08:07:35
-327,357322090314,EVA OKTAVININGSIH,281,evaoktaok42@gmail.com,Tamat D4/S1,Perempuan,1984-10-24,NULL,2025-10-15 08:07:36,2025-10-15 08:07:36
-328,357322090350,MEGA CAHYANI,285,megachaa.26@gmail.com,Tamat D4/S1,Perempuan,1992-08-26,NULL,2025-10-15 08:07:37,2025-10-15 08:07:37
-329,357322090326,Septiana iriyanti,286,septiana.qaisara@gmail.com,Tamat SMS/Sederajat,Perempuan,1995-10-23,NULL,2025-10-15 08:07:37,2025-10-15 08:07:37
-330,357322090345,Ita Christina,288,itachristinabesoet@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:07:38,2025-10-15 08:07:38
-331,357322090522,Agis Suryawan,289,Kinanthiregina1@gmail.com,Tamat SMS/Sederajat,Perempuan,1969-08-17,NULL,2025-10-15 08:07:39,2025-10-15 08:07:39
-332,357324100038,Danty Oktiana Prastiwi,293,oktianadanty@gmail.com,Tamat D4/S1,Perempuan,1998-10-14,NULL,2025-10-15 08:07:40,2025-10-15 08:07:40
-333,357322090515,SULIS INDRAWATI,297,Sulisindra83@gmail.com,Tamat SMS/Sederajat,Perempuan,1983-08-25,NULL,2025-10-15 08:07:41,2025-10-15 08:07:41
-334,357322090508,Zulfa Amelia,300,amelzulfa22@gmail.com,Tamat SMS/Sederajat,Perempuan,1999-03-22,NULL,2025-10-15 08:07:42,2025-10-15 08:07:42
-335,357322100377,Agus Tri Andriatmoko,305,milanino88@gmail.com,Tamat SMS/Sederajat,Perempuan,1974-08-28,NULL,2025-10-15 08:07:44,2025-10-15 08:07:44
-336,357322100243,Aulia Lestari,314,kheylaauriella@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:07:47,2025-10-15 08:07:47
-337,357322100045,Erwis wirdiyanti,315,Erwisanik@gmail.com,Tamat SMS/Sederajat,Perempuan,1973-10-28,NULL,2025-10-15 08:07:47,2025-10-15 08:07:47
-338,517122100631,Vonny,320,vonnyamalia14@gmail.com,Tamat SMS/Sederajat,Perempuan,1976-10-14,NULL,2025-10-15 08:07:48,2025-10-15 08:07:48
-339,357323020002,Sri Wilujeng,322,sriwilujeng@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:07:49,2025-10-15 08:07:49
-340,350723060093,Fajar Widiyanto,332,fajarwivi@gmail.com,Tamat D4/S1,Perempuan,1980-03-31,NULL,2025-10-15 08:07:53,2025-10-15 08:07:53
-341,351323110844,Ahmad Rijal Pahlevy,333,ahmadrijalpahlevy@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:07:53,2025-10-15 08:07:53
-342,357324100033,Ayu Puspita Sari,335,ayupus259@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:07:54,2025-10-15 08:07:54
-343,357323110072,Bella Agustina Pratiwi,343,agustinapratiwibella@gmail.com,Tamat D4/S1,Perempuan,1994-08-13,NULL,2025-10-15 08:07:57,2025-10-15 08:07:57
-344,350723110300,Istiqomatul Amanah Amalia Nur Azizah,349,azizah.amalia0203@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:07:59,2025-10-15 08:07:59
-345,357324100043,Mukhammad Athok Illah,351,athokillah409@gmail.com,Tamat D4/S1,Perempuan,1999-10-28,NULL,2025-10-15 08:08:00,2025-10-15 08:08:00
-346,357323110002,Lestari,354,kenlestari15@gmail.com,Tamat SMS/Sederajat,Perempuan,1973-10-15,NULL,2025-10-15 08:08:01,2025-10-15 08:08:01
-347,357324100018,Vina Irawati,355,irawativina0@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:08:01,2025-10-15 08:08:01
-348,357324100013,Widyaningsih,358,widyaningsih.040@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:08:02,2025-10-15 08:08:02
-349,350723110362,AS\'AD ANDI YAHYA,364,asadyahya00@gmail.com,Tamat SMS/Sederajat,Perempuan,2000-03-24,NULL,2025-10-15 08:08:04,2025-10-15 08:08:04
-350,357324100044,Sapphiretita Oktarissa Farakh Heydina,367,sapphire.ofh@gmail.com,Tamat D4/S1,Perempuan,1997-10-31,NULL,2025-10-15 08:08:05,2025-10-15 08:08:05
-351,352523110826,Robiatul Adawiyah,368,ra.aladawiyah@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:08:05,2025-10-15 08:08:05
-352,357324100028,Silva ahmad adini,369,Silva.adin.m@gmail.com,Tamat D4/S1,Perempuan,1988-08-31,NULL,2025-10-15 08:08:06,2025-10-15 08:08:06
-353,357324100021,Dewi Martia Ningsih,371,dewimotivator@gmail.com,Tamat D4/S1,Perempuan,1991-03-21,NULL,2025-10-15 08:08:06,2025-10-15 08:08:06
-354,357324100029,Wiwin Widya Wati,376,wiwinwid.www@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:08:08,2025-10-15 08:08:08
-355,357324100041,Chandra Rusbianto,383,chandrarusbianto@gmail.com,Tamat D1/D2/D3,Perempuan,1970-01-01,NULL,2025-10-15 08:08:11,2025-10-15 08:08:11
-356,357324100062,David Rakha Sutjipto,386,rakhad96@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:08:12,2025-10-15 08:08:12
-357,357324100046,linda oktavia irawati,390,octalinda28@gmail.com,Tamat SMS/Sederajat,Perempuan,1995-10-21,NULL,2025-10-15 08:08:14,2025-10-15 08:08:14
-358,357324100050,MAHBUBATUN NISWAH,391,mahbubatunniswah14@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:08:14,2025-10-15 08:08:14
-359,357324100065,Brillian Musa Maulana,395,brillimaulana06022004@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:08:15,2025-10-15 08:08:15
-360,357324100036,Rani Indahwati,397,rani.indahwati.ri@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:08:16,2025-10-15 08:08:16
-361,357325050013,Bagus Mahardika Satria Nugraha,403,satriabagus948@gmail.com,Tamat SMS/Sederajat,Perempuan,1984-08-27,NULL,2025-10-15 08:08:18,2025-10-15 08:08:18
-362,357325050018,MERRY KUSUMAWATI,405,ameesuprayogi4@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:08:19,2025-10-15 08:08:19
-363,357325050021,Enuk Egowati,407,egowati08@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:08:19,2025-10-15 08:08:19
-364,357324100069,Asri Wulandari Purnayudya,115,awpyud@gmail.com,Tamat D4/S1,Perempuan,1985-01-19,NULL,2025-10-15 08:09:46,2025-10-15 08:09:46
-365,357322010022,DWI YOES TINUS PRIHANTO,144,Yoestinusdwi@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:09:56,2025-10-15 08:09:56
-366,357322010035,Moh Kristiawan Trimaryono,150,kristiawan.trimaryono86@gmail.com,Tamat D1/D2/D3,Perempuan,1986-01-30,NULL,2025-10-15 08:09:58,2025-10-15 08:09:58
-367,357322090546,M. Pancalaharti,151,pancamashuri@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-26,NULL,2025-10-15 08:09:59,2025-10-15 08:09:59
-368,357322020001,Aqila Nur Rahmalia,168,aqilanr97@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:10:05,2025-10-15 08:10:05
-369,357322020108,Ongki Antonio,190,spiderpakman182@gmail.com,Tamat SMS/Sederajat,Perempuan,1990-01-20,NULL,2025-10-15 08:10:12,2025-10-15 08:10:12
-370,357322040009,Intan Eka Purnama Sari,199,Abyanatar@gmail.com,Tamat D1/D2/D3,Perempuan,1988-01-22,NULL,2025-10-15 08:10:17,2025-10-15 08:10:17
-371,357322030046,Noer Cahyono Setyawan,201,gangsarsablon@gmail.com,Tamat SMS/Sederajat,Perempuan,1983-01-28,NULL,2025-10-15 08:10:18,2025-10-15 08:10:18
-372,357322050012,Faisal Ahmad Rodhi,205,faisalahmad1697@gmail.com,Tamat D1/D2/D3,Perempuan,1970-01-01,NULL,2025-10-15 08:10:20,2025-10-15 08:10:20
-373,357322090062,Rahmah nur cahyani,228,rahmahnurcahyani@gmail.com,Tamat SMS/Sederajat,Perempuan,1999-01-13,NULL,2025-10-15 08:10:29,2025-10-15 08:10:29
-374,357322090236,Angela Ratih Kusuma Andari,SE,239,rkaangela12@gmail.com,Tamat D4/S1,Perempuan,1984-01-22,NULL,2025-10-15 08:10:35,2025-10-15 08:10:35
-375,357322090119,Warti ratna ikawati,240,Ikawatiratna78@gmail.com,Tamat SMS/Sederajat,Perempuan,1978-01-28,NULL,2025-10-15 08:10:36,2025-10-15 08:10:36
-376,357322090300,zainul arifin,247,zainularifin2365@gmail.com,Tamat SMS/Sederajat,Perempuan,1965-01-23,NULL,2025-10-15 08:10:38,2025-10-15 08:10:38
-377,357322100359,SUSWATI,313,suswatisuswati273@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:11:00,2025-10-15 08:11:00
-378,357324100077,GARANITA MANGGAR PUTRI,381,garanitaarsyila@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:11:22,2025-10-15 08:11:22
-379,357324100011,Ravika Indah Kharisma,392,ravikaindah@student.ub.ac.id,Tamat D4/S1,Perempuan,2002-01-30,NULL,2025-10-15 08:11:26,2025-10-15 08:11:26
-380,357322050011,AINUN SEGAR RAHMAWATI,411,ainun.rhmwti@gmail.com,Tamat SMS/Sederajat,Perempuan,2025-07-03,NULL,2025-10-15 08:15:40,2025-10-15 08:15:40
-381,357325050008,Wilda Aulia Fathoni,413,wilda.fath.geo10@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:15:43,2025-10-15 08:15:43
-382,357325050010,Ahmad Habibi,415,ahmadhabibi020919@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:15:44,2025-10-15 08:15:44
-383,357325050011,Dhuiki Nursepta Aldiansyah,416,nurseptadhuiki@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:15:44,2025-10-15 08:15:44
-384,357325050016,Sajidan Wildan Ahmad,420,ahmad.sajidanwildan@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:15:46,2025-10-15 08:15:46
-385,357323110177,MUCHAMMAD RIZAL SYAKIRUDDIN,409,muchrizall09@gmail.com,Tamat SMS/Sederajat,Perempuan,1970-01-01,NULL,2025-10-15 08:17:07,2025-10-15 08:17:07
-386,357322090333,Irena Salsabila,412,irenasalsabila@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:17:09,2025-10-15 08:17:09
-387,357325050009,Christian Nathanael,414,christiannathanaelsiagian@gmail.com,Tamat SMS/Sederajat,Perempuan,2002-01-16,NULL,2025-10-15 08:17:12,2025-10-15 08:17:12
-388,357325050012,Muhammad Muzaky Verdian Firmansyah,417,muzakyverdian@gmail.com,Tamat SMS/Sederajat,Perempuan,2004-05-27,NULL,2025-10-15 08:17:13,2025-10-15 08:17:13
-389,357325050014,Akemat Rio Setiawan,418,riorachell29@gmail.com,Tamat D4/S1,Perempuan,2003-01-29,NULL,2025-10-15 08:17:13,2025-10-15 08:17:13
-390,357325050015,Moh Taufiq Ismu Abadi,419,ismu.taufiq@gmail.com,Tamat D4/S1,Perempuan,1993-05-24,NULL,2025-10-15 08:17:14,2025-10-15 08:17:14
-391,357325050017,Yonatan Hendra Wijaya,421,yonatan.hendra.2204326@students.um.ac.id,Tamat SMS/Sederajat,Perempuan,2004-05-19,NULL,2025-10-15 08:17:14,2025-10-15 08:17:14
-392,357322040025,Devy Prasetyono,410,devyprasetyono.geo@gmail.com,Tamat D4/S1,Perempuan,1970-01-01,NULL,2025-10-15 08:17:54,2025-10-15 08:17:54
+"id","sobat_id","name","user_id","email","pendidikan","jenis_kelamin","tanggal_lahir","photo","created_at","updated_at"
+"1","357322090040","SUTARTI YUNI ASTUTIK","32","astuti.sya@gmail.com","5","Perempuan","1970-01-01","","2025-07-10 08:07:44","2025-07-10 08:07:44"
+"2","357322030002","Emman Suparji","29","e81emm4n5@gmail.com","5","Perempuan","1981-06-21","","2025-07-10 08:14:57","2025-07-10 08:14:57"
+"3","357322010048","SONNA ASDINATA","30","Sonna.asdinata19@gmail.com","5","Perempuan","1982-04-19","","2025-07-10 08:14:57","2025-07-10 08:14:57"
+"4","357322090027","Didiet Ananto Widodo","31","didietwidodo33@gmail.com","3","Perempuan","1964-03-21","","2025-07-10 08:14:58","2025-07-10 08:14:58"
+"5","357322090007","Shindy Ayu Widyaswara","33","shindyayu.widyaswara@gmail.com","5","Perempuan","1993-10-26","","2025-07-10 08:16:42","2025-07-10 08:16:42"
+"6","357322090013","Hilda Seskowati","34","hildayasmin2211@gmail.com","3","Perempuan","1991-06-18","","2025-07-10 08:16:44","2025-07-10 08:16:44"
+"7","357322090177","Zulfian Arif","35","zulfian.arif@gmail.com","5","Perempuan","1968-02-29","","2025-07-10 08:16:44","2025-07-10 08:16:44"
+"8","357323070003","Arif Hambali","36","hambali.arif@gmail.com","5","Perempuan","1983-10-28","","2025-07-10 08:16:45","2025-07-10 08:16:45"
+"9","357323110322","Tri Wahyu Utomo","37","my_hygeva@yahoo.com","3","Perempuan","1970-01-01","","2025-07-10 08:16:45","2025-07-10 08:16:45"
+"10","839724452","Dessy Anggrainy","38","dessy.anggrainy87@gmail.com","3","Perempuan","1987-01-31","","2025-07-10 08:22:06","2025-07-10 08:22:06"
+"11","839814778","KUSMILAH","39","Bundakus42300@gmail.com","3","Perempuan","1973-07-24","","2025-07-10 08:22:07","2025-07-10 08:22:07"
+"12","839804489","TITIEK TRISOESILOWATI","40","ndhoxsusie@gmail.com","5","Perempuan","1970-01-01","","2025-07-10 08:22:07","2025-07-10 08:22:07"
+"13","357322090103","IKE MARDIANA SADIYAH","41","ikerafi1@gmail.com","5","Perempuan","1972-09-14","","2025-07-10 08:25:03","2025-07-10 08:25:03"
+"14","357323110133","Muhammad Jehan Rabbani","42","mjgila8@gmail.com","3","Perempuan","2005-04-26","","2025-07-10 08:29:37","2025-07-10 08:29:37"
+"15","357322030004","Riyono","43","kopler87@gmail.com","5","Perempuan","1979-04-22","","2025-07-10 08:29:38","2025-07-10 08:29:38"
+"16","357322030023","Ardhea Citra Dhamayanty","44","ardheacitraa2807@gmail.com","5","Perempuan","1997-07-28","","2025-07-10 08:37:01","2025-07-10 08:37:01"
+"17","357322030026","Mila Nurjana","45","aisyah.nurjanah116@gmail.com","3","Perempuan","1985-04-16","","2025-07-10 08:37:02","2025-07-10 08:37:02"
+"18","357322030032","Ila Nur Chasanah","46","ilanurchasanah5@gmail.com","3","Perempuan","1970-01-01","","2025-07-10 08:37:02","2025-07-10 08:37:02"
+"19","357322050019","Khoirunisa Sukma Hadi","47","sukma.khoirunisa21@gmail.com","5","Perempuan","1970-01-01","","2025-07-10 08:37:02","2025-07-10 08:37:02"
+"20","357322100017","Yessy Tri Hardiyanti","48","hardiyantiyessy@gmail.com","5","Perempuan","1970-01-01","","2025-07-10 08:37:03","2025-07-10 08:37:03"
+"21","357322090185","Indah Wahyuningsih","49","sbw.mlg@gmail.com","6","Perempuan","1970-01-01","","2025-07-10 08:37:03","2025-07-10 08:37:03"
+"22","357323110001","Sharon Mahar Tanjung","50","sharonmahartn@gmail.com","5","Perempuan","1970-01-01","","2025-07-10 08:37:04","2025-07-10 08:37:04"
+"23","357322090014","Arry Puspitasari","51","trust.indigo@gmail.com","3","Perempuan","1970-01-01","","2025-07-10 08:38:26","2025-07-10 08:38:26"
+"24","357322020041","Rujiyani","52","rujiyaniyani@gmail.com","3","Perempuan","1972-07-19","","2025-07-10 08:44:15","2025-07-10 08:44:15"
+"25","357323030009","Theresiana Septioningrum","53","theresiana07@gmail.com","5","Perempuan","1970-01-01","","2025-07-10 08:44:17","2025-07-10 08:44:17"
+"26","357322030009","Puji Rahayu","54","doublesix664@gmail.com","5","Perempuan","1977-11-18","","2025-07-10 08:46:37","2025-07-10 08:46:37"
+"27","357322090108","Era Dhani Restari","55","Eradhani588@gmail.com","3","Perempuan","1976-06-22","","2025-07-10 08:46:38","2025-07-10 08:46:38"
+"28","357322030029","ROOS PANDAN WANGI(WIWIN).SH","56","roospandanwangi24@gmail.com","5","Perempuan","1973-04-26","","2025-07-10 08:46:38","2025-07-10 08:46:38"
+"29","357322030044","Farida Achadyah","57","faridachadyah1309@gmail.com","5","Perempuan","1970-09-13","","2025-07-10 08:46:39","2025-07-10 08:46:39"
+"30","357322030059","Aris Sugiarti","58","mbkaris80@gmail.com","3","Perempuan","1970-01-01","","2025-07-10 08:46:39","2025-07-10 08:46:39"
+"31","357322090163","YUNIAR PANDANSARI","59","yuniarpandansari67@gmail.com","5","Perempuan","1967-06-15","","2025-07-10 08:46:39","2025-07-10 08:46:39"
+"32","357322100100","Rodiyah","60","rodiyah44307@gmail.com","4","Perempuan","1970-01-01","","2025-07-10 08:46:40","2025-07-10 08:46:40"
+"33","357322090417","Dewi Ayu Indriani","61","dewia4101@gmail.com","5","Perempuan","1982-02-22","","2025-07-10 08:46:40","2025-07-10 08:46:40"
+"34","357323110167","HERTIN SULISTYO RINI","62","hertinrini59@gmail.com","3","Perempuan","1979-09-16","","2025-07-10 08:46:41","2025-07-10 08:46:41"
+"35","357322100385","Eka Astuti","63","ekaastuti1980@gmail.com","5","Perempuan","1970-01-01","","2025-07-10 08:50:12","2025-07-10 08:50:12"
+"36","357322090428","HENI KUSUMAWATI","64","Henikusuma29@gmail.com","3","Perempuan","1970-01-01","","2025-07-10 08:50:12","2025-07-10 08:50:12"
+"37","357323030003","Dicky Ramadhan","65","Dickyrammm97@gmail.com","3","Perempuan","1970-01-01","","2025-07-10 08:50:13","2025-07-10 08:50:13"
+"38","357322030003","Juwariyah","66","e85riasuparji@gmail.com","4","Perempuan","1970-01-01","","2025-07-10 08:57:25","2025-07-10 08:57:25"
+"39","357322020022","Muhammad Handy Rizki Prasetyo","67","tunjungsekarppl@gmail.com","3","Perempuan","1970-01-01","","2025-07-10 08:57:25","2025-07-10 08:57:25"
+"40","357322010053","TEJO WIRAWAN","68","tejowirawan1@gmail.com","5","Perempuan","1970-01-01","","2025-07-10 08:57:26","2025-07-10 08:57:26"
+"41","357322020080","Agus Dwi Prasetyo","69","agusdwiprasetyo07@gmail.com","5","Perempuan","1970-01-01","","2025-07-10 08:57:26","2025-07-10 08:57:26"
+"42","357322030031","Fenny Gunawan","70","fennymarsudi@gmail.com","3","Perempuan","1970-01-01","","2025-07-10 08:57:27","2025-07-10 08:57:27"
+"43","357322100321","ERNAWATI","71","ernaina6@gmail.com","3","Perempuan","1970-01-01","","2025-07-10 08:57:27","2025-07-10 08:57:27"
+"44","357323030002","Maulid Diyah Kholis Saputri","72","diyahmaulid234@gmail.com","3","Perempuan","1970-01-01","","2025-07-10 08:57:28","2025-07-10 08:57:28"
+"45","840744433","Nurfuady Rafi\' Alfauznursy","73","nurfuady1@gmail.com","5","Perempuan","1970-01-01","","2025-07-10 09:09:07","2025-07-10 09:09:07"
+"46","357323110096","TALITHA ALIFAH","74","talithaalifah99@gmail.com","5","Perempuan","1970-01-01","","2025-07-10 09:30:42","2025-07-10 09:30:42"
+"47","357322030027","ALFIATUL KHAMIMAH","75","alfi.sewing@gmail.com","3","Perempuan","1988-10-21","","2025-07-10 09:30:43","2025-07-10 09:30:43"
+"48","357322030035","Arinda Putri Dewi","76","dewiarindaputri3@gmail.com","5","Perempuan","1993-03-22","","2025-07-10 09:30:43","2025-07-10 09:30:43"
+"49","839734549","Aulia Rachman","77","armand.m.513@gmail.com","3","Perempuan","1970-01-01","","2025-07-10 09:33:34","2025-07-10 09:33:34"
+"50","839764446","Catur Sandy Cahyono","78","catursandy70@gmail.com","5","Perempuan","1970-01-01","","2025-07-10 09:33:34","2025-07-10 09:33:34"
+"51","839724505","Feri Achmad Ardiansyah","79","feriachmad683@gmail.com","4","Perempuan","2000-08-23","","2025-07-10 09:33:35","2025-07-10 09:33:35"
+"52","357322040023","Ariesta Putri Sayekti","81","Ariestaps9@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 03:58:47","2025-10-15 03:58:47"
+"53","357322090317","Devita Aprilia Purwitasari","87","devitaaprilia65@gmail.com","Tamat D4/S1","Perempuan","1998-04-05","","2025-10-15 04:43:26","2025-10-15 04:43:26"
+"54","357322090100","Retno Herawati","90","retno.herawatti@gmail.com","Tamat D4/S1","Perempuan","1995-04-24","","2025-10-15 04:43:27","2025-10-15 04:43:27"
+"55","357322100330","Wiwik Ambarwati","95","Wiwiekcentil@gmail.com","Tamat D4/S1","Perempuan","1990-06-02","","2025-10-15 04:43:29","2025-10-15 04:43:29"
+"56","357322090296","YULIATI","96","yulenkayuliati@gmail.com","Tamat D4/S1","Perempuan","1970-06-30","","2025-10-15 04:43:30","2025-10-15 04:43:30"
+"57","357322090050","MIFTAKHUL HIDAYAH","91","emiphid@gmail.com","Tamat D4/S1","Perempuan","1976-07-14","","2025-10-15 04:45:50","2025-10-15 04:45:50"
+"58","357322010009","Dian Falah Fitriyana","82","dianff19@gmail.com","Tamat D4/S1","Perempuan","1992-03-19","","2025-10-15 04:53:08","2025-10-15 04:53:08"
+"59","357322010026","SRI WILUJENG","83","ajengsriwilujeng.78@gmail.com","Tamat SMS/Sederajat","Perempuan","1978-08-31","","2025-10-15 04:53:09","2025-10-15 04:53:09"
+"60","357322010033","Sekar Widiasmara","84","sekar.w.asmara@gmail.com","Tamat D4/S1","Perempuan","1988-03-14","","2025-10-15 04:53:09","2025-10-15 04:53:09"
+"61","357322030033","Orlin Tiara Oktavia Purnama","85","tiaraorlin@gmail.com","Tamat SMS/Sederajat","Perempuan","1999-10-14","","2025-10-15 04:53:10","2025-10-15 04:53:10"
+"62","357322100358","Sulastri Ningsih","86","nsulastri685@gmail.com","Tamat SMS/Sederajat","Perempuan","1981-05-30","","2025-10-15 04:53:12","2025-10-15 04:53:12"
+"63","357322090029","Suhariyanti","88","nurulyantwibisana@gmail.com","Tamat SMS/Sederajat","Perempuan","1986-10-14","","2025-10-15 04:53:13","2025-10-15 04:53:13"
+"64","357322090051","Anis Zauzzaenah","89","zauza.anis86@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 04:53:14","2025-10-15 04:53:14"
+"65","357322090408","Ninik Wahyuni","92","ninikwahyuni53@gmail.com","Tamat SMS/Sederajat","Perempuan","1978-03-17","","2025-10-15 04:53:16","2025-10-15 04:53:16"
+"66","357322090549","Anggraeni Istanti","93","anggraenistantist@gmail.com","Tamat D1/D2/D3","Perempuan","1977-10-18","","2025-10-15 04:53:17","2025-10-15 04:53:17"
+"67","357322090274","FITRI HIDAYATI","94","fitrihidayati2108@gmail.com","Tamat D1/D2/D3","Perempuan","1979-08-21","","2025-10-15 04:53:17","2025-10-15 04:53:17"
+"68","357322100264","MARISA RAHMAWATI","97","marisarahma06@gmail.com","Tamat D1/D2/D3","Perempuan","1970-01-01","","2025-10-15 04:53:19","2025-10-15 04:53:19"
+"69","357322090161","YENI MILAWATI","100","Milawatiyeni1@gmail.com","Tamat SMS/Sederajat","Perempuan","1976-06-16","","2025-10-15 05:04:57","2025-10-15 05:04:57"
+"70","357322090370","NINA YULIANA PRIYATININGSIH","101","ninasepohrakharaykha@gmail.com","Tamat SMS/Sederajat","Perempuan","1984-07-05","","2025-10-15 05:04:57","2025-10-15 05:04:57"
+"71","357322090219","Eddy Subagio","102","eddysubagio32@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 05:04:59","2025-10-15 05:04:59"
+"72","357322040008","Lilis Sunarmi","98","lilis30sni@gmail.com","Tamat SMS/Sederajat","Perempuan","1981-03-30","","2025-10-15 05:07:02","2025-10-15 05:07:02"
+"73","357322090036","Diana Christanty Handayani","99","dianachristantyhandayani@gmail.com","Tamat D4/S1","Perempuan","1972-03-13","","2025-10-15 05:07:05","2025-10-15 05:07:05"
+"74","357322090544","Windy Arum Ningtyas","107","windyberseri@gmail.com","Tamat D1/D2/D3","Perempuan","1970-01-01","","2025-10-15 05:11:00","2025-10-15 05:11:00"
+"75","357322090128","SRI HARTINI","103","titinsri301@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 05:12:16","2025-10-15 05:12:16"
+"76","357322090123","SRI HARTATIK","104","sritatik0312@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 05:12:16","2025-10-15 05:12:16"
+"77","357322090393","Sri mutini","105","srimutini2016@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 05:12:18","2025-10-15 05:12:18"
+"78","357322090575","Enis Dwi Sri Wahyuni","106","enisbudi87@gmail.com","Tamat SMS/Sederajat","Perempuan","1988-10-17","","2025-10-15 05:12:18","2025-10-15 05:12:18"
+"79","357323110164","Selina Fathriska Ramadani","112","selinafath71@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 05:21:53","2025-10-15 05:21:53"
+"80","357322010072","Alifionita Nur Hikmaningtyas","108","alifionita99@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 05:23:08","2025-10-15 05:23:08"
+"81","357322090077","LULIS RAHAYUNINGSIH","109","lulisrahayu70@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 05:23:10","2025-10-15 05:23:10"
+"82","357322090095","Atik Mujiati","110","atiek8885@gmail.com","Tamat SMS/Sederajat","Perempuan","1974-03-23","","2025-10-15 05:23:11","2025-10-15 05:23:11"
+"83","357322090471","Dewi Agustiningrum","111","agustiningrumdewi@gmail.com","Tamat SMS/Sederajat","Perempuan","1977-08-15","","2025-10-15 05:23:12","2025-10-15 05:23:12"
+"84","357322090131","Rike indarwati","113","indarwati.rike96@gmail.com","Tamat D4/S1","Perempuan","1987-03-31","","2025-10-15 07:38:43","2025-10-15 07:38:43"
+"85","357322090273","Eni Widiarti","114","eniwidya1712@gmail.com","Tamat D1/D2/D3","Perempuan","1973-12-17","","2025-10-15 07:52:06","2025-10-15 07:52:06"
+"86","357323110115","Fitriatin Yulaikah","117","yullshabreena@gmail.com","Tamat SMS/Sederajat","Perempuan","1983-07-18","","2025-10-15 07:59:37","2025-10-15 07:59:37"
+"87","357323110077","Mila Amalia Damayanti","118","milaamaliad@gmail.com","Tamat D4/S1","Perempuan","2025-07-22","","2025-10-15 07:59:37","2025-10-15 07:59:37"
+"88","357323110098","Ani koirunisak","120","anikoirunisak5@gmail.com","Tamat SMS/Sederajat","Perempuan","1989-07-05","","2025-10-15 07:59:38","2025-10-15 07:59:38"
+"89","357325050001","Dimas Zainul Umar Fahri","122","dimaszainulumarfahri@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 07:59:39","2025-10-15 07:59:39"
+"90","357322010002","Indah Wulandari","124","indah.indahwulandari99@gmail.com","Tamat D1/D2/D3","Perempuan","1995-06-05","","2025-10-15 07:59:40","2025-10-15 07:59:40"
+"91","357322010064","Oria Arda Bella","125","oriaardabella@gmail.com","Tamat SMS/Sederajat","Perempuan","1982-07-06","","2025-10-15 07:59:40","2025-10-15 07:59:40"
+"92","357322010003","Zulfikar Rifqi","127","zr2692@gmail.com","Tamat D1/D2/D3","Perempuan","1992-06-26","","2025-10-15 07:59:41","2025-10-15 07:59:41"
+"93","357322010052","Saiful arif","130","sawunkaconk@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 07:59:42","2025-10-15 07:59:42"
+"94","357322010051","Lidya Pradina Ayuningtyas","134","lidyaayuningtyas@gmail.com","Tamat D4/S1","Perempuan","1985-07-25","","2025-10-15 07:59:43","2025-10-15 07:59:43"
+"95","357322030053","Yulli Handayani","135","handafani@gmail.com","Tamat SMS/Sederajat","Perempuan","1981-07-18","","2025-10-15 07:59:43","2025-10-15 07:59:43"
+"96","357322020023","Indrawati","136","inoxin79@gmail.com","Tamat D1/D2/D3","Perempuan","1970-01-01","","2025-10-15 07:59:44","2025-10-15 07:59:44"
+"97","357322030051","Arvina","138","Arvinamakmurjaya@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 07:59:44","2025-10-15 07:59:44"
+"98","357322020017","Rr. Nanien Setyaningsih","139","nanien_setyaningsih@yahoo.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 07:59:45","2025-10-15 07:59:45"
+"99","357322010021","Titania Franciska Dewi","140","Titaniafranciska11@gmail.com","Tamat D4/S1","Perempuan","1998-07-11","","2025-10-15 07:59:45","2025-10-15 07:59:45"
+"100","357322010024","Purwatiningsih","141","galuh.tietie@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 07:59:45","2025-10-15 07:59:45"
+"101","357322010018","Sofyan, S.Ap","143","isofyan0381@gmail.com","Tamat D4/S1","Perempuan","1981-07-03","","2025-10-15 07:59:46","2025-10-15 07:59:46"
+"102","357322010028","Adi Khisbul Wathon","145","kissbull@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 07:59:47","2025-10-15 07:59:47"
+"103","357322020036","Novi Inisyahika","146","samjir0n46@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 07:59:47","2025-10-15 07:59:47"
+"104","357322010034","Sugeng Hari Priyanto","149","ngekhharipriyanto@gmail.com","Tamat D1/D2/D3","Perempuan","1970-01-01","","2025-10-15 07:59:48","2025-10-15 07:59:48"
+"105","357322020016","Siti Cholifah","154","siticholifah0607@gmail.com","Tamat D4/S1","Perempuan","1967-07-09","","2025-10-15 07:59:50","2025-10-15 07:59:50"
+"106","357322010063","Rusmiana","164","rusmianatutut@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 07:59:54","2025-10-15 07:59:54"
+"107","357322030013","Dian Purwanti","165","dianpurwanti49@gmail.com","Tamat SMS/Sederajat","Perempuan","1991-06-13","","2025-10-15 07:59:54","2025-10-15 07:59:54"
+"108","357322020070","M. Hafizh Al Hanif, SE.","172","hafisnsi@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 07:59:56","2025-10-15 07:59:56"
+"109","357322020053","Rani Karlina","174","leenaran@yahoo.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 07:59:57","2025-10-15 07:59:57"
+"110","357322020052","HERDYAN APRIANTO","175","Dianapri460@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 07:59:57","2025-10-15 07:59:57"
+"111","357322030036","SUNARSIH","180","sunnarsih494@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 07:59:59","2025-10-15 07:59:59"
+"112","357322020103","Novi mahmudah lailatus stani","187","Staninovi5@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:01","2025-10-15 08:00:01"
+"113","357322020105","Elly Herlinda","188","ellyherlinda3@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:01","2025-10-15 08:00:01"
+"114","357322020102","DZIKRI MUDHOFAR","189","dzikrimudhofar04@gmail.com","Tamat SMS/Sederajat","Perempuan","2025-07-04","","2025-10-15 08:00:01","2025-10-15 08:00:01"
+"115","357322090054","Erlin Prasetyowati","191","08170525730.a@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:02","2025-10-15 08:00:02"
+"116","357322100062","Sri Indrayani","192","indrayanisri203@gmail.com","Tamat SMS/Sederajat","Perempuan","1985-07-11","","2025-10-15 08:00:03","2025-10-15 08:00:03"
+"117","357322030015","Ratrin blester linata","196","blesterratrin@gmail.com","Tamat D1/D2/D3","Perempuan","1991-07-31","","2025-10-15 08:00:05","2025-10-15 08:00:05"
+"118","357322030040","Kartika Dwi Ariyani","198","Kartikada04@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:07","2025-10-15 08:00:07"
+"119","357322040017","Aisni Nurul Rochmah","202","aisni.rochmah@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:08","2025-10-15 08:00:08"
+"120","357322090015","Irfan Santosa","203","Irfansantoso3084@gmail.com","Tamat SMS/Sederajat","Perempuan","1985-07-30","","2025-10-15 08:00:09","2025-10-15 08:00:09"
+"121","337222050009","Rakryan Shelbidilla","204","rakryan52@gmail.com","Tamat D4/S1","Perempuan","2025-07-10","","2025-10-15 08:00:09","2025-10-15 08:00:09"
+"122","357322090010","MUSLIHIN","206","caliztamazta@gmail.com","Tamat SMS/Sederajat","Perempuan","1974-07-07","","2025-10-15 08:00:10","2025-10-15 08:00:10"
+"123","357322090018","VANNI PUJI HERMAWATI","207","vannipuji30@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:10","2025-10-15 08:00:10"
+"124","357322090009","Azizah","208","zhizha2012@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:11","2025-10-15 08:00:11"
+"125","357322090012","Wahyu Ika Setyaningsih","210","wahyuikas1980@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:12","2025-10-15 08:00:12"
+"126","357322090083","Titik Indrawati","212","titikindrawati0507@gmail.com","Tamat D4/S1","Perempuan","1980-07-05","","2025-10-15 08:00:13","2025-10-15 08:00:13"
+"127","357322090210","FATCHIYAH SE","218","fatchiyah1965@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:14","2025-10-15 08:00:14"
+"128","357322090412","Chiqmatus Sania","220","Sofyanaprianto01@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:16","2025-10-15 08:00:16"
+"129","357322100199","FEMMY FIRMAN WIGATI","221","wigatifemmy@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:16","2025-10-15 08:00:16"
+"130","357322090330","RIZCHA VERDA AMARILLO","225","rizchaverda94@gmail.com","Tamat SMS/Sederajat","Perempuan","2025-06-27","","2025-10-15 08:00:18","2025-10-15 08:00:18"
+"131","357322090254","Atik purwati","233","atikp3@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:21","2025-10-15 08:00:21"
+"132","357322090280","Tri Wahyuni","234","khareem3333@gmail.com","Tamat D4/S1","Perempuan","1978-06-12","","2025-10-15 08:00:22","2025-10-15 08:00:22"
+"133","357322100057","Bella Novanda","235","akyuncadhangan@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:22","2025-10-15 08:00:22"
+"134","357322100257","Moh Agus Romadhoni","236","romadhoni.mlg0780@gmail.com","Tamat SMS/Sederajat","Perempuan","1980-07-27","","2025-10-15 08:00:22","2025-10-15 08:00:22"
+"135","357322090135","Yusnia Rizky Amalia","237","Yusniara88@gmail.com","Tamat SMS/Sederajat","Perempuan","1988-06-06","","2025-10-15 08:00:23","2025-10-15 08:00:23"
+"136","357322100344","Hanik mashuda","242","Hanikmashuda@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:25","2025-10-15 08:00:25"
+"137","357322100029","Hanang Asmuntoro","243","kawulohanang@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:26","2025-10-15 08:00:26"
+"138","357322090353","Puryadi","244","ppuryadi08@gmail.com","Tamat SMS/Sederajat","Perempuan","1974-07-16","","2025-10-15 08:00:26","2025-10-15 08:00:26"
+"139","357322090130","AL AMIN BAYU MUSTIKA","245","bayualseven2@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:27","2025-10-15 08:00:27"
+"140","357322090225","Risky Fajar Afrianto","248","riskyfajarr321@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:28","2025-10-15 08:00:28"
+"141","357322090198","Rinil Indarti","249","rinilndrt@gmail.com","Tamat D4/S1","Perempuan","1967-07-26","","2025-10-15 08:00:29","2025-10-15 08:00:29"
+"142","357322090157","Amin Yuli Astuti","251","astuti131@gmail.com","Tamat D4/S1","Perempuan","1981-07-13","","2025-10-15 08:00:29","2025-10-15 08:00:29"
+"143","357322090286","SUGIANTO","258","giantosugiantosugianto323@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:32","2025-10-15 08:00:32"
+"144","357322090248","Anik Hidayati","259","azzahraleon13@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:32","2025-10-15 08:00:32"
+"145","357322090193","Yuyun Rinawati Ningsih","260","yuyun.rinawati75@gmail.com","Tamat SMS/Sederajat","Perempuan","1975-06-14","","2025-10-15 08:00:32","2025-10-15 08:00:32"
+"146","357322100261","Maulut ulfa dwiyanti","264","Ulpeupe@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:34","2025-10-15 08:00:34"
+"147","357322100222","Lilun arbiyanti salatina","266","lilunsalatina@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:35","2025-10-15 08:00:35"
+"148","357322090577","Riris Rukma Nisita","267","riris.rukma@gmail.com","Tamat D4/S1","Perempuan","1989-06-19","","2025-10-15 08:00:35","2025-10-15 08:00:35"
+"149","357322090358","Anggi maudy priyanti","268","Anggimaudy42@gmail.com","Tamat SMS/Sederajat","Perempuan","1999-06-25","","2025-10-15 08:00:35","2025-10-15 08:00:35"
+"150","357322090582","Vika Lusita Anggraeni","271","vlanggraeni.vla2@gmail.com","Tamat D4/S1","Perempuan","1992-07-29","","2025-10-15 08:00:36","2025-10-15 08:00:36"
+"151","357322100204","SUSIOWATI","272","Susiowati909@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:36","2025-10-15 08:00:36"
+"152","357322100176","Waode Pristanti Nuri Rachmawati","274","waodepristanti@gmail.com","Tamat S2","Perempuan","1970-01-01","","2025-10-15 08:00:37","2025-10-15 08:00:37"
+"153","357322090525","Herni natalia","276","elisabethherni1984@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:38","2025-10-15 08:00:38"
+"154","357322090354","MAYA INDRIYANI","279","mayaindri03@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:39","2025-10-15 08:00:39"
+"155","357322100208","Rina indiana","282","adysule12@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:40","2025-10-15 08:00:40"
+"156","357322090474","ENGGA RESTU DIAN SAGITA","284","rdsengga@gmail.com","Tamat D4/S1","Perempuan","1986-06-12","","2025-10-15 08:00:41","2025-10-15 08:00:41"
+"157","357322090566","Anni Khoirun Nisa","287","annikhoirunn@gmail.com","Tamat D1/D2/D3","Perempuan","1970-01-01","","2025-10-15 08:00:42","2025-10-15 08:00:42"
+"158","357322090530","Aataina Thoi\'in","290","aatainathoiin@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:42","2025-10-15 08:00:42"
+"159","357322090532","NENI YUTRIKASARI","291","neniyutrikasari@gmail.com","Tamat SMS/Sederajat","Perempuan","1987-07-24","","2025-10-15 08:00:43","2025-10-15 08:00:43"
+"160","357322090426","Sherly anggraeni cahya putri","292","jziiiaannzkr01@gmail.com","Tamat SMS/Sederajat","Perempuan","2025-06-25","","2025-10-15 08:00:43","2025-10-15 08:00:43"
+"161","357322090436","Cynthia June Indah Widiyasari","294","cynthiajuneiw@gmail.com","Tamat D4/S1","Perempuan","1994-06-01","","2025-10-15 08:00:44","2025-10-15 08:00:44"
+"162","357322090466","Vita rakhmawati","299","Tarasaga74@gmail.com","Tamat SMS/Sederajat","Perempuan","1993-06-30","","2025-10-15 08:00:46","2025-10-15 08:00:46"
+"163","357322090486","Radias Tarwoco Putro","301","radias.tarwoco@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:47","2025-10-15 08:00:47"
+"164","357322100098","SANDRA DEWI SARASWATI","302","sandraiwed83@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:48","2025-10-15 08:00:48"
+"165","357322100185","Wilda Wahyuningsih","303","wilda.wahyuni123@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:48","2025-10-15 08:00:48"
+"166","357322100250","Ika Rahmawati","304","ikarahmakusuma87@gmail.com","Tamat D1/D2/D3","Perempuan","1987-07-28","","2025-10-15 08:00:48","2025-10-15 08:00:48"
+"167","357322090518","Maudini Mutiara Wandarti","306","maudinimutiarawandarti@gmail.com","Tamat D4/S1","Perempuan","2025-06-04","","2025-10-15 08:00:49","2025-10-15 08:00:49"
+"168","357323110008","Erdina Elfi Riana","307","erdinaelfiriana@gmail.com","Tamat D4/S1","Perempuan","1994-07-08","","2025-10-15 08:00:49","2025-10-15 08:00:49"
+"169","357322100500","VENNIA DIAN RESTANI","309","Venniadianrestani@gmwil.com","Tamat SMS/Sederajat","Perempuan","1999-07-23","","2025-10-15 08:00:50","2025-10-15 08:00:50"
+"170","357322090534","Diah Mesti","310","diahmesti.ri@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:51","2025-10-15 08:00:51"
+"171","357322100240","Satya Bram Wiratma","311","bho.satya@gmail.com","Tamat D4/S1","Perempuan","1989-06-23","","2025-10-15 08:00:51","2025-10-15 08:00:51"
+"172","357322100386","Chusnul Chotimah","312","chusnul27041991@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:52","2025-10-15 08:00:52"
+"173","357322100370","Suryani Pradina Mp","316","dinakiran13@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:54","2025-10-15 08:00:54"
+"174","357322100070","SUCIANI KUMARIAH","317","Sucianikumariah6@gmail.com","Tamat D4/S1","Perempuan","1983-07-08","","2025-10-15 08:00:54","2025-10-15 08:00:54"
+"175","357322100096","JULIZA TRIPUSPITA RACHMAWATI","318","julyzha69@gmail.com","Tamat D4/S1","Perempuan","1995-07-11","","2025-10-15 08:00:55","2025-10-15 08:00:55"
+"176","357322100209","Pratiwi dita ayu putri setya permana","319","pratiwidita1404@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:55","2025-10-15 08:00:55"
+"177","357322100477","Eli Saputri","323","elisaputri682@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:57","2025-10-15 08:00:57"
+"178","357324100030","ENI SUCI HARIATI","327","kh4risma74@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:00:59","2025-10-15 08:00:59"
+"179","357323110021","Andi Bagus Alfrianto","328","alfrianto00@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:00:59","2025-10-15 08:00:59"
+"180","357323110003","Lina Siti Maryamah","330","stm.lina@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:01:00","2025-10-15 08:01:00"
+"181","350723110151","Jati Laksono","331","djati.laksono79@gmail.com","Tamat SMS/Sederajat","Perempuan","2025-06-05","","2025-10-15 08:01:00","2025-10-15 08:01:00"
+"182","351824090001","NADIA NURBAITI","334","nadianurbaiti13@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:01:02","2025-10-15 08:01:02"
+"183","350223060063","Rr Ajar Wikhu Redhati","336","roroajarwikhu@gmail.com","Tamat D4/S1","Perempuan","1999-06-09","","2025-10-15 08:01:02","2025-10-15 08:01:02"
+"184","351423080009","NABIILAH RAUDHANISA","337","nabiilahr322@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:01:03","2025-10-15 08:01:03"
+"185","357323110207","Eka Indah Nur Fatimah Mashud","340","ekin0696@gmail.com","Tamat D4/S1","Perempuan","1996-06-12","","2025-10-15 08:01:04","2025-10-15 08:01:04"
+"186","357323110064","DYANA IKA SARI","341","dyanaikasari@gmail.com","Tamat D4/S1","Perempuan","1988-06-28","","2025-10-15 08:01:04","2025-10-15 08:01:04"
+"187","357323110144","Achmad Fatchur Rizqi","344","rizqielfath16095@gmail.com","Tamat D4/S1","Perempuan","1998-06-14","","2025-10-15 08:01:06","2025-10-15 08:01:06"
+"188","357323110129","ZAKIYATUL FAKHIROH","345","zakiyatull90@gmail.com","Tamat D4/S1","Perempuan","1990-07-21","","2025-10-15 08:01:06","2025-10-15 08:01:06"
+"189","350723110360","Rosi Risa Haris","346","rosiryan1982@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:01:06","2025-10-15 08:01:06"
+"190","357323110170","Mas Lutfi Afandi","347","masloethfieafandi@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:01:07","2025-10-15 08:01:07"
+"191","357323110321","Muhammad Riza Fachruddin","348","Ezataher82@gmail.com","Tamat D4/S1","Perempuan","1994-06-10","","2025-10-15 08:01:07","2025-10-15 08:01:07"
+"192","350723110027","PUTRI WAHYU SARIARTI","353","putrisariarti24@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:01:09","2025-10-15 08:01:09"
+"193","357323110262","Ferary ayu novitasari","356","Feraryayunovi@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:01:10","2025-10-15 08:01:10"
+"194","357323110216","Eka Prasetya Nugraha","357","nugrahaekaprasetya@gmail.com","Tamat D4/S1","Perempuan","1996-06-14","","2025-10-15 08:01:10","2025-10-15 08:01:10"
+"195","350723110361","Mustika Siwi Amumpuni","359","tikacw52@gmail.com","Tamat D4/S1","Perempuan","1980-07-13","","2025-10-15 08:01:11","2025-10-15 08:01:11"
+"196","357324100010","Tarisya Izzahirah Permana","361","tarisyatarisya@gmail.com","Tamat D4/S1","Perempuan","2025-07-25","","2025-10-15 08:01:11","2025-10-15 08:01:11"
+"197","350723110341","Laili Dzakiyyah Efendi","362","lailidzakiyyah@gmail.com","Tamat D4/S1","Perempuan","2025-07-22","","2025-10-15 08:01:12","2025-10-15 08:01:12"
+"198","357324100025","Benny Yogga Pratama","366","yoga@pulsawae.com","Tamat D1/D2/D3","Perempuan","1985-07-22","","2025-10-15 08:01:13","2025-10-15 08:01:13"
+"199","357324100020","FIRMANSYAH HARIS HERLAMBANG","370","firmansyah.haris.h@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:01:14","2025-10-15 08:01:14"
+"200","357324100027","Maudi Eka Putri","372","maudieka4@gmail.com","Tamat D4/S1","Perempuan","2025-06-01","","2025-10-15 08:01:15","2025-10-15 08:01:15"
+"201","357324100064","Setyarini","375","ririnsetyarini18@gmail.com","Tamat D1/D2/D3","Perempuan","1972-06-26","","2025-10-15 08:01:16","2025-10-15 08:01:16"
+"202","357324100012","KEVYN GALUH JUARDINO","377","galuhjuardino@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:01:17","2025-10-15 08:01:17"
+"203","357324100066","Nelly Avrilia Nur Putri","378","nellyavrilia67@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:01:18","2025-10-15 08:01:18"
+"204","357324100009","KHARISMA LATIFATUNNISA","379","khrisma88@gmail.com","Tamat SMS/Sederajat","Perempuan","2025-06-23","","2025-10-15 08:01:18","2025-10-15 08:01:18"
+"205","357325050004","DYAH BAYU EKA PRAMESWARI","380","prameswaridyah43@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:01:19","2025-10-15 08:01:19"
+"206","357324100022","Nurul azmi","382","RasyaOke60@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:01:19","2025-10-15 08:01:19"
+"207","357324100006","Nova Lailatul Zanah","388","nova20856@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:01:21","2025-10-15 08:01:21"
+"208","357324100049","Nadine Ranisyademas H.C","389","ranisnadine@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:01:22","2025-10-15 08:01:22"
+"209","357324100067","ADYATMA NUGRAHSANTO WICAKSONO","394","adyatmahebat@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:01:23","2025-10-15 08:01:23"
+"210","357324100035","Iqbal Firmansyah","396","iqbalfirmansyah971@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:01:24","2025-10-15 08:01:24"
+"211","357324100047","Muhammad Khoirul Basyar","398","basyar0106@gmail.com","Tamat SMS/Sederajat","Perempuan","1998-06-01","","2025-10-15 08:01:25","2025-10-15 08:01:25"
+"212","357324100063","Naufal Khalid Ghali  muhammad","399","khaliedwoii@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:01:25","2025-10-15 08:01:25"
+"213","357325050005","Adelisa Rizki Zaharani","400","adelisarizki@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:01:25","2025-10-15 08:01:25"
+"214","357325050006","Novi Silvia","401","nsilvia2330@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:01:26","2025-10-15 08:01:26"
+"215","357325050007","Nurfikri Amru Al-fayi\'nursy","402","nurfikri090905@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:01:26","2025-10-15 08:01:26"
+"216","357325050023","Moch Aldi Putra Permata","406","aldiputrapermata16@gmail.com","Tamat SMS/Sederajat","Perempuan","2025-06-16","","2025-10-15 08:01:27","2025-10-15 08:01:27"
+"217","357325050022","MUHAMMAD CHOLILI","408","cholilibaly@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:01:28","2025-10-15 08:01:28"
+"218","357323110055","Melinda Kristin","116","melindamelindakristin@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:02:44","2025-10-15 08:02:44"
+"219","357324100057","Desi harini","119","desiharini2021@gmail.com","Tamat SMS/Sederajat","Perempuan","1980-12-26","","2025-10-15 08:02:45","2025-10-15 08:02:45"
+"220","357323110104","Christin Mairina Priandini","121","chrstn.mairina@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:02:46","2025-10-15 08:02:46"
+"221","357322010067","Desi Puspita","129","desiathallah07@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:02:49","2025-10-15 08:02:49"
+"222","357322010068","Ahmad Fariz Rahmadani","131","farizdani002@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:02:50","2025-10-15 08:02:50"
+"223","357322090302","Ferry Hardiansyah Hadi Seputra","137","fhardiansyahhadis@gmail.com","Tamat D4/S1","Perempuan","1980-12-15","","2025-10-15 08:02:52","2025-10-15 08:02:52"
+"224","357322020018","Idham Kholiq","147","idhamcorner@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:02:55","2025-10-15 08:02:55"
+"225","357322010036","Mulyono Arief","148","mulyonoarief9@gmail.com","Tamat D1/D2/D3","Perempuan","1970-01-01","","2025-10-15 08:02:56","2025-10-15 08:02:56"
+"226","357322020013","Nurul Siti Fatimah","155","adityanurulnirwan@gmail.com","Tamat S2","Perempuan","1970-01-01","","2025-10-15 08:02:59","2025-10-15 08:02:59"
+"227","357322020008","Saiful Akbar","156","akbarnacal@gmail.com","Tamat SMS/Sederajat","Perempuan","1973-12-31","","2025-10-15 08:02:59","2025-10-15 08:02:59"
+"228","357322020005","Moch.Heri Utomo","158","ireh.ceko@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:03:00","2025-10-15 08:03:00"
+"229","357322010062","Vicky Prasetia Bakti","160","ekiviky@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:03:01","2025-10-15 08:03:01"
+"230","357322020011","Kadang Pancoro","161","kadangpancoro@gmail.com","Tamat D4/S1","Perempuan","1972-12-20","","2025-10-15 08:03:01","2025-10-15 08:03:01"
+"231","357322090229","Muhammad Adam Dairis","169","muhadam1220@gmail.com","Tamat SMS/Sederajat","Perempuan","1999-12-20","","2025-10-15 08:03:04","2025-10-15 08:03:04"
+"232","357322090134","CANDRA SRI UTAMI","171","candrasriutamiu61@gmail.com","Tamat D4/S1","Perempuan","1980-12-25","","2025-10-15 08:03:05","2025-10-15 08:03:05"
+"233","357322020089","Ignasius Tri Hariyono","184","m.trihariyono@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:03:09","2025-10-15 08:03:09"
+"234","357322020090","Umbar Wulandari","185","rengganisumbarwulandari@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:03:10","2025-10-15 08:03:10"
+"235","357322020093","Mira Kurniasari","186","Kurniasarimira74@gmail.com","Tamat D1/D2/D3","Perempuan","1974-05-23","","2025-10-15 08:03:10","2025-10-15 08:03:10"
+"236","357323030005","NELA DWINGUDIYAHSARI","193","nelakankim@gmail.com","Tamat D1/D2/D3","Perempuan","1970-01-01","","2025-10-15 08:03:12","2025-10-15 08:03:12"
+"237","357325050002","Raihan Adenoer Ekaputra","213","raihanadenoerekaputra@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:03:21","2025-10-15 08:03:21"
+"238","357322090090","Sudarmi","216","pinkynio75@gmail.com","Tamat SMS/Sederajat","Perempuan","1975-12-17","","2025-10-15 08:03:21","2025-10-15 08:03:21"
+"239","357322090063","Nur Farida","217","rezqianorafardhan20@gmail.com","Tamat SMS/Sederajat","Perempuan","1993-12-31","","2025-10-15 08:03:22","2025-10-15 08:03:22"
+"240","357322090066","RATIH MAYKURNIA","222","ratihmaykurnia1@gmail.com","Tamat D4/S1","Perempuan","1984-05-16","","2025-10-15 08:03:25","2025-10-15 08:03:25"
+"241","357322100355","Risha alfa safitri","223","Rishaalfasafitri@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:03:25","2025-10-15 08:03:25"
+"242","357322090143","Wiwik Indriani","224","wiwikindriani13@gmail.com","Tamat SMS/Sederajat","Perempuan","1993-12-29","","2025-10-15 08:03:26","2025-10-15 08:03:26"
+"243","357322090399","MOH SLAMET","250","nurs4llim@gmail.com","Tamat SMS/Sederajat","Perempuan","1986-12-16","","2025-10-15 08:03:36","2025-10-15 08:03:36"
+"244","357322090598","ISTIKOMAH WIDYA","252","widya.talita27@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:03:37","2025-10-15 08:03:37"
+"245","357322090171","Doni Erfanto","254","azka.albaik@gmail.com","Tamat D4/S1","Perempuan","1979-12-27","","2025-10-15 08:03:38","2025-10-15 08:03:38"
+"246","357322090181","Faisal Amin","257","aminsal426@gmail.com","Tamat D4/S1","Perempuan","1999-05-17","","2025-10-15 08:03:39","2025-10-15 08:03:39"
+"247","357322090247","Khusnul Kholidah","269","KhusnulKholidah@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:03:43","2025-10-15 08:03:43"
+"248","357322100407","Samsul Mashuri","270","samsulmashuri84@gmail.com","Tamat SMS/Sederajat","Perempuan","1984-05-14","","2025-10-15 08:03:43","2025-10-15 08:03:43"
+"249","357325050003","Muhammad Hanif Firnanda","275","amirfauzie1@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:03:45","2025-10-15 08:03:45"
+"250","357322090295","Ika Suryaningsih","277","nafillahikari56@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:03:45","2025-10-15 08:03:45"
+"251","357322090299","Dessy Anggraeni","280","dessyanggraeni269@gmail.com","Tamat SMS/Sederajat","Perempuan","1990-12-22","","2025-10-15 08:03:47","2025-10-15 08:03:47"
+"252","357322090301","MERLINA ADI KURNIAWATI","283","arsyilamalang901@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:03:47","2025-10-15 08:03:47"
+"253","357322100420","Rani Hafilianawati","295","bundarun.e@gmail.com","Tamat D4/S1","Perempuan","1980-05-24","","2025-10-15 08:03:51","2025-10-15 08:03:51"
+"254","357322090470","Ismi Alfiah","296","Alfiahismi06@gmail.com","Tamat SMS/Sederajat","Perempuan","1991-05-26","","2025-10-15 08:03:52","2025-10-15 08:03:52"
+"255","357322100090","FIFIN AGUS PRIYA UTAMA","298","mrayyan3a@gmail.com","Tamat D4/S1","Perempuan","1982-05-21","","2025-10-15 08:03:53","2025-10-15 08:03:53"
+"256","357322100419","Tria Warsa Enggal","308","triawarsaenggal@gmail.com","Tamat D4/S1","Perempuan","1986-12-31","","2025-10-15 08:03:57","2025-10-15 08:03:57"
+"257","357322100425","Yasmina Majidah Imanamahirah","321","yasminamajidah@gmail.com","Tamat D4/S1","Perempuan","2000-05-25","","2025-10-15 08:04:01","2025-10-15 08:04:01"
+"258","357322100512","Qorina Anindhita Prameswari","324","qorinaanindhita708@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:04:02","2025-10-15 08:04:02"
+"259","357322110015","Daniel","325","Daniel.sulik88@gmail.com","Tamat SMS/Sederajat","Perempuan","1988-05-22","","2025-10-15 08:04:02","2025-10-15 08:04:02"
+"260","357322110029","Fahrisyal Ainur Roziqin","326","fahrisyalroz59@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:04:03","2025-10-15 08:04:03"
+"261","357324100040","Dian Ratnasari","329","dhianata@yahoo.com","Tamat S2","Perempuan","1970-01-01","","2025-10-15 08:04:04","2025-10-15 08:04:04"
+"262","357323110336","Dista Dwi Cahyani","338","distadc@gmail.com","Tamat D1/D2/D3","Perempuan","2001-05-21","","2025-10-15 08:04:08","2025-10-15 08:04:08"
+"263","357324100042","Farhan Mirza Zakky","339","farhan.zakky354@gmail.com","Tamat D1/D2/D3","Perempuan","2001-12-31","","2025-10-15 08:04:08","2025-10-15 08:04:08"
+"264","357323110065","Achmad Firmansah","342","raveculture9@gmail.com","Tamat D4/S1","Perempuan","1982-05-28","","2025-10-15 08:04:09","2025-10-15 08:04:09"
+"265","350723110283","Bahjatul Imaniyyah","350","bahjatul.kerja@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:04:12","2025-10-15 08:04:12"
+"266","357323110211","Sofwan Meiridho","352","meiridho@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:04:13","2025-10-15 08:04:13"
+"267","357324100008","Helmalia Intan Azzahra","360","Azzahraintan976@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:04:16","2025-10-15 08:04:16"
+"268","357324100024","Dewi Hafi Doturochma","363","Kendz34@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:04:17","2025-10-15 08:04:17"
+"269","351323110387","Aji Muktioko Utomo","365","muktiokoaji@gmail.com","Tamat SMS/Sederajat","Perempuan","1989-12-14","","2025-10-15 08:04:18","2025-10-15 08:04:18"
+"270","357324100070","NANDA ANDI PURNAMANSYAH, S.Si.","373","purnamalevi05@gmail.com","Tamat D4/S1","Perempuan","2002-05-14","","2025-10-15 08:04:22","2025-10-15 08:04:22"
+"271","357324100054","Amelia nur rahma","374","amelianurrahma23@gmail.com","Tamat D4/S1","Perempuan","1999-12-23","","2025-10-15 08:04:22","2025-10-15 08:04:22"
+"272","357324100058","Nunik Indrawati","384","nunikindraw@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:04:25","2025-10-15 08:04:25"
+"273","357324100056","ARIS HIDAYAT","385","aris.ukwk@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:04:26","2025-10-15 08:04:26"
+"274","357324100007","Berliano budiono","387","berlianobudiono99@gmail.com","Tamat D4/S1","Perempuan","1999-05-15","","2025-10-15 08:04:26","2025-10-15 08:04:26"
+"275","357324100014","Ruliyanto Ratno Saputro","393","ruliyantoratno@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:04:28","2025-10-15 08:04:28"
+"276","357325050019","Mochamad bandi","404","bandi3453@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:04:32","2025-10-15 08:04:32"
+"277","357323110363","MOCHAMMAD REVALINO VARGAS","123","revalinovargas684@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:06:32","2025-10-15 08:06:32"
+"278","357322040029","Eka Pujiyanti","126","ekapujiyantitutut@gmail.com","Tamat SMS/Sederajat","Perempuan","1981-10-28","","2025-10-15 08:06:33","2025-10-15 08:06:33"
+"279","357322010006","Avilia agustin","128","vilaagustin988@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:06:34","2025-10-15 08:06:34"
+"280","357322030041","M. Rudi","132","bpssimitra@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:06:35","2025-10-15 08:06:35"
+"281","357322020002","Suliati","133","Mamacun42@gmail.com","Tamat SMS/Sederajat","Perempuan","1976-03-20","","2025-10-15 08:06:36","2025-10-15 08:06:36"
+"282","357322010015","Ovita Sellgi Liesdamaiyanti","142","ovsellgi@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:06:39","2025-10-15 08:06:39"
+"283","357322090165","Nani Puji Rahayu","152","Rahayu76nani@gmail.com","Tamat D4/S1","Perempuan","1974-08-25","","2025-10-15 08:06:44","2025-10-15 08:06:44"
+"284","357322020020","BENNY RIYANTO","153","bennyriyan@gmail.com","Tamat D1/D2/D3","Perempuan","1970-01-01","","2025-10-15 08:06:44","2025-10-15 08:06:44"
+"285","357322010056","M. Asny Fajri Ulama\'i","157","fajrey12@gmail.com","Tamat D4/S1","Perempuan","1996-03-24","","2025-10-15 08:06:46","2025-10-15 08:06:46"
+"286","357322020003","Catur Sisworini","159","rinicatur09@gmail.com","Tamat D1/D2/D3","Perempuan","1970-01-01","","2025-10-15 08:06:47","2025-10-15 08:06:47"
+"287","357322010066","Akhmad Budi","162","akhmadbudidg77@gmail.com","Tamat SMS/Sederajat","Perempuan","1986-02-21","","2025-10-15 08:06:48","2025-10-15 08:06:48"
+"288","357322020027","Woro Ratih Andayani","163","woro.dedykayana@gmail.com","Tamat SMS/Sederajat","Perempuan","1985-10-16","","2025-10-15 08:06:48","2025-10-15 08:06:48"
+"289","357322020010","LAILATUL FADJRIJAH","166","lfadjrijah@gmail.com","Tamat D4/S1","Perempuan","1968-10-24","","2025-10-15 08:06:49","2025-10-15 08:06:49"
+"290","357322020026","Nur chasanah","167","nurpsm3@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:06:49","2025-10-15 08:06:49"
+"291","357322020043","Anang Maret Tri Basuki","170","alpasigma69@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:06:51","2025-10-15 08:06:51"
+"292","357322020050","SRI ASIH","173","asri50526@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:06:52","2025-10-15 08:06:52"
+"293","357322020059","Seno Febriyanto","176","senofebryanto@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:06:53","2025-10-15 08:06:53"
+"294","357322020047","Moch syarifudin hidayatullah","177","asoy9112@gmail.com","Tamat SMS/Sederajat","Perempuan","1992-10-16","","2025-10-15 08:06:53","2025-10-15 08:06:53"
+"295","357322020076","Witria Linawati","178","witria.linawati.id@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:06:54","2025-10-15 08:06:54"
+"296","357322020057","Hargi Pranoto","179","hargipranoto96@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:06:54","2025-10-15 08:06:54"
+"297","357322020075","Ani mutmainah","181","almozaani@gmail.com","Tamat SMS/Sederajat","Perempuan","1983-02-25","","2025-10-15 08:06:54","2025-10-15 08:06:54"
+"298","357322020086","Ina Fayati","182","inafayati@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:06:55","2025-10-15 08:06:55"
+"299","357322020088","CHANDRA WIDY HARTATO","183","wchandra1190@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:06:56","2025-10-15 08:06:56"
+"300","357322030021","Lensi Rachmawati","194","lensirachma40@gmail.com","Tamat SMS/Sederajat","Perempuan","1981-03-14","","2025-10-15 08:07:00","2025-10-15 08:07:00"
+"301","357322030022","Yulfaridah Eka Ariani","195","yulfaridah9@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:07:00","2025-10-15 08:07:00"
+"302","357322030024","Inawan Pamoengkas","197","Gambyohgamby@gmail.com","Tamat SMS/Sederajat","Perempuan","1978-03-20","","2025-10-15 08:07:01","2025-10-15 08:07:01"
+"303","357322030043","Meryta Devi Anggraini","200","merytadevi46@gmail.com","Tamat D4/S1","Perempuan","1997-03-27","","2025-10-15 08:07:03","2025-10-15 08:07:03"
+"304","357322090056","Eryk Sareyang Hasan","209","wgrp2009@gmail.com","Tamat D4/S1","Perempuan","1976-08-25","","2025-10-15 08:07:07","2025-10-15 08:07:07"
+"305","357322090021","Wahdaniar Sri Utami","211","Wahdaniar.utami@gmail.com","Tamat S2","Perempuan","1989-03-17","","2025-10-15 08:07:08","2025-10-15 08:07:08"
+"306","357322100073","Marliya Ika Irmawati","214","ikasahroni@gmail.com","Tamat D1/D2/D3","Perempuan","1991-03-13","","2025-10-15 08:07:09","2025-10-15 08:07:09"
+"307","357322090035","NURMA KURNIAWATI","215","nurmakurnia0403@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:07:10","2025-10-15 08:07:10"
+"308","357322090147","Ida Kurnia wati","219","idakurniawati991@gmail.com","Tamat SMS/Sederajat","Perempuan","1979-08-13","","2025-10-15 08:07:12","2025-10-15 08:07:12"
+"309","357322100278","EVIE RESTU WILUJENG","226","everestuui@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:07:15","2025-10-15 08:07:15"
+"310","357324100031","Titik nurhajati","227","Plongkowati9@gmail.com","Tamat D4/S1","Perempuan","1972-10-17","","2025-10-15 08:07:15","2025-10-15 08:07:15"
+"311","357322090365","ERIA FEBRI SUSANTI","229","eriasusantiyuhu@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:07:16","2025-10-15 08:07:16"
+"312","357322090535","Mitha Munawaroh","230","panich2005@gmail.com","Tamat SMS/Sederajat","Perempuan","1987-02-23","","2025-10-15 08:07:16","2025-10-15 08:07:16"
+"313","357322090472","Cindy Christiningsih Neno","231","cindyneno897@gmail.com","Tamat SMS/Sederajat","Perempuan","1997-08-29","","2025-10-15 08:07:17","2025-10-15 08:07:17"
+"314","357322090164","Reny Diana","232","renydiana05@gmail.com","Tamat D1/D2/D3","Perempuan","1970-01-01","","2025-10-15 08:07:17","2025-10-15 08:07:17"
+"315","357322100404","SOEHERIS","238","herissoe@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:07:19","2025-10-15 08:07:19"
+"316","357322090124","Yuny Damayanti","241","lagilagiveronica@gmail.com","Tamat D4/S1","Perempuan","1988-03-14","","2025-10-15 08:07:21","2025-10-15 08:07:21"
+"317","357322090303","SRI HARI WURYANTI","246","amywury08@gmail.com","Tamat SMS/Sederajat","Perempuan","1968-08-19","","2025-10-15 08:07:23","2025-10-15 08:07:23"
+"318","357322090312","Yonarisa Febryanti","253","yonarisa84@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:07:27","2025-10-15 08:07:27"
+"319","357324100002","Ilham Octavia Pratama","255","ilhamokta1916@gmail.com","Tamat SMS/Sederajat","Perempuan","2002-10-15","","2025-10-15 08:07:28","2025-10-15 08:07:28"
+"320","357322090180","Suherna","256","suherna143@gmail.com","Tamat D4/S1","Perempuan","1968-02-29","","2025-10-15 08:07:28","2025-10-15 08:07:28"
+"321","357322090262","Rini Arthanti Agustini","261","arthanti02@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:07:29","2025-10-15 08:07:29"
+"322","357322100399","Ivana kartikasari","262","vanaz90687@gmail.com","Tamat D1/D2/D3","Perempuan","1984-03-31","","2025-10-15 08:07:30","2025-10-15 08:07:30"
+"323","357322090228","LIA KURNIA SARI","263","liakurnia8815@gmail.com","Tamat D1/D2/D3","Perempuan","1988-08-15","","2025-10-15 08:07:30","2025-10-15 08:07:30"
+"324","357322090217","Ridha Nur Rohma","265","ridhanurrohma@gmail.com","Tamat SMS/Sederajat","Perempuan","1998-10-17","","2025-10-15 08:07:31","2025-10-15 08:07:31"
+"325","357322100001","Kartika juwita","273","carteacajoe@gmail.com","Tamat SMS/Sederajat","Perempuan","1983-08-16","","2025-10-15 08:07:33","2025-10-15 08:07:33"
+"326","357322090369","Karuniawati","278","Karuniaw71@gmail.com","Tamat SMS/Sederajat","Perempuan","1980-03-16","","2025-10-15 08:07:35","2025-10-15 08:07:35"
+"327","357322090314","EVA OKTAVININGSIH","281","evaoktaok42@gmail.com","Tamat D4/S1","Perempuan","1984-10-24","","2025-10-15 08:07:36","2025-10-15 08:07:36"
+"328","357322090350","MEGA CAHYANI","285","megachaa.26@gmail.com","Tamat D4/S1","Perempuan","1992-08-26","","2025-10-15 08:07:37","2025-10-15 08:07:37"
+"329","357322090326","Septiana iriyanti","286","septiana.qaisara@gmail.com","Tamat SMS/Sederajat","Perempuan","1995-10-23","","2025-10-15 08:07:37","2025-10-15 08:07:37"
+"330","357322090345","Ita Christina","288","itachristinabesoet@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:07:38","2025-10-15 08:07:38"
+"331","357322090522","Agis Suryawan","289","Kinanthiregina1@gmail.com","Tamat SMS/Sederajat","Perempuan","1969-08-17","","2025-10-15 08:07:39","2025-10-15 08:07:39"
+"332","357324100038","Danty Oktiana Prastiwi","293","oktianadanty@gmail.com","Tamat D4/S1","Perempuan","1998-10-14","","2025-10-15 08:07:40","2025-10-15 08:07:40"
+"333","357322090515","SULIS INDRAWATI","297","Sulisindra83@gmail.com","Tamat SMS/Sederajat","Perempuan","1983-08-25","","2025-10-15 08:07:41","2025-10-15 08:07:41"
+"334","357322090508","Zulfa Amelia","300","amelzulfa22@gmail.com","Tamat SMS/Sederajat","Perempuan","1999-03-22","","2025-10-15 08:07:42","2025-10-15 08:07:42"
+"335","357322100377","Agus Tri Andriatmoko","305","milanino88@gmail.com","Tamat SMS/Sederajat","Perempuan","1974-08-28","","2025-10-15 08:07:44","2025-10-15 08:07:44"
+"336","357322100243","Aulia Lestari","314","kheylaauriella@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:07:47","2025-10-15 08:07:47"
+"337","357322100045","Erwis wirdiyanti","315","Erwisanik@gmail.com","Tamat SMS/Sederajat","Perempuan","1973-10-28","","2025-10-15 08:07:47","2025-10-15 08:07:47"
+"338","517122100631","Vonny","320","vonnyamalia14@gmail.com","Tamat SMS/Sederajat","Perempuan","1976-10-14","","2025-10-15 08:07:48","2025-10-15 08:07:48"
+"339","357323020002","Sri Wilujeng","322","sriwilujeng@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:07:49","2025-10-15 08:07:49"
+"340","350723060093","Fajar Widiyanto","332","fajarwivi@gmail.com","Tamat D4/S1","Perempuan","1980-03-31","","2025-10-15 08:07:53","2025-10-15 08:07:53"
+"341","351323110844","Ahmad Rijal Pahlevy","333","ahmadrijalpahlevy@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:07:53","2025-10-15 08:07:53"
+"342","357324100033","Ayu Puspita Sari","335","ayupus259@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:07:54","2025-10-15 08:07:54"
+"343","357323110072","Bella Agustina Pratiwi","343","agustinapratiwibella@gmail.com","Tamat D4/S1","Perempuan","1994-08-13","","2025-10-15 08:07:57","2025-10-15 08:07:57"
+"344","350723110300","Istiqomatul Amanah Amalia Nur Azizah","349","azizah.amalia0203@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:07:59","2025-10-15 08:07:59"
+"345","357324100043","Mukhammad Athok Illah","351","athokillah409@gmail.com","Tamat D4/S1","Perempuan","1999-10-28","","2025-10-15 08:08:00","2025-10-15 08:08:00"
+"346","357323110002","Lestari","354","kenlestari15@gmail.com","Tamat SMS/Sederajat","Perempuan","1973-10-15","","2025-10-15 08:08:01","2025-10-15 08:08:01"
+"347","357324100018","Vina Irawati","355","irawativina0@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:08:01","2025-10-15 08:08:01"
+"348","357324100013","Widyaningsih","358","widyaningsih.040@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:08:02","2025-10-15 08:08:02"
+"349","350723110362","AS\'AD ANDI YAHYA","364","asadyahya00@gmail.com","Tamat SMS/Sederajat","Perempuan","2000-03-24","","2025-10-15 08:08:04","2025-10-15 08:08:04"
+"350","357324100044","Sapphiretita Oktarissa Farakh Heydina","367","sapphire.ofh@gmail.com","Tamat D4/S1","Perempuan","1997-10-31","","2025-10-15 08:08:05","2025-10-15 08:08:05"
+"351","352523110826","Robiatul Adawiyah","368","ra.aladawiyah@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:08:05","2025-10-15 08:08:05"
+"352","357324100028","Silva ahmad adini","369","Silva.adin.m@gmail.com","Tamat D4/S1","Perempuan","1988-08-31","","2025-10-15 08:08:06","2025-10-15 08:08:06"
+"353","357324100021","Dewi Martia Ningsih","371","dewimotivator@gmail.com","Tamat D4/S1","Perempuan","1991-03-21","","2025-10-15 08:08:06","2025-10-15 08:08:06"
+"354","357324100029","Wiwin Widya Wati","376","wiwinwid.www@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:08:08","2025-10-15 08:08:08"
+"355","357324100041","Chandra Rusbianto","383","chandrarusbianto@gmail.com","Tamat D1/D2/D3","Perempuan","1970-01-01","","2025-10-15 08:08:11","2025-10-15 08:08:11"
+"356","357324100062","David Rakha Sutjipto","386","rakhad96@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:08:12","2025-10-15 08:08:12"
+"357","357324100046","linda oktavia irawati","390","octalinda28@gmail.com","Tamat SMS/Sederajat","Perempuan","1995-10-21","","2025-10-15 08:08:14","2025-10-15 08:08:14"
+"358","357324100050","MAHBUBATUN NISWAH","391","mahbubatunniswah14@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:08:14","2025-10-15 08:08:14"
+"359","357324100065","Brillian Musa Maulana","395","brillimaulana06022004@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:08:15","2025-10-15 08:08:15"
+"360","357324100036","Rani Indahwati","397","rani.indahwati.ri@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:08:16","2025-10-15 08:08:16"
+"361","357325050013","Bagus Mahardika Satria Nugraha","403","satriabagus948@gmail.com","Tamat SMS/Sederajat","Perempuan","1984-08-27","","2025-10-15 08:08:18","2025-10-15 08:08:18"
+"362","357325050018","MERRY KUSUMAWATI","405","ameesuprayogi4@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:08:19","2025-10-15 08:08:19"
+"363","357325050021","Enuk Egowati","407","egowati08@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:08:19","2025-10-15 08:08:19"
+"364","357324100069","Asri Wulandari Purnayudya","115","awpyud@gmail.com","Tamat D4/S1","Perempuan","1985-01-19","","2025-10-15 08:09:46","2025-10-15 08:09:46"
+"365","357322010022","DWI YOES TINUS PRIHANTO","144","Yoestinusdwi@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:09:56","2025-10-15 08:09:56"
+"366","357322010035","Moh Kristiawan Trimaryono","150","kristiawan.trimaryono86@gmail.com","Tamat D1/D2/D3","Perempuan","1986-01-30","","2025-10-15 08:09:58","2025-10-15 08:09:58"
+"367","357322090546","M. Pancalaharti","151","pancamashuri@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-26","","2025-10-15 08:09:59","2025-10-15 08:09:59"
+"368","357322020001","Aqila Nur Rahmalia","168","aqilanr97@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:10:05","2025-10-15 08:10:05"
+"369","357322020108","Ongki Antonio","190","spiderpakman182@gmail.com","Tamat SMS/Sederajat","Perempuan","1990-01-20","","2025-10-15 08:10:12","2025-10-15 08:10:12"
+"370","357322040009","Intan Eka Purnama Sari","199","Abyanatar@gmail.com","Tamat D1/D2/D3","Perempuan","1988-01-22","","2025-10-15 08:10:17","2025-10-15 08:10:17"
+"371","357322030046","Noer Cahyono Setyawan","201","gangsarsablon@gmail.com","Tamat SMS/Sederajat","Perempuan","1983-01-28","","2025-10-15 08:10:18","2025-10-15 08:10:18"
+"372","357322050012","Faisal Ahmad Rodhi","205","faisalahmad1697@gmail.com","Tamat D1/D2/D3","Perempuan","1970-01-01","","2025-10-15 08:10:20","2025-10-15 08:10:20"
+"373","357322090062","Rahmah nur cahyani","228","rahmahnurcahyani@gmail.com","Tamat SMS/Sederajat","Perempuan","1999-01-13","","2025-10-15 08:10:29","2025-10-15 08:10:29"
+"374","357322090236","Angela Ratih Kusuma Andari, SE","239","rkaangela12@gmail.com","Tamat D4/S1","Perempuan","1984-01-22","","2025-10-15 08:10:35","2025-10-15 08:10:35"
+"375","357322090119","Warti ratna ikawati","240","Ikawatiratna78@gmail.com","Tamat SMS/Sederajat","Perempuan","1978-01-28","","2025-10-15 08:10:36","2025-10-15 08:10:36"
+"376","357322090300","zainul arifin","247","zainularifin2365@gmail.com","Tamat SMS/Sederajat","Perempuan","1965-01-23","","2025-10-15 08:10:38","2025-10-15 08:10:38"
+"377","357322100359","SUSWATI","313","suswatisuswati273@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:11:00","2025-10-15 08:11:00"
+"378","357324100077","GARANITA MANGGAR PUTRI","381","garanitaarsyila@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:11:22","2025-10-15 08:11:22"
+"379","357324100011","Ravika Indah Kharisma","392","ravikaindah@student.ub.ac.id","Tamat D4/S1","Perempuan","2002-01-30","","2025-10-15 08:11:26","2025-10-15 08:11:26"
+"380","357322050011","AINUN SEGAR RAHMAWATI","411","ainun.rhmwti@gmail.com","Tamat SMS/Sederajat","Perempuan","2025-07-03","","2025-10-15 08:15:40","2025-10-15 08:15:40"
+"381","357325050008","Wilda Aulia Fathoni","413","wilda.fath.geo10@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:15:43","2025-10-15 08:15:43"
+"382","357325050010","Ahmad Habibi","415","ahmadhabibi020919@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:15:44","2025-10-15 08:15:44"
+"383","357325050011","Dhuiki Nursepta Aldiansyah","416","nurseptadhuiki@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:15:44","2025-10-15 08:15:44"
+"384","357325050016","Sajidan Wildan Ahmad","420","ahmad.sajidanwildan@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:15:46","2025-10-15 08:15:46"
+"385","357323110177","MUCHAMMAD RIZAL SYAKIRUDDIN","409","muchrizall09@gmail.com","Tamat SMS/Sederajat","Perempuan","1970-01-01","","2025-10-15 08:17:07","2025-10-15 08:17:07"
+"386","357322090333","Irena Salsabila","412","irenasalsabila@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:17:09","2025-10-15 08:17:09"
+"387","357325050009","Christian Nathanael","414","christiannathanaelsiagian@gmail.com","Tamat SMS/Sederajat","Perempuan","2002-01-16","","2025-10-15 08:17:12","2025-10-15 08:17:12"
+"388","357325050012","Muhammad Muzaky Verdian Firmansyah","417","muzakyverdian@gmail.com","Tamat SMS/Sederajat","Perempuan","2004-05-27","","2025-10-15 08:17:13","2025-10-15 08:17:13"
+"389","357325050014","Akemat Rio Setiawan","418","riorachell29@gmail.com","Tamat D4/S1","Perempuan","2003-01-29","","2025-10-15 08:17:13","2025-10-15 08:17:13"
+"390","357325050015","Moh Taufiq Ismu Abadi","419","ismu.taufiq@gmail.com","Tamat D4/S1","Perempuan","1993-05-24","","2025-10-15 08:17:14","2025-10-15 08:17:14"
+"391","357325050017","Yonatan Hendra Wijaya","421","yonatan.hendra.2204326@students.um.ac.id","Tamat SMS/Sederajat","Perempuan","2004-05-19","","2025-10-15 08:17:14","2025-10-15 08:17:14"
+"392","357322040025","Devy Prasetyono","410","devyprasetyono.geo@gmail.com","Tamat D4/S1","Perempuan","1970-01-01","","2025-10-15 08:17:54","2025-10-15 08:17:54"
