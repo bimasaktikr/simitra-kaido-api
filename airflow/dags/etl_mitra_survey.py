@@ -155,9 +155,6 @@ def refresh_mysql_cache(**context):
     print("🔄 Triggering MySQL cache refresh via Laravel webhook...")
     
     try:
-        laravel_url = os.getenv("LARAVEL_API_URL", "http://host.docker.internal:8000")
-        webhook_url = f"{laravel_url}/api/webhooks/ml-training-complete"
-        
         dag_run_id = context.get('dag_run').run_id if context.get('dag_run') else 'unknown'
         
         payload = {
@@ -167,19 +164,50 @@ def refresh_mysql_cache(**context):
             'message': 'ML training completed successfully'
         }
         
-        response = requests.post(webhook_url, json=payload, timeout=10)
+        laravel_urls = [
+            os.getenv("LARAVEL_API_URL", "http://host.docker.internal:8000"),
+            "http://localhost:8000",
+            "http://127.0.0.1:8000",
+            "http://172.17.0.1:8000",  
+            "http://192.168.65.1:8000",  
+        ]
         
-        if response.status_code == 200:
-            result = response.json()
-            print(f"✅ MySQL cache refreshed successfully")
-            print(f"   📊 Rumah Tangga: {result.get('rumah_tangga', 0)} records")
-            print(f"   📊 Perusahaan: {result.get('perusahaan', 0)} records")
-        else:
-            print(f"⚠️ Cache refresh failed: HTTP {response.status_code}")
-            print(f"   Response: {response.text}")
+        success = False
+        for laravel_url in laravel_urls:
+            webhook_url = f"{laravel_url}/api/webhooks/ml-training-complete"
+            
+            try:
+                print(f"   🔗 Trying: {webhook_url}")
+                response = requests.post(webhook_url, json=payload, timeout=60)
+                
+                if response.status_code == 200:
+                    result = response.json()
+                    print(f"✅ MySQL cache refreshed successfully via {laravel_url}")
+                    print(f"   📊 Rumah Tangga: {result.get('records_cached', {}).get('rumah_tangga', 0)} records")
+                    print(f"   📊 Perusahaan: {result.get('records_cached', {}).get('perusahaan', 0)} records")
+                    success = True
+                    break
+                else:
+                    print(f"   ⚠️ HTTP {response.status_code}: {response.text[:100]}")
+                    continue
+                    
+            except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
+                print(f"   ⏭️ Failed ({e.__class__.__name__}), trying next URL...")
+                continue
+        
+        if not success:
+            print(f"\n⚠️ Could not reach Laravel on any URL")
+            print(f"\n💡 MANUAL ACTION REQUIRED:")
+            print(f"   Please run this command on your Laravel server:")
+            print(f"   cd /path/to/laravel && php artisan ml:sync-master-survey-types --force")
+            print(f"\n   This will sync master_surveys.type from PostgreSQL to MySQL")
+            print(f"   Then the cache will be refreshed automatically on next API call")
     
     except Exception as e:
         print(f"❌ Failed to refresh MySQL cache: {str(e)}")
+        print(f"\n💡 MANUAL ACTION REQUIRED:")
+        print(f"   Please run this command on your Laravel server:")
+        print(f"   cd /path/to/laravel && php artisan ml:sync-master-survey-types --force")
         pass
 
 with DAG(
