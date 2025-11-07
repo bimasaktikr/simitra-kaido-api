@@ -5,7 +5,7 @@ router = APIRouter(prefix="/mitra", tags=["Mitra"])
 
 @router.get("/")
 def get_mitra_data():
-    data = fetch_table("mitra_cleaned", "id")
+    data = fetch_table("mitras_cleaned", "id")
     if isinstance(data, dict) and "error" in data:
         return {"status": "error", "detail": data["error"]}
     return {"count": len(data), "data": data}

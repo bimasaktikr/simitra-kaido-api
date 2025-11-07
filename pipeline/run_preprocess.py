@@ -150,12 +150,12 @@ def run_preprocess(base_dir: str, mode: str = "overwrite"):
         
         print(f"\n📥 Reading mitras data...")
         try:
-            df_m = pd.read_sql("SELECT * FROM mitra_cleaned", conn)
+            df_m = pd.read_sql("SELECT * FROM mitras_cleaned", conn)
             if len(df_m) == 0:
-                raise ValueError("mitra_cleaned is empty, trying fallback")
-            print(f"   ✅ Found {len(df_m)} mitras from mitra_cleaned")
+                raise ValueError("mitras_cleaned is empty, trying fallback")
+            print(f"   ✅ Found {len(df_m)} mitras from mitras_cleaned")
         except Exception as e:
-            print(f"   ⚠️  mitra_cleaned issue: {str(e)[:50]}")
+            print(f"   ⚠️  mitras_cleaned issue: {str(e)[:50]}")
             print(f"   🔄 Trying fallback to mitras (raw)...")
             try:
                 df_m = pd.read_sql("SELECT * FROM mitras", conn)
