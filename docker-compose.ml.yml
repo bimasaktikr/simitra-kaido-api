@@ -1,53 +1,17 @@
 version: "3.9"
 
 services:
-  postgres:
-    image: postgres:17.6
-    container_name: simitra_postgres
-    restart: unless-stopped
-    environment:
-      POSTGRES_DB: ${DB_NAME:-mitra_kaido}
-      POSTGRES_USER: ${DB_USER:-postgres}
-      POSTGRES_PASSWORD: ${DB_PASS:-mitra123}
-      POSTGRES_HOST_AUTH_METHOD: md5
-      POSTGRES_INITDB_ARGS: "--auth-host=md5 --auth-local=md5"
-      PGDATA: /var/lib/postgresql/data/pgdata
-    command:
-      - "postgres"
-      - "-c"
-      - "password_encryption=md5"
-      - "-c"
-      - "checkpoint_timeout=15min"
-      - "-c"
-      - "log_checkpoints=off"
-      - "-c"
-      - "shared_buffers=256MB"
-      - "-c"
-      - "max_connections=100"
-    ports:
-      - "${POSTGRES_PORT:-5432}:5432"
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    networks:
-      - simitra_network
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-postgres} -d ${DB_NAME:-mitra_kaido}"]
-      interval: 10s
-      timeout: 5s
-      retries: 10
-      start_period: 60s
-
   airflow:
     image: qwact/simitra-airflow:latest
     container_name: simitra_airflow
-    restart: unless-stopped
-    depends_on:
-      postgres:
-        condition: service_healthy
+    restart: on-failure:5
     environment:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
-      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${DB_USER:-postgres}:${DB_PASS:-mitra123}@postgres:5432/airflow_metadata
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${DB_USER:-postgres}:${DB_PASS:-mitra123}@simitra_postgres:5432/airflow_metadata
+      AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_SIZE: 10
+      AIRFLOW__DATABASE__SQL_ALCHEMY_POOL_RECYCLE: 1800
+      AIRFLOW__DATABASE__SQL_ALCHEMY_MAX_OVERFLOW: 20
 
       AIRFLOW__CORE__PARALLELISM: 32
       AIRFLOW__CORE__DAG_CONCURRENCY: 16
@@ -60,7 +24,6 @@ services:
       AIRFLOW__API__AUTH_BACKENDS: airflow.api.auth.backend.basic_auth
       AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "False"
       AIRFLOW__WEBSERVER__RELOAD_ON_PLUGIN_CHANGE: "True"
-
       AIRFLOW__WEBSERVER__AUTH_BACKEND: airflow.api.auth.backend.basic_auth
       AIRFLOW__WEBSERVER__RBAC: "True"
       AIRFLOW__WEBSERVER__WEB_SERVER_MASTER_TIMEOUT: 300
@@ -69,7 +32,7 @@ services:
       DB_NAME: ${DB_NAME:-mitra_kaido}
       DB_USER: ${DB_USER:-postgres}
       DB_PASS: ${DB_PASS:-mitra123}
-      DB_HOST: postgres
+      DB_HOST: simitra_postgres
       DB_PORT: 5432
 
       LARAVEL_DB_HOST: ${LARAVEL_DB_HOST:-host.docker.internal}
@@ -98,31 +61,43 @@ services:
     entrypoint: []
     command: /opt/airflow/init-airflow.sh
     networks:
-      - simitra_network
+      - simitra_shared_network
     extra_hosts:
       - "host.docker.internal:host-gateway"
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:8080/health 2>/dev/null || pgrep -f 'airflow webserver' > /dev/null"]
+      test: ["CMD-SHELL", "curl -f http://localhost:8080/health || exit 1"]
       interval: 30s
-      timeout: 15s
+      timeout: 10s
       retries: 5
-      start_period: 180s
+      start_period: 120s
+    deploy:
+      resources:
+        limits:
+          cpus: "4"
+          memory: 4G
+        reservations:
+          cpus: "1"
+          memory: 1G
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+        max_attempts: 5
+        window: 180s
 
   api:
     image: qwact/simitra-api:latest
     container_name: simitra_api
-    restart: unless-stopped
-    depends_on:
-      postgres:
-        condition: service_healthy
+    restart: on-failure:5
     environment:
       DB_NAME: ${DB_NAME:-mitra_kaido}
       DB_USER: ${DB_USER:-postgres}
       DB_PASS: ${DB_PASS:-mitra123}
-      DB_HOST: postgres
+      DB_HOST: simitra_postgres
       DB_PORT: 5432
 
       AIRFLOW_URL: http://airflow:8080
+      AIRFLOW_USERNAME: ""
+      AIRFLOW_PASSWORD: ""
 
       LARAVEL_API_URL: ${LARAVEL_API_URL:-http://host.docker.internal:8000}
       LARAVEL_DB_HOST: ${LARAVEL_DB_HOST:-host.docker.internal}
@@ -134,9 +109,11 @@ services:
     ports:
       - "${API_PORT:-8001}:8000"
     volumes:
-      - api_data:/app
+      - ./api:/app
+      - ./.env:/app/.env:ro
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
     networks:
-      - simitra_network
+      - simitra_shared_network
     extra_hosts:
       - "host.docker.internal:host-gateway"
     healthcheck:
@@ -145,13 +122,21 @@ services:
       timeout: 15s
       retries: 5
       start_period: 60s
-
-volumes:
-  postgres_data:
-    driver: local
-  api_data:
-    driver: local
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 2G
+        reservations:
+          cpus: "0.5"
+          memory: 512M
+      restart_policy:
+        condition: on-failure
+        delay: 10s
+        max_attempts: 5
+        window: 180s
 
 networks:
-  simitra_network:
-    driver: bridge
+  simitra_shared_network:
+    external: true
+    name: simitra_shared_network
