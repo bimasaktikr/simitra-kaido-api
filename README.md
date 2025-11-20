@@ -93,7 +93,7 @@ Machine Learning Backend Service untuk Mitra Ranking & Survey Aggregation dengan
 1. **Clone Repository**
 
    ```bash
-   git clone https://github.com/QwAct225/simitra-kaido-api.git
+   git clone https://github.com/bimasaktikr/simitra-kaido-api.git
    cd simitra-kaido-api
    ```
 
@@ -276,8 +276,6 @@ docker push qwact/simitra-api:latest
 
 ## 🔧 **Troubleshooting**
 
-Untuk panduan lengkap troubleshooting, silakan lihat **[TROUBLESHOOTING.md](./TROUBLESHOOTING.md)**
-
 ### **Common Issues:**
 
 #### **1. Database "airflow_metadata" does not exist**
@@ -334,9 +332,6 @@ API_PORT=8002
 #### **5. Database Connection Failed / MD5 Authentication Error**
 
 - **Check:** Password di `.env` harus sama dengan yang di volume PostgreSQL
-- **Solution:** Lihat [TROUBLESHOOTING.md - PostgreSQL Authentication](./TROUBLESHOOTING.md#-postgresql-authentication-errors)
-
-**More Issues?** Check **[TROUBLESHOOTING.md](./TROUBLESHOOTING.md)** for comprehensive solutions.
 
 ---
 
