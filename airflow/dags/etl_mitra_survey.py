@@ -166,6 +166,7 @@ def refresh_mysql_cache(**context):
         
         laravel_urls = [
             os.getenv("LARAVEL_API_URL", "http://host.docker.internal:8000"),
+            "http://host.docker.internal:8000",
             "http://localhost:8000",
             "http://127.0.0.1:8000",
             "http://172.17.0.1:8000",  

@@ -76,7 +76,9 @@ Machine Learning Backend Service untuk Mitra Ranking & Survey Aggregation dengan
     ├── .env.example
     ├── .gitattributes
     ├── .gitignore
-    ├── docker-compose.yml
+    ├── docker-compose.db.yml      # PostgreSQL database stack
+    ├── docker-compose.ml.yml      # Airflow + FastAPI stack
+    ├── docker-compose.yml         # Legacy single-stack compose
     ├── README.md
     └── requirements.txt
 
@@ -101,10 +103,19 @@ Machine Learning Backend Service untuk Mitra Ranking & Survey Aggregation dengan
    cp .env.example .env
    ```
 
-3. **Start Docker Containers**
+3. **Start Docker Containers (Isolated Stacks)**
+
+   **⚡ Recommended Approach - Separate Stacks for Fault Isolation:**
 
    ```bash
-   docker-compose up -d --build
+   # Step 1: Start Database Stack (Critical Infrastructure)
+   docker compose -f docker-compose.db.yml -p simitra-db up -d
+   
+   # Step 2: Wait for database to be ready (~10 seconds)
+   docker logs simitra_postgres -f  # Press Ctrl+C after "ready to accept connections"
+   
+   # Step 3: Start ML Stack (Application Layer)
+   docker compose -f docker-compose.ml.yml -p simitra-ml up -d
    ```
 
    **📊 Database akan otomatis dibuat:**
@@ -112,60 +123,102 @@ Machine Learning Backend Service untuk Mitra Ranking & Survey Aggregation dengan
    - `airflow_metadata` - Airflow internal database (WAJIB!)
    - `mitra_kaido` - ML results database
 
+   **🎯 Why Separate Stacks?**
+   - ✅ **Fault Isolation**: Database remains accessible if ML stack crashes
+   - ✅ **Independent Restart**: Update/restart ML services without database downtime
+   - ✅ **Data Safety**: Database volume protected during ML troubleshooting
+   - ✅ **Resource Management**: Scale ML resources independently
+
 4. **Tunggu ~30 detik untuk initialization**
 
 5. **Verifikasi services running:**
 
    ```bash
-   docker-compose ps
+   docker ps --filter "name=simitra"
    ```
 
    Expected:
 
-   - ✅ `simitra_postgres` - Up (healthy)
-   - ✅ `simitra_airflow` - Up (port 8080)
-   - ✅ `simitra_api` - Up (port 8001)
+   - ✅ `simitra_postgres` - Up (healthy) - **Stack: simitra-db**
+   - ✅ `simitra_airflow` - Up (port 8080) - **Stack: simitra-ml**
+   - ✅ `simitra_api` - Up (port 8001) - **Stack: simitra-ml**
 
 6. **Access services:**
    - Airflow UI: http://localhost:8080
    - API Docs: http://localhost:8001/docs
+   - PostgreSQL: localhost:5432
+
+7. **Managing Stacks:**
+
+   ```bash
+   # Restart only ML stack (database stays up)
+   docker compose -f docker-compose.ml.yml -p simitra-ml restart
+   
+   # Stop ML stack (database stays up)
+   docker compose -f docker-compose.ml.yml -p simitra-ml down
+   
+   # Stop all stacks
+   docker compose -f docker-compose.db.yml -p simitra-db down
+   docker compose -f docker-compose.ml.yml -p simitra-ml down
+   ```
 
 ---
 
-## **🎯 Deploy to Portainer**
+## **🎯 Deploy to Portainer (Alternative Method)**
 
+> **Note:** Command-line deployment with `-p` flag (explained above) is **recommended** for better control and isolation. Use Portainer UI only if you don't have SSH access to the server.
+
+### **Method 1: Via Portainer UI (2 Separate Stacks)**
+
+**Stack 1 - Database (Critical Infrastructure):**
 1. **Login to Portainer:** http://localhost:9443
 2. **Go to:** Stacks → Add stack
-3. **Stack name:** `simitra-kaido-api`
+3. **Stack name:** `simitra-db`
 4. **Build method:** Web editor
-5. **Copy & Paste** entire content dari file `docker-compose.portainer.yml`
-6. **Environment variables** (optional - gunakan default jika tidak diisi):
+5. **Copy & Paste** content dari `docker-compose.db.yml`
+   - ⚠️ **Important:** Comment out or remove local file volume mounts (lines with `./sql/...`)
+   - Use named volumes or manual database initialization instead
+6. **Deploy** and wait for database to be healthy
+
+**Stack 2 - ML Services (Application Layer):**
+1. **Go to:** Stacks → Add stack
+2. **Stack name:** `simitra-ml`
+3. **Build method:** Web editor
+4. **Copy & Paste** content dari `docker-compose.ml.yml`
+   - ⚠️ **Important:** Comment out `./airflow/dags` and `./data/raw` volume mounts
+   - DAG changes require image rebuild or use git pull + image update
+5. **Environment variables** (optional):
    ```env
    DB_NAME=mitra_kaido
    DB_USER=postgres
    DB_PASS=mitra123
-   POSTGRES_PORT=5432
+   LARAVEL_API_URL=http://host.docker.internal:8000
    AIRFLOW_PORT=8080
    API_PORT=8001
    ```
-7. **Click:** "Deploy the stack"
-8. **Wait:** 3-5 minutes untuk initialization
+6. **Deploy** and wait for services to be healthy
 
-### **Verify Deployment**
+### **Method 2: Via Command Line (Recommended)**
 
-**Check Containers Status:**
-
-- Portainer → Containers → All should be "healthy" (green)
-
-**Verify DAG Status (No Import Errors):**
+If you have SSH access to the server:
 
 ```bash
-docker exec simitra_airflow airflow dags list
-# Expected: master_mitra_survey | /opt/airflow/dags/etl_mitra_survey.py | airflow | False
+# Pull latest code
+cd /path/to/simitra-kaido-api
+git pull origin main
 
-docker exec simitra_airflow airflow dags list-import-errors
-# Expected: No data found (✅ means no errors)
+# Deploy with separate stacks
+docker compose -f docker-compose.db.yml -p simitra-db up -d
+docker compose -f docker-compose.ml.yml -p simitra-ml up -d
 ```
+
+**Advantages:**
+- ✅ No volume mounting issues
+- ✅ Easier code updates (just `git pull` + restart)
+- ✅ Full control over stack lifecycle
+- ✅ Better for development workflow
+
+### **Verify Deployment**
 
 **Access Services:**
 
@@ -196,8 +249,8 @@ Pre-built images available on Docker Hub:
 
 ```
 🐳 qwact/simitra-airflow:latest   (Apache Airflow + DAGs + Pipeline)
-🐳 qwact/simitra-api:latest        (FastAPI + Routers + Services)
-🐳 postgres:17                      (PostgreSQL Database)
+🐳 qwact/simitra-api:latest       (FastAPI + Routers + Services)
+🐳 postgres:17                    (PostgreSQL Database)
 ```
 
 ---
@@ -284,104 +337,6 @@ API_PORT=8002
 - **Solution:** Lihat [TROUBLESHOOTING.md - PostgreSQL Authentication](./TROUBLESHOOTING.md#-postgresql-authentication-errors)
 
 **More Issues?** Check **[TROUBLESHOOTING.md](./TROUBLESHOOTING.md)** for comprehensive solutions.
-
----
-
-## 📊 **API Endpoints**
-
-### **FastAPI Documentation:**
-
-- Swagger UI: http://localhost:8001/docs
-- ReDoc: http://localhost:8001/redoc
-
-### **Available Endpoints:**
-
-**Health Check:**
-
-```bash
-GET /health
-```
-
-**Mitra Recommendations:**
-
-```bash
-GET /recommendations/mitra?limit=10
-```
-
-**Survey Master Data:**
-
-```bash
-GET /master-survey
-```
-
-**Webhook (Trigger Airflow DAG):**
-
-```bash
-POST /webhook/trigger-dag
-```
-
----
-
-## 🛠️ **Local Development**
-
-### **Option 1: Docker Compose (Recommended)**
-
-```bash
-# Start all services
-docker-compose up -d
-
-# View logs
-docker-compose logs -f airflow
-
-# Stop services
-docker-compose down
-```
-
-### **Option 2: Local Python (Advanced)**
-
-```bash
-# Setup virtual environment
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-pip install -r airflow/requirements.txt
-pip install -r api/requirements.txt
-
-# Run API locally
-cd api
-uvicorn main:app --reload --port 8001
-```
-
----
-
-## 📝 **Environment Variables**
-
-Create `.env` file (copy from `.env.example`):
-
-```env
-# PostgreSQL
-DB_NAME=mitra_kaido
-DB_USER=postgres
-DB_PASS=mitra123
-POSTGRES_PORT=5432
-
-# Laravel MySQL (External)
-LARAVEL_DB_HOST=host.docker.internal
-LARAVEL_DB_PORT=3306
-LARAVEL_DB_NAME=kaido_kit
-LARAVEL_DB_USER=root
-LARAVEL_DB_PASS=
-LARAVEL_API_URL=http://host.docker.internal:8000
-
-# Airflow
-AIRFLOW_PORT=8080
-AIRFLOW_SECRET_KEY=your-secret-key
-
-# API
-API_PORT=8001
-```
 
 ---
 

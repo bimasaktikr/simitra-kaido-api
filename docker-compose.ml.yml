@@ -57,6 +57,7 @@ services:
       - "${AIRFLOW_PORT:-8080}:8080"
     volumes:
       - ./data/raw:/opt/airflow/data/raw
+      - ./airflow/dags:/opt/airflow/dags
     user: "50000:0"
     entrypoint: []
     command: /opt/airflow/init-airflow.sh
